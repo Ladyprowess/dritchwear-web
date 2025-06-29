@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sparkles, ShoppingBag, Star, ArrowRight, Heart, Truck, Shield, Headphones, Download, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { sendNewsletterEmail } from '../lib/emailService';
+import MobileMenu from '../components/MobileMenu';
 
 export default function HomePage() {
   const [email, setEmail] = useState('');
@@ -32,13 +33,13 @@ export default function HomePage() {
     setNewsletterError('');
 
     try {
-      const success = await sendNewsletterEmail({ email });
+      const result = await sendNewsletterEmail({ email });
       
-      if (success) {
+      if (result.success) {
         setNewsletterSuccess(true);
         setEmail('');
       } else {
-        setNewsletterError('Failed to subscribe. Please try again.');
+        setNewsletterError(result.error || 'Failed to subscribe. Please try again.');
       }
     } catch (err) {
       setNewsletterError('Failed to subscribe. Please try again.');
@@ -59,6 +60,8 @@ export default function HomePage() {
                 <span className="text-2xl font-bold text-gray-900">Dritchwear</span>
               </div>
             </div>
+            
+            {/* Desktop menu - hidden on mobile */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <button onClick={scrollToAppDownload} className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Shop</button>
@@ -67,7 +70,9 @@ export default function HomePage() {
                 <a href="/contact" className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+            
+            {/* Desktop icons - hidden on mobile */}
+            <div className="hidden md:flex items-center space-x-4">
               <button onClick={handleAppDownload} className="text-gray-600 hover:text-brand-purple transition-colors">
                 <Heart className="h-6 w-6" />
               </button>
@@ -75,6 +80,12 @@ export default function HomePage() {
                 <ShoppingBag className="h-6 w-6" />
               </button>
             </div>
+
+            {/* Mobile menu */}
+            <MobileMenu 
+              onAppDownload={handleAppDownload}
+              scrollToAppDownload={scrollToAppDownload}
+            />
           </div>
         </div>
       </nav>
