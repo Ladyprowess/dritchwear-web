@@ -1,12 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, Smartphone, Download, ArrowRight, AlertTriangle, RefreshCw } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+
+// Mock supabase for demonstration - replace with your actual supabase import
+const supabase = {
+  auth: {
+    getSession: () => Promise.resolve({ data: { session: null }, error: null }),
+    setSession: ({ access_token, refresh_token }) => {
+      // Simulate different scenarios for testing
+      if (access_token === 'expired_token') {
+        return Promise.resolve({ 
+          data: { session: null }, 
+          error: { message: 'Token has expired' } 
+        });
+      }
+      if (access_token === 'already_confirmed_token') {
+        return Promise.resolve({ 
+          data: { session: null }, 
+          error: { message: 'Email link is invalid or has expired' } 
+        });
+      }
+      // Simulate successful confirmation
+      return Promise.resolve({
+        data: {
+          session: {
+            user: {
+              id: '123',
+              email: 'user@example.com',
+              email_confirmed_at: new Date().toISOString()
+            }
+          }
+        },
+        error: null
+      });
+    }
+  }
+};
 
 export default function ConfirmEmail() {
   const [countdown, setCountdown] = useState(10);
   const [redirecting, setRedirecting] = useState(false);
   const [confirmationStatus, setConfirmationStatus] = useState<'loading' | 'success' | 'already_confirmed' | 'error'>('loading');
   const [errorMessage, setErrorMessage] = useState('');
+  const [debugInfo, setDebugInfo] = useState('');
 
   useEffect(() => {
     handleEmailConfirmation();
@@ -39,85 +74,96 @@ export default function ConfirmEmail() {
       const error = urlParams.get('error');
       const errorDescription = urlParams.get('error_description');
 
-      // Handle explicit errors from Supabase
-      if (error || errorDescription) {
-        if (errorDescription?.includes('already_confirmed') || 
-            error?.includes('already_confirmed') ||
-            errorDescription?.includes('Email link is invalid or has expired')) {
+      // Debug information
+      const debugData = {
+        accessToken: accessToken ? 'present' : 'missing',
+        refreshToken: refreshToken ? 'present' : 'missing',
+        type,
+        error,
+        errorDescription
+      };
+      setDebugInfo(JSON.stringify(debugData, null, 2));
+
+      // Handle explicit errors from Supabase first
+      if (error) {
+        console.log('URL contains error parameter:', error, errorDescription);
+        
+        if (error === 'access_denied' || 
+            errorDescription?.includes('Email link is invalid or has expired') ||
+            errorDescription?.includes('already_confirmed')) {
           setConfirmationStatus('already_confirmed');
         } else {
           setConfirmationStatus('error');
-          setErrorMessage(errorDescription || error || 'Confirmation failed');
+          setErrorMessage(errorDescription || error);
         }
         return;
       }
 
-      // Check if this is a confirmation request
-      if (type === 'signup' && accessToken && refreshToken) {
-        try {
-          // First, check if we already have a session to avoid duplicate confirmations
-          const { data: existingSession } = await supabase.auth.getSession();
-          
-          if (existingSession.session?.user?.email_confirmed_at) {
-            // User is already confirmed and has an active session
-            setConfirmationStatus('already_confirmed');
-            return;
-          }
-
-          // Set the session with the tokens for first-time confirmation
-          const { data, error: sessionError } = await supabase.auth.setSession({
-            access_token: accessToken,
-            refresh_token: refreshToken
-          });
-
-          if (sessionError) {
-            console.error('Session error:', sessionError);
-            
-            // Check for specific error messages that indicate already confirmed
-            if (sessionError.message?.includes('already_confirmed') || 
-                sessionError.message?.includes('Email link is invalid or has expired') ||
-                sessionError.message?.includes('Token has expired') ||
-                sessionError.message?.includes('invalid_token')) {
-              setConfirmationStatus('already_confirmed');
-            } else {
-              setConfirmationStatus('error');
-              setErrorMessage(sessionError.message || 'Failed to confirm email');
-            }
-            return;
-          }
-
-          if (data.session?.user) {
-            // Successfully set session - this means confirmation was successful
-            console.log('Email confirmation successful for user:', data.session.user.email);
-            setConfirmationStatus('success');
-
-            // Clear the URL parameters to prevent reuse
-            window.history.replaceState({}, document.title, window.location.pathname);
-          } else {
-            setConfirmationStatus('error');
-            setErrorMessage('Invalid confirmation link');
-          }
-        } catch (err: any) {
-          console.error('Confirmation error:', err);
-          
-          // Check if the error indicates the email was already confirmed
-          if (err.message?.includes('already_confirmed') ||
-              err.message?.includes('Email link is invalid or has expired')) {
-            setConfirmationStatus('already_confirmed');
-          } else {
-            setConfirmationStatus('error');
-            setErrorMessage('An unexpected error occurred during confirmation');
-          }
-        }
-      } else {
-        // No valid confirmation parameters
+      // Validate required parameters
+      if (!accessToken || !refreshToken) {
+        console.log('Missing required tokens');
         setConfirmationStatus('error');
-        setErrorMessage('Invalid confirmation link');
+        setErrorMessage('Invalid confirmation link - missing authentication tokens');
+        return;
       }
+
+      // Only proceed if this is a signup confirmation
+      if (type !== 'signup') {
+        console.log('Invalid confirmation type:', type);
+        setConfirmationStatus('error');
+        setErrorMessage('Invalid confirmation link type');
+        return;
+      }
+
+      console.log('Attempting to set session with tokens...');
+
+      // Attempt to set the session with the provided tokens
+      const { data, error: sessionError } = await supabase.auth.setSession({
+        access_token: accessToken,
+        refresh_token: refreshToken
+      });
+
+      if (sessionError) {
+        console.error('Session error:', sessionError);
+        
+        // Handle specific error cases
+        if (sessionError.message?.includes('Token has expired') ||
+            sessionError.message?.includes('invalid_token') ||
+            sessionError.message?.includes('jwt expired')) {
+          setConfirmationStatus('error');
+          setErrorMessage('This confirmation link has expired. Please request a new one.');
+        } else if (sessionError.message?.includes('Email link is invalid or has expired') ||
+                   sessionError.message?.includes('already_confirmed') ||
+                   sessionError.message?.includes('signup_disabled')) {
+          setConfirmationStatus('already_confirmed');
+        } else {
+          setConfirmationStatus('error');
+          setErrorMessage(sessionError.message || 'Failed to confirm email');
+        }
+        return;
+      }
+
+      // Check if we got a valid session back
+      if (!data.session?.user) {
+        console.log('No session returned from setSession');
+        setConfirmationStatus('error');
+        setErrorMessage('Invalid confirmation response');
+        return;
+      }
+
+      // Success! Clear URL parameters to prevent reuse
+      console.log('Email confirmation successful for user:', data.session.user.email);
+      setConfirmationStatus('success');
+      
+      // Clear URL parameters after successful confirmation
+      setTimeout(() => {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }, 1000);
+
     } catch (err: any) {
-      console.error('Unexpected error:', err);
+      console.error('Unexpected error during confirmation:', err);
       setConfirmationStatus('error');
-      setErrorMessage('An unexpected error occurred');
+      setErrorMessage('An unexpected error occurred during confirmation');
     }
   };
 
@@ -144,17 +190,27 @@ export default function ConfirmEmail() {
   // Loading state
   if (confirmationStatus === 'loading') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-brand-purple via-brand-purple-light to-purple-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
           <div className="mb-6">
-            <div className="w-20 h-20 bg-brand-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <RefreshCw className="text-brand-purple animate-spin" size={48} />
+            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <RefreshCw className="text-purple-600 animate-spin" size={48} />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Confirming Email...</h1>
             <p className="text-gray-600">
               Please wait while we verify your email confirmation.
             </p>
           </div>
+          
+          {/* Debug info for development */}
+          {debugInfo && (
+            <details className="text-left mt-4">
+              <summary className="text-sm text-gray-500 cursor-pointer">Debug Info</summary>
+              <pre className="text-xs text-gray-400 mt-2 bg-gray-50 p-2 rounded overflow-auto">
+                {debugInfo}
+              </pre>
+            </details>
+          )}
         </div>
       </div>
     );
@@ -163,7 +219,7 @@ export default function ConfirmEmail() {
   // Already confirmed state
   if (confirmationStatus === 'already_confirmed') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-brand-purple via-brand-purple-light to-purple-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
           <div className="mb-6">
             <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -183,7 +239,7 @@ export default function ConfirmEmail() {
           <div className="space-y-4">
             <button
               onClick={handleOpenApp}
-              className="w-full bg-brand-purple text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-brand-purple-dark transition-colors duration-300"
+              className="w-full bg-purple-600 text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-purple-700 transition-colors duration-300"
             >
               <Smartphone size={20} />
               Open Dritchwear App to Sign In
@@ -212,7 +268,7 @@ export default function ConfirmEmail() {
             <div className="mt-6 pt-4 border-t">
               <a
                 href="/"
-                className="inline-flex items-center text-brand-purple font-medium hover:text-brand-purple-dark transition-colors duration-300"
+                className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors duration-300"
               >
                 Back to Dritchwear.com <ArrowRight size={16} className="ml-1" />
               </a>
@@ -226,7 +282,7 @@ export default function ConfirmEmail() {
   // Error state
   if (confirmationStatus === 'error') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-brand-purple via-brand-purple-light to-purple-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
           <div className="mb-6">
             <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -259,7 +315,7 @@ export default function ConfirmEmail() {
 
             <button
               onClick={handleOpenApp}
-              className="w-full bg-brand-purple text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-brand-purple-dark transition-colors duration-300"
+              className="w-full bg-purple-600 text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-purple-700 transition-colors duration-300"
             >
               <Smartphone size={20} />
               Open App to Resend Confirmation
@@ -278,7 +334,7 @@ export default function ConfirmEmail() {
             <div className="mt-6 pt-4 border-t">
               <a
                 href="/"
-                className="inline-flex items-center text-brand-purple font-medium hover:text-brand-purple-dark transition-colors duration-300"
+                className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors duration-300"
               >
                 Back to Dritchwear.com <ArrowRight size={16} className="ml-1" />
               </a>
@@ -291,7 +347,7 @@ export default function ConfirmEmail() {
 
   // Success state (first-time confirmation)
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-purple via-brand-purple-light to-purple-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
         {/* Success Icon */}
         <div className="mb-6">
@@ -306,8 +362,8 @@ export default function ConfirmEmail() {
 
         {/* App Redirect Section */}
         <div className="mb-8">
-          <div className="bg-brand-purple/10 rounded-xl p-6 mb-6">
-            <Smartphone className="text-brand-purple mx-auto mb-3" size={32} />
+          <div className="bg-purple-50 rounded-xl p-6 mb-6">
+            <Smartphone className="text-purple-600 mx-auto mb-3" size={32} />
             <h2 className="text-lg font-semibold text-gray-900 mb-2">
               Opening Dritchwear App...
             </h2>
@@ -318,7 +374,7 @@ export default function ConfirmEmail() {
             {!redirecting && (
               <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                 <div 
-                  className="bg-brand-purple h-2 rounded-full transition-all duration-1000"
+                  className="bg-purple-600 h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${((10 - countdown) / 10) * 100}%` }}
                 ></div>
               </div>
@@ -327,7 +383,7 @@ export default function ConfirmEmail() {
 
           <button
             onClick={handleOpenApp}
-            className="w-full bg-brand-purple text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-brand-purple-dark transition-colors duration-300 mb-4"
+            className="w-full bg-purple-600 text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-purple-700 transition-colors duration-300 mb-4"
           >
             <Smartphone size={20} />
             Open Dritchwear App Now
@@ -359,7 +415,7 @@ export default function ConfirmEmail() {
         <div className="mt-6 pt-4 border-t">
           <a
             href="/"
-            className="inline-flex items-center text-brand-purple font-medium hover:text-brand-purple-dark transition-colors duration-300"
+            className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors duration-300"
           >
             Back to Dritchwear.com <ArrowRight size={16} className="ml-1" />
           </a>
