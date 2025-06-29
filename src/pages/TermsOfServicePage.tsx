@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, FileText, Scale, AlertTriangle, CheckCircle, Download, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import MobileMenu from '../components/MobileMenu';
 
 export default function TermsOfServicePage() {
   const handleAppDownload = () => {
@@ -24,11 +25,13 @@ export default function TermsOfServicePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="/" className="flex-shrink-0 flex items-center">
+              <a href="/" className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity">
                 <Sparkles className="h-8 w-8 text-brand-purple mr-2" />
                 <span className="text-2xl font-bold text-gray-900">Dritchwear</span>
               </a>
             </div>
+            
+            {/* Desktop menu - hidden on mobile */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <button onClick={scrollToAppDownload} className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Shop</button>
@@ -37,11 +40,19 @@ export default function TermsOfServicePage() {
                 <a href="/contact" className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+            
+            {/* Desktop icons - hidden on mobile */}
+            <div className="hidden md:flex items-center space-x-4">
               <button onClick={handleAppDownload} className="text-gray-600 hover:text-brand-purple transition-colors">
                 <Download className="h-6 w-6" />
               </button>
             </div>
+
+            {/* Mobile menu */}
+            <MobileMenu 
+              onAppDownload={handleAppDownload}
+              scrollToAppDownload={scrollToAppDownload}
+            />
           </div>
         </div>
       </nav>

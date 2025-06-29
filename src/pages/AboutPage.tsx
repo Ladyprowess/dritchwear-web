@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Heart, Users, Award, Truck, Shield, Star, ArrowRight, Download, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import MobileMenu from '../components/MobileMenu';
 
 export default function AboutPage() {
   const handleAppDownload = () => {
@@ -30,6 +31,8 @@ export default function AboutPage() {
                 <span className="text-2xl font-bold text-gray-900">Dritchwear</span>
               </a>
             </div>
+            
+            {/* Desktop menu - hidden on mobile */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <button onClick={scrollToAppDownload} className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Shop</button>
@@ -38,7 +41,9 @@ export default function AboutPage() {
                 <a href="/contact" className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+            
+            {/* Desktop icons - hidden on mobile */}
+            <div className="hidden md:flex items-center space-x-4">
               <button onClick={handleAppDownload} className="text-gray-600 hover:text-brand-purple transition-colors">
                 <Heart className="h-6 w-6" />
               </button>
@@ -46,6 +51,12 @@ export default function AboutPage() {
                 <Download className="h-6 w-6" />
               </button>
             </div>
+
+            {/* Mobile menu */}
+            <MobileMenu 
+              onAppDownload={handleAppDownload}
+              scrollToAppDownload={scrollToAppDownload}
+            />
           </div>
         </div>
       </nav>
@@ -60,7 +71,7 @@ export default function AboutPage() {
               <span className="block text-yellow-300">Dritchwear</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto animate-slide-up">
-              We make stylish streetwear that’s easy to wear, feels good, and looks great.
+              We make stylish streetwear that's easy to wear, feels good, and looks great.
             </p>
           </div>
         </div>
@@ -76,7 +87,7 @@ export default function AboutPage() {
                 Dritchwear started as a small idea to make good clothes that people love to wear. We wanted to create outfits that are simple, neat, and comfortable, without being too expensive or hard to get.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                From the start, we’ve believed that everyone should feel good in what they wear. Today, we help individuals and brands get the right clothing for their everyday life, business, or events.
+                From the start, we've believed that everyone should feel good in what they wear. Today, we help individuals and brands get the right clothing for their everyday life, business, or events.
               </p>
               <button 
                 onClick={scrollToAppDownload}

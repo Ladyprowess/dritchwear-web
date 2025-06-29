@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, Users, Heart, Briefcase, MapPin, Clock, DollarSign, GraduationCap, Download, Send, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import MobileMenu from '../components/MobileMenu';
 
 export default function CareersPage() {
   const [selectedJob, setSelectedJob] = useState<number | null>(null);
@@ -147,6 +148,8 @@ export default function CareersPage() {
                 <span className="text-2xl font-bold text-gray-900">Dritchwear</span>
               </a>
             </div>
+            
+            {/* Desktop menu - hidden on mobile */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <button onClick={scrollToAppDownload} className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Shop</button>
@@ -155,11 +158,19 @@ export default function CareersPage() {
                 <a href="/contact" className="text-gray-600 hover:text-brand-purple px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+            
+            {/* Desktop icons - hidden on mobile */}
+            <div className="hidden md:flex items-center space-x-4">
               <button onClick={handleAppDownload} className="text-gray-600 hover:text-brand-purple transition-colors">
                 <Download className="h-6 w-6" />
               </button>
             </div>
+
+            {/* Mobile menu */}
+            <MobileMenu 
+              onAppDownload={handleAppDownload}
+              scrollToAppDownload={scrollToAppDownload}
+            />
           </div>
         </div>
       </nav>
