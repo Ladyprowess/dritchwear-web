@@ -133,7 +133,7 @@ export default function ContactPage() {
 </Button>
 
             <p className="text-xs text-black/60">
-              For placing full orders, the complete experience is inside the
+              For placing orders, the complete experience is inside the
               Dritchwear app.
             </p>
           </form>

@@ -160,11 +160,11 @@ var _s = __turbopack_context__.k.signature();
 function ContactPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(66);
-    if ($[0] !== "e7166c3277c4b81b97e253e919c3b847c1746772925895595ab10cbd653efa6f") {
+    if ($[0] !== "80c8463b48acd9f979e1b3ad0d7493f56e6e7ad68b4c3328ac0e25ea79696fcc") {
         for(let $i = 0; $i < 66; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "e7166c3277c4b81b97e253e919c3b847c1746772925895595ab10cbd653efa6f";
+        $[0] = "80c8463b48acd9f979e1b3ad0d7493f56e6e7ad68b4c3328ac0e25ea79696fcc";
     }
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [sent, setSent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -567,7 +567,7 @@ function ContactPage() {
     if ($[34] === Symbol.for("react.memo_cache_sentinel")) {
         t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             className: "text-xs text-black/60",
-            children: "For placing full orders, the complete experience is inside the Dritchwear app."
+            children: "For placing orders, the complete experience is inside the Dritchwear app."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
             lineNumber: 241,
