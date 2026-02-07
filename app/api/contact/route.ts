@@ -4,7 +4,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // 🔑 CONTACT TEMPLATE ID (Resend)
-const CONTACT_TEMPLATE_ID = "re_XXXXXXXXXXXX"; // replace with real ID
+const CONTACT_TEMPLATE_ID = "contact"; // replace with real ID
 
 export async function POST(req: Request) {
   try {
@@ -26,22 +26,23 @@ export async function POST(req: Request) {
     }
 
     await resend.emails.send({
-      from: "Dritchwear <hello@dritchwear.com>",
-      to: ["hello@dritchwear.com"],
+      from: "Dritchwear <info@dritchwear.com>",
+      to: ["dritchwear@gmail.com"],
       replyTo: email,
-
-      // ✅ CONTACT TEMPLATE
-      template_id: CONTACT_TEMPLATE_ID,
-
-      // Variables mapped to Resend template
-      template_data: {
-        full_name: fullName,
-        email,
-        phone,
-        inquiry_type: inquiryType || "General enquiry",
-        message,
+    
+      // ✅ Use templates like this (NOT template_id)
+      template: {
+        id: CONTACT_TEMPLATE_ID,
+        variables: {
+          full_name: fullName,
+          email,
+          phone,
+          inquiry_type: inquiryType || "General enquiry",
+          message,
+        },
       },
     });
+    
 
     return NextResponse.json({ success: true });
   } catch (error) {
