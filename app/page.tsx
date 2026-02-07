@@ -58,8 +58,9 @@ export default function HomePage() {
         </div>
 
         <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-10 grid lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT */}
-          <div className="max-w-xl">
+      
+      {/* LEFT */}
+<div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-black/60">
               Premium custom streetwear & branded merch
             </p>
@@ -77,7 +78,7 @@ export default function HomePage() {
               clothing into identity, visibility, and value.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3 justify-center lg:justify-start">
             <button
   type="button"
   onClick={() => setIsStoreModalOpen(true)}
@@ -94,7 +95,7 @@ export default function HomePage() {
 </a>
             </div>
 
-            <div className="mt-10 flex items-center gap-3 text-sm text-black/60">
+            <div className="mt-10 flex items-center gap-3 text-sm text-black/60 justify-center lg:justify-start">
   <span
     aria-hidden
     className="inline-block h-[2px] w-8 bg-[#FDB813]"
@@ -234,7 +235,7 @@ export default function HomePage() {
     {/* DARK BRAND SECTION */}
 <section className="bg-[var(--black)] text-white py-20">
   <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-12 items-start">
-    <div>
+  <div className="mx-auto max-w-xl text-center lg:text-left lg:mx-0">
       <p className="text-xs font-semibold tracking-[0.18em] uppercase text-white/60">
         Built for modern streetwear
       </p>
@@ -254,7 +255,7 @@ export default function HomePage() {
         whether it’s your personal style, your brand, or your next big event.
       </p>
 
-      <div className="mt-8 flex gap-3">
+      <div className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
         {/* Button text = #5A2D82, hover text = black */}
         <button
   type="button"

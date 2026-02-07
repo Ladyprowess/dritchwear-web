@@ -812,11 +812,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 function SoftIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "7cf9c3c697fe13a2a38b884b2dce56606db49d4f488c4d0166d0d47bc16fe03f") {
+    if ($[0] !== "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "7cf9c3c697fe13a2a38b884b2dce56606db49d4f488c4d0166d0d47bc16fe03f";
+        $[0] = "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -850,11 +850,11 @@ _c = SoftIcon;
 function HomePage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(47);
-    if ($[0] !== "7cf9c3c697fe13a2a38b884b2dce56606db49d4f488c4d0166d0d47bc16fe03f") {
+    if ($[0] !== "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6") {
         for(let $i = 0; $i < 47; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "7cf9c3c697fe13a2a38b884b2dce56606db49d4f488c4d0166d0d47bc16fe03f";
+        $[0] = "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6";
     }
     const [isStoreModalOpen, setIsStoreModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -1000,7 +1000,7 @@ function HomePage() {
     let t7;
     if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
         t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mt-7 flex flex-wrap gap-3",
+            className: "mt-7 flex flex-wrap gap-3 justify-center lg:justify-start",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     type: "button",
@@ -1012,7 +1012,7 @@ function HomePage() {
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
                     lineNumber: 81,
-                    columnNumber: 53
+                    columnNumber: 85
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                     href: "/shop",
@@ -1036,14 +1036,14 @@ function HomePage() {
     let t8;
     if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
         t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-xl",
+            className: "max-w-xl mx-auto lg:mx-0 text-center lg:text-left",
             children: [
                 t3,
                 t5,
                 t6,
                 t7,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-10 flex items-center gap-3 text-sm text-black/60",
+                    className: "mt-10 flex items-center gap-3 text-sm text-black/60 justify-center lg:justify-start",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             "aria-hidden": true,
@@ -1051,20 +1051,20 @@ function HomePage() {
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
                             lineNumber: 90,
-                            columnNumber: 121
+                            columnNumber: 194
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             children: "Custom · Bulk · Events · Merch"
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
                             lineNumber: 90,
-                            columnNumber: 198
+                            columnNumber: 271
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
                     lineNumber: 90,
-                    columnNumber: 52
+                    columnNumber: 93
                 }, this)
             ]
         }, void 0, true, {
@@ -1506,12 +1506,13 @@ function HomePage() {
     let t22;
     if ($[23] === Symbol.for("react.memo_cache_sentinel")) {
         t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mx-auto max-w-xl text-center lg:text-left lg:mx-0",
             children: [
                 t17,
                 t19,
                 t20,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-8 flex gap-3",
+                    className: "mt-8 flex flex-wrap gap-3 justify-center lg:justify-start",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             type: "button",
@@ -1524,7 +1525,7 @@ function HomePage() {
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
                             lineNumber: 186,
-                            columnNumber: 64
+                            columnNumber: 168
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "/contact",
@@ -1539,7 +1540,7 @@ function HomePage() {
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
                     lineNumber: 186,
-                    columnNumber: 31
+                    columnNumber: 93
                 }, this)
             ]
         }, void 0, true, {
