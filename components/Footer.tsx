@@ -71,13 +71,13 @@ export function Footer() {
         <div className="text-sm">
           <p className="font-semibold text-white">Social</p>
           <div className="mt-3 grid gap-2 text-white/80">
-            <a className="hover:text-[var(--brand-yellow)]" href="#" target="_blank" rel="noreferrer">
+            <a className="hover:text-[var(--brand-yellow)]" href="instagram.con/dritchwear" target="_blank" rel="noreferrer">
               Instagram
             </a>
-            <a className="hover:text-[var(--brand-yellow)]" href="#" target="_blank" rel="noreferrer">
+            <a className="hover:text-[var(--brand-yellow)]" href="tiktokcom/@dritchwear" target="_blank" rel="noreferrer">
               TikTok
             </a>
-            <a className="hover:text-[var(--brand-yellow)]" href="#" target="_blank" rel="noreferrer">
+            <a className="hover:text-[var(--brand-yellow)]" href="twitter.com/dritchwear" target="_blank" rel="noreferrer">
               X (Twitter)
             </a>
           </div>
@@ -87,7 +87,7 @@ export function Footer() {
         <div className="text-sm">
           <p className="font-semibold text-white">Stay in the loop</p>
           <p className="mt-2 text-white/70">
-            New drops, special offers, and updates — straight to your inbox.
+            New drops, special offers, and updates; straight to your inbox.
           </p>
 
           {success ? (
@@ -102,7 +102,7 @@ export function Footer() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-sm text-black outline-none"
+                className="w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-[16px] md:text-sm text-black outline-none"
               />
 
               <button

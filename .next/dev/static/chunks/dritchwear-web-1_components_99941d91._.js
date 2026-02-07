@@ -571,7 +571,7 @@ function Footer() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         className: "hover:text-[var(--brand-yellow)]",
-                                        href: "#",
+                                        href: "instagram.con/dritchwear",
                                         target: "_blank",
                                         rel: "noreferrer",
                                         children: "Instagram"
@@ -582,7 +582,7 @@ function Footer() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         className: "hover:text-[var(--brand-yellow)]",
-                                        href: "#",
+                                        href: "tiktokcom/@dritchwear",
                                         target: "_blank",
                                         rel: "noreferrer",
                                         children: "TikTok"
@@ -593,7 +593,7 @@ function Footer() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         className: "hover:text-[var(--brand-yellow)]",
-                                        href: "#",
+                                        href: "twitter.com/dritchwear",
                                         target: "_blank",
                                         rel: "noreferrer",
                                         children: "X (Twitter)"
@@ -627,7 +627,7 @@ function Footer() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-2 text-white/70",
-                                children: "New drops, special offers, and updates — straight to your inbox."
+                                children: "New drops, special offers, and updates; straight to your inbox."
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
                                 lineNumber: 88,
@@ -653,7 +653,7 @@ function Footer() {
                                         placeholder: "Enter your email",
                                         value: email,
                                         onChange: (e_0)=>setEmail(e_0.target.value),
-                                        className: "w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-sm text-black outline-none"
+                                        className: "w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-[16px] md:text-sm text-black outline-none"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
                                         lineNumber: 97,
