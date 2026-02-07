@@ -160,11 +160,11 @@ var _s = __turbopack_context__.k.signature();
 function ContactPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(66);
-    if ($[0] !== "3e326d759c42cdd01941291ae58619940709c4fbf51ef7ff646599251a1bfa78") {
+    if ($[0] !== "e7166c3277c4b81b97e253e919c3b847c1746772925895595ab10cbd653efa6f") {
         for(let $i = 0; $i < 66; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "3e326d759c42cdd01941291ae58619940709c4fbf51ef7ff646599251a1bfa78";
+        $[0] = "e7166c3277c4b81b97e253e919c3b847c1746772925895595ab10cbd653efa6f";
     }
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [sent, setSent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -548,7 +548,9 @@ function ContactPage() {
     let t24;
     if ($[31] !== loading || $[32] !== t23) {
         t24 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+            type: "submit",
             disabled: loading,
+            className: "btn btn-purple w-full",
             children: t23
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",

@@ -124,10 +124,13 @@ export default function ContactPage() {
                 setForm((p) => ({ ...p, message: e.target.value }))
               }
             />
-
-            <Button disabled={loading}>
-              {loading ? "Sending..." : "Send message"}
-            </Button>
+<Button
+  type="submit"
+  disabled={loading}
+  className="btn btn-purple w-full"
+>
+  {loading ? "Sending..." : "Send message"}
+</Button>
 
             <p className="text-xs text-black/60">
               For placing full orders, the complete experience is inside the

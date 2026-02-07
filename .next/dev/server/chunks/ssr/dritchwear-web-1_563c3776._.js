@@ -298,19 +298,21 @@ function ContactPage() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                        type: "submit",
                                         disabled: loading,
+                                        className: "btn btn-purple w-full",
                                         children: loading ? "Sending..." : "Send message"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 128,
-                                        columnNumber: 13
+                                        lineNumber: 127,
+                                        columnNumber: 1
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs text-black/60",
                                         children: "For placing full orders, the complete experience is inside the Dritchwear app."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 135,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -339,7 +341,7 @@ function ContactPage() {
                                                 children: "WhatsApp"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 144,
+                                                lineNumber: 147,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -347,7 +349,7 @@ function ContactPage() {
                                                 children: "Chat with us"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 150,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -355,7 +357,7 @@ function ContactPage() {
                                                 children: "For quick replies on orders, pricing, and delivery."
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 153,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -370,13 +372,13 @@ function ContactPage() {
                                                 children: "Open WhatsApp"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 154,
+                                                lineNumber: 157,
                                                 columnNumber: 7
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 146,
                                         columnNumber: 5
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -387,7 +389,7 @@ function ContactPage() {
                                                 children: "Email"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 169,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -395,7 +397,7 @@ function ContactPage() {
                                                 children: "dritchwear@gmail.com"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 172,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -403,7 +405,7 @@ function ContactPage() {
                                                 children: "Best for detailed requests and partnerships."
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 175,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -416,19 +418,19 @@ function ContactPage() {
                                                 children: "Send an Email"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 179,
                                                 columnNumber: 7
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 168,
                                         columnNumber: 5
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                lineNumber: 142,
+                                lineNumber: 145,
                                 columnNumber: 3
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -442,7 +444,7 @@ function ContactPage() {
                                                 children: "Location"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 192,
+                                                lineNumber: 195,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -450,7 +452,7 @@ function ContactPage() {
                                                 children: "Made in Nigeria"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 195,
+                                                lineNumber: 198,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -458,13 +460,13 @@ function ContactPage() {
                                                 children: "Shop 101 tailoring line, tradefair complex Lagos."
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 198,
+                                                lineNumber: 201,
                                                 columnNumber: 7
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 194,
                                         columnNumber: 5
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -475,7 +477,7 @@ function ContactPage() {
                                                 children: "Social"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 207,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -488,7 +490,7 @@ function ContactPage() {
                                                                 children: "Instagram:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                                lineNumber: 210,
+                                                                lineNumber: 213,
                                                                 columnNumber: 3
                                                             }, this),
                                                             " ",
@@ -500,13 +502,13 @@ function ContactPage() {
                                                                 children: "@dritchwear"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                                lineNumber: 211,
+                                                                lineNumber: 214,
                                                                 columnNumber: 3
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                        lineNumber: 209,
+                                                        lineNumber: 212,
                                                         columnNumber: 7
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -516,7 +518,7 @@ function ContactPage() {
                                                                 children: "X (Twitter):"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                                lineNumber: 222,
+                                                                lineNumber: 225,
                                                                 columnNumber: 3
                                                             }, this),
                                                             " ",
@@ -528,13 +530,13 @@ function ContactPage() {
                                                                 children: "@dritchwear"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                                lineNumber: 223,
+                                                                lineNumber: 226,
                                                                 columnNumber: 3
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 224,
                                                         columnNumber: 1
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -544,7 +546,7 @@ function ContactPage() {
                                                                 children: "TikTok:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                                lineNumber: 234,
+                                                                lineNumber: 237,
                                                                 columnNumber: 3
                                                             }, this),
                                                             " ",
@@ -556,31 +558,31 @@ function ContactPage() {
                                                                 children: "@dritchwear"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                                lineNumber: 235,
+                                                                lineNumber: 238,
                                                                 columnNumber: 3
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                        lineNumber: 233,
+                                                        lineNumber: 236,
                                                         columnNumber: 1
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 208,
+                                                lineNumber: 211,
                                                 columnNumber: 7
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 206,
                                         columnNumber: 5
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                lineNumber: 190,
+                                lineNumber: 193,
                                 columnNumber: 3
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -594,7 +596,7 @@ function ContactPage() {
                                                 children: "Heads up"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 252,
+                                                lineNumber: 255,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -602,7 +604,7 @@ function ContactPage() {
                                                 children: "Plan early for bulk orders"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 255,
+                                                lineNumber: 258,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -610,13 +612,13 @@ function ContactPage() {
                                                 children: "Bulk and event orders are best handled early so we can plan production and delivery properly."
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 258,
+                                                lineNumber: 261,
                                                 columnNumber: 7
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 254,
                                         columnNumber: 5
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -627,7 +629,7 @@ function ContactPage() {
                                                 children: "App notice"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 265,
+                                                lineNumber: 268,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -635,7 +637,7 @@ function ContactPage() {
                                                 children: "Order via the app"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 268,
+                                                lineNumber: 271,
                                                 columnNumber: 7
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -643,25 +645,25 @@ function ContactPage() {
                                                 children: "Browse the full catalogue and place orders inside the Dritchwear mobile app."
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 274,
                                                 columnNumber: 7
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                        lineNumber: 264,
+                                        lineNumber: 267,
                                         columnNumber: 5
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                                lineNumber: 250,
+                                lineNumber: 253,
                                 columnNumber: 3
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/contact/page.tsx",
-                        lineNumber: 140,
+                        lineNumber: 143,
                         columnNumber: 1
                     }, this)
                 ]

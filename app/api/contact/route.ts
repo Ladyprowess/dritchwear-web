@@ -3,8 +3,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// 🔑 CONTACT TEMPLATE ID (Resend)
-const CONTACT_TEMPLATE_ID = "contact"; // replace with real ID
+const CONTACT_TEMPLATE_ID = "contact"; // your real template ID
 
 export async function POST(req: Request) {
   try {
@@ -14,7 +13,7 @@ export async function POST(req: Request) {
       fullName,
       email,
       phone,
-      inquiryType, // 👈 THIS IS THE IMPORTANT PART
+      inquiryType,
       message,
     } = body;
 
@@ -27,10 +26,15 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Dritchwear <info@dritchwear.com>",
-      to: ["dritchwear@gmail.com"],
+
+      // ✅ SEND TO BOTH RECEIVER + SENDER
+      to: [
+        "dritchwear@gmail.com", // receiver
+        email,                  // sender
+      ],
+
       replyTo: email,
-    
-      // ✅ Use templates like this (NOT template_id)
+
       template: {
         id: CONTACT_TEMPLATE_ID,
         variables: {
@@ -42,7 +46,6 @@ export async function POST(req: Request) {
         },
       },
     });
-    
 
     return NextResponse.json({ success: true });
   } catch (error) {
