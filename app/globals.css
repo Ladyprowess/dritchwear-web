@@ -43,20 +43,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Optional dark mode */
-:root {
-  color-scheme: light;
-}
 
-/* Force your light tokens even when system is dark */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #0b0b0d;
-    --muted: rgba(11, 11, 13, 0.04);
-    --border: rgba(11, 11, 13, 0.10);
-  }
-}
 
 /* =========================
    Base Styles
