@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Card } from "./Card";
-import { Button } from "./Button";
 
 type Props = {
   id: string;
@@ -17,6 +16,9 @@ type Props = {
 
   ctaLabel?: string;
   ctaHref?: string;
+
+  // NEW: how often to show again (default 1 hour)
+  repeatEveryMs?: number;
 };
 
 export function AnnouncementModal({
@@ -28,18 +30,27 @@ export function AnnouncementModal({
   bullets = [],
   ctaLabel = "Start your order now!",
   ctaHref = "/shop",
+
+  // 1 hour by default. For 2 hours use: 2 * 60 * 60 * 1000
+  repeatEveryMs = 60 * 60 * 1000,
 }: Props) {
-  const storageKey = `dritchwear_announcement_dismissed_${id}`;
+  const storageKey = `dritchwear_announcement_last_closed_${id}`;
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const dismissed =
-      typeof window !== "undefined" && localStorage.getItem(storageKey);
-    if (!dismissed) setOpen(true);
-  }, [storageKey]);
+    if (typeof window === "undefined") return;
+
+    const lastClosedRaw = localStorage.getItem(storageKey);
+    const lastClosed = lastClosedRaw ? Number(lastClosedRaw) : 0;
+
+    const now = Date.now();
+    const canShowAgain = !lastClosed || now - lastClosed >= repeatEveryMs;
+
+    if (canShowAgain) setOpen(true);
+  }, [storageKey, repeatEveryMs]);
 
   const close = () => {
-    localStorage.setItem(storageKey, "1");
+    localStorage.setItem(storageKey, String(Date.now())); // store time closed
     setOpen(false);
   };
 
@@ -64,9 +75,7 @@ export function AnnouncementModal({
 
         {/* Subtitle */}
         {subtitle && (
-          <p className="mt-2 text-center text-sm text-black/70">
-            {subtitle}
-          </p>
+          <p className="mt-2 text-center text-sm text-black/70">{subtitle}</p>
         )}
 
         {/* Highlight */}
@@ -90,30 +99,27 @@ export function AnnouncementModal({
 
         {/* Message */}
         {message && (
-          <p className="mt-5 text-center text-sm text-black/75">
-            {message}
-          </p>
+          <p className="mt-5 text-center text-sm text-black/75">{message}</p>
         )}
 
         {/* Actions */}
         <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
-  <Link
-    href={ctaHref}
-    onClick={close}
-    className="btn btn-purple w-full sm:w-auto"
-  >
-    👉 {ctaLabel}
-  </Link>
+          <Link
+            href={ctaHref}
+            onClick={close}
+            className="btn btn-purple w-full sm:w-auto"
+          >
+            👉 {ctaLabel}
+          </Link>
 
-  <button
-    type="button"
-    className="btn w-full sm:w-auto border border-black/10"
-    onClick={close}
-  >
-    Close
-  </button>
-</div>
-
+          <button
+            type="button"
+            className="btn w-full sm:w-auto border border-black/10"
+            onClick={close}
+          >
+            Close
+          </button>
+        </div>
       </Card>
     </div>
   );

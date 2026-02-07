@@ -44,6 +44,8 @@ export default function HomePage() {
   message="Let’s bring your custom clothing and branded items to life; fast, clean, and stylish!"
   ctaLabel="Start your order now!"
   ctaHref="/shop"
+  repeatEveryMs={2 * 60 * 60 * 1000}
+
 />
 
 

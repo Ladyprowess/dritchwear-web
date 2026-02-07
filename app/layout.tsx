@@ -5,7 +5,7 @@ import { NotificationBar } from "@/components/NotificationBar";
 import { PurpleBackground } from "@/components/PurpleBackground";
 
 export const metadata = {
-  title: "DRITCHWEAR — Custom Streetwear & Branded Merch",
+  title: "DRITCHWEAR",
   description: "Wear it. Brand it. Gift it.",
 };
 
