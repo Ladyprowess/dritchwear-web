@@ -68,7 +68,7 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="mt-4 grid gap-4">
             <input
               required
-              className="rounded-xl border border-black/10 px-4 py-3 text-sm"
+              className="rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm"
               placeholder="Full name"
               value={form.fullName}
               onChange={(e) =>
@@ -79,7 +79,7 @@ export default function ContactPage() {
             <input
               required
               type="email"
-              className="rounded-xl border border-black/10 px-4 py-3 text-sm"
+              className="rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm"
               placeholder="Email address"
               value={form.email}
               onChange={(e) =>
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
             <input
               required
-              className="rounded-xl border border-black/10 px-4 py-3 text-sm"
+              className="rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm"
               placeholder="Phone number"
               value={form.phone}
               onChange={(e) =>
@@ -100,7 +100,7 @@ export default function ContactPage() {
             {/* ✅ INQUIRY TYPE (THIS IS WHAT YOU ASKED FOR) */}
             <select
               required
-              className="rounded-xl border border-black/10 px-4 py-3 text-sm"
+              className="rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm"
               value={form.inquiryType}
               onChange={(e) =>
                 setForm((p) => ({ ...p, inquiryType: e.target.value }))

@@ -171,7 +171,7 @@ function ContactPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         required: true,
-                                        className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+                                        className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
                                         placeholder: "Full name",
                                         value: form.fullName,
                                         onChange: (e)=>setForm((p)=>({
@@ -186,7 +186,7 @@ function ContactPage() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         required: true,
                                         type: "email",
-                                        className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+                                        className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
                                         placeholder: "Email address",
                                         value: form.email,
                                         onChange: (e)=>setForm((p)=>({
@@ -200,7 +200,7 @@ function ContactPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         required: true,
-                                        className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+                                        className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
                                         placeholder: "Phone number",
                                         value: form.phone,
                                         onChange: (e)=>setForm((p)=>({
@@ -214,7 +214,7 @@ function ContactPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                         required: true,
-                                        className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+                                        className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
                                         value: form.inquiryType,
                                         onChange: (e)=>setForm((p)=>({
                                                     ...p,

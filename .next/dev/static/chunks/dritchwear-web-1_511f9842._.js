@@ -160,11 +160,11 @@ var _s = __turbopack_context__.k.signature();
 function ContactPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(66);
-    if ($[0] !== "80c8463b48acd9f979e1b3ad0d7493f56e6e7ad68b4c3328ac0e25ea79696fcc") {
+    if ($[0] !== "50749d6a8d4aa4dc3378217f39ddf310b004594bd9ce2a018dd168faea6d7ae9") {
         for(let $i = 0; $i < 66; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "80c8463b48acd9f979e1b3ad0d7493f56e6e7ad68b4c3328ac0e25ea79696fcc";
+        $[0] = "50749d6a8d4aa4dc3378217f39ddf310b004594bd9ce2a018dd168faea6d7ae9";
     }
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [sent, setSent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -316,7 +316,7 @@ function ContactPage() {
     if ($[10] !== form.fullName) {
         t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
             required: true,
-            className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+            className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
             placeholder: "Full name",
             value: form.fullName,
             onChange: t6
@@ -349,7 +349,7 @@ function ContactPage() {
         t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
             required: true,
             type: "email",
-            className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+            className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
             placeholder: "Email address",
             value: form.email,
             onChange: t8
@@ -381,7 +381,7 @@ function ContactPage() {
     if ($[16] !== form.phone) {
         t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
             required: true,
-            className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+            className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
             placeholder: "Phone number",
             value: form.phone,
             onChange: t10
@@ -490,7 +490,7 @@ function ContactPage() {
     if ($[26] !== form.inquiryType) {
         t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
             required: true,
-            className: "rounded-xl border border-black/10 px-4 py-3 text-sm",
+            className: "rounded-xl border border-black/10 px-4 py-3 text-[16px] md:text-sm",
             value: form.inquiryType,
             onChange: t12,
             children: [
