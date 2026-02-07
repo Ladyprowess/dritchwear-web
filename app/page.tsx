@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { AnnouncementModal } from "@/components/AnnouncementModal";
 import { Card } from "@/components/Card";
+import { ManualGoogleReviews } from "@/components/ManualGoogleReviews";
+
+
+
 
 function SoftIcon() {
   return (
@@ -380,6 +384,12 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
+
+<ManualGoogleReviews />
+
+
+
 
 
       {/* WHY + APP PROMO */}
