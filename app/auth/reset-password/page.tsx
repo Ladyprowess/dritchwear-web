@@ -49,13 +49,19 @@ export default function ResetPasswordPage() {
   return (
     <div className="min-h-[70vh] grid place-items-center px-4 py-10">
       <Card className="w-full max-w-md p-6">
-      <p className="text-xs font-semibold text-[var(--brand-purple)] text-center">
-  DRITCHWEAR
-</p>
+  <div className="flex justify-center">
+    <img
+      src="/images/logo.png"
+      alt="Dritchwear"
+      className="h-6 w-auto"
+    />
+  </div>
 
-<div className="mt-3 h-[2px] w-12 bg-[var(--brand-yellow)] mx-auto" />
-        <h1 className="mt-2 text-xl font-extrabold text-center">Reset your password</h1>
-        <div className="mt-3 h-[2px] w-12 bg-[var(--yellow)] mx-auto" />
+  <h1 className="mt-3 text-xl font-extrabold text-center">
+    Reset your password
+  </h1>
+
+  <div className="mt-3 h-[2px] w-12 bg-[var(--brand-yellow)] mx-auto" />
 
         {status !== "success" ? (
           <div className="mt-6 grid gap-3">
