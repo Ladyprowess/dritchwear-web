@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Instagram, Twitter, Music2, Linkedin } from "lucide-react";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -34,7 +35,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[var(--black)] text-white mt-16">
-      <div className="mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-4">
+      <div className="mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-3">
         {/* BRAND */}
         <div>
           <div className="text-lg font-extrabold tracking-tight">
@@ -46,6 +47,50 @@ export function Footer() {
             Custom streetwear & branded merchandise; built for identity,
             visibility, and value.
           </p>
+
+          {/* SOCIAL ICONS */}
+<div className="mt-4 flex items-center gap-4 text-white/80">
+  <a
+    href="https://www.instagram.com/dritchwear"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Instagram"
+    className="hover:text-[var(--brand-yellow)] transition"
+  >
+    <Instagram size={20} />
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@dritchwear"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="TikTok"
+    className="hover:text-[var(--brand-yellow)] transition"
+  >
+    <Music2 size={20} />
+  </a>
+
+  <a
+    href="https://twitter.com/dritchwear"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="X (Twitter)"
+    className="hover:text-[var(--brand-yellow)] transition"
+  >
+    <Twitter size={20} />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/dritchwear"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="LinkedIn"
+    className="hover:text-[var(--brand-yellow)] transition"
+  >
+    <Linkedin size={20} />
+  </a>
+</div>
+
         </div>
 
         {/* SUPPORT */}
@@ -58,32 +103,22 @@ export function Footer() {
             <Link className="hover:text-[var(--brand-yellow)]" href="/returns">
               Returns & Exchanges
             </Link>
-            <Link className="hover:text-[var(--brand-yellow)]" href="/terms-of-service">
+            <Link
+              className="hover:text-[var(--brand-yellow)]"
+              href="/terms-of-service"
+            >
               Terms & Conditions
             </Link>
-            <Link className="hover:text-[var(--brand-yellow)]" href="/privacy-policy">
+            <Link
+              className="hover:text-[var(--brand-yellow)]"
+              href="/privacy-policy"
+            >
               Privacy Policy
             </Link>
           </div>
         </div>
 
-        {/* SOCIAL */}
-        <div className="text-sm">
-          <p className="font-semibold text-white">Social</p>
-          <div className="mt-3 grid gap-2 text-white/80">
-            <a className="hover:text-[var(--brand-yellow)]" href="instagram.con/dritchwear" target="_blank" rel="noreferrer">
-              Instagram
-            </a>
-            <a className="hover:text-[var(--brand-yellow)]" href="tiktokcom/@dritchwear" target="_blank" rel="noreferrer">
-              TikTok
-            </a>
-            <a className="hover:text-[var(--brand-yellow)]" href="twitter.com/dritchwear" target="_blank" rel="noreferrer">
-              X (Twitter)
-            </a>
-          </div>
-        </div>
-
-        {/* SUBSCRIBE (RESEND) */}
+        {/* SUBSCRIBE */}
         <div className="text-sm">
           <p className="font-semibold text-white">Stay in the loop</p>
           <p className="mt-2 text-white/70">
@@ -120,6 +155,7 @@ export function Footer() {
         </div>
       </div>
 
+      {/* COPYRIGHT */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-white/60">
           © {new Date().getFullYear()} Dritchwear. All rights reserved.

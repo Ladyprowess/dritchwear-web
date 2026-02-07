@@ -104,7 +104,7 @@ export default function ShopPage() {
             />
             <div className="p-4">
               <h3 className="font-bold text-[var(--brand-purple)]">{product.name}</h3>
-              <p className="mt-2 text-sm text-black/60">Tap to order via the app or WhatsApp</p>
+              <p className="mt-2 text-sm text-black/60">Tap to order</p>
             </div>
           </button>
         ))}

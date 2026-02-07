@@ -9,51 +9,51 @@ __turbopack_context__.s([
 const featuredProducts = [
     {
         id: "1",
-        name: "Oversized Tee (Custom)",
-        priceNote: "From ₦…",
-        category: "Tops",
+        name: "Introvert Zip Hoodie",
+        priceNote: "From ₦28,000",
+        category: "Hoodies",
         short: "Heavyweight feel. Clean fit.",
-        image: "/images/products/oversized-tee.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/introvert-zip-hoodie-1.png?raw=true"
     },
     {
         id: "2",
-        name: "Branded Polo",
+        name: "Plain Polo",
         priceNote: "From ₦…",
         category: "Corporate",
         short: "Premium stitch + clean branding.",
-        image: "/images/products/branded-polo.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/polo-1.jpeg?raw=true"
     },
     {
         id: "3",
-        name: "Hoodie (Streetwear)",
+        name: "Plain T-shirts",
         priceNote: "From ₦…",
         category: "Hoodies",
         short: "Relaxed fit. Built for daily wear.",
-        image: "/images/products/hoodie.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/tshirt-3.jpeg?raw=true"
     },
     {
         id: "4",
-        name: "Joggers",
+        name: "Jogger Pants",
         priceNote: "From ₦…",
         category: "Bottoms",
         short: "Structured, soft, and durable.",
-        image: "/images/products/joggers.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/jogger-pants-1.jpeg?raw=true"
     },
     {
         id: "5",
-        name: "Event Tees (Bulk)",
+        name: "Sleeveless Sweatshirt",
         priceNote: "Bulk pricing",
         category: "Bulk",
         short: "Fast turnaround for teams/events.",
-        image: "/images/products/event-tees.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/Sleeveless%20Sweatshirt-3.PNG?raw=true"
     },
     {
         id: "6",
-        name: "Branded Tote Bag",
+        name: "Tote Bag",
         priceNote: "From ₦…",
         category: "Merch",
         short: "Clean print. Strong fabric.",
-        image: "/images/products/tote-bag.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/tote-bag-3.png?raw=true"
     },
     {
         id: "7",
@@ -277,7 +277,7 @@ function ShopPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mt-2 text-sm text-black/60",
-                                        children: "Tap to order via the app or WhatsApp"
+                                        children: "Tap to order"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/shop/page.tsx",
                                         lineNumber: 107,

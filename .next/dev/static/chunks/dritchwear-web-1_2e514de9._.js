@@ -9,51 +9,51 @@ __turbopack_context__.s([
 const featuredProducts = [
     {
         id: "1",
-        name: "Oversized Tee (Custom)",
-        priceNote: "From ₦…",
-        category: "Tops",
+        name: "Introvert Zip Hoodie",
+        priceNote: "From ₦28,000",
+        category: "Hoodies",
         short: "Heavyweight feel. Clean fit.",
-        image: "/images/products/oversized-tee.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/introvert-zip-hoodie-1.png?raw=true"
     },
     {
         id: "2",
-        name: "Branded Polo",
+        name: "Plain Polo",
         priceNote: "From ₦…",
         category: "Corporate",
         short: "Premium stitch + clean branding.",
-        image: "/images/products/branded-polo.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/polo-1.jpeg?raw=true"
     },
     {
         id: "3",
-        name: "Hoodie (Streetwear)",
+        name: "Plain T-shirts",
         priceNote: "From ₦…",
         category: "Hoodies",
         short: "Relaxed fit. Built for daily wear.",
-        image: "/images/products/hoodie.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/tshirt-3.jpeg?raw=true"
     },
     {
         id: "4",
-        name: "Joggers",
+        name: "Jogger Pants",
         priceNote: "From ₦…",
         category: "Bottoms",
         short: "Structured, soft, and durable.",
-        image: "/images/products/joggers.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/jogger-pants-1.jpeg?raw=true"
     },
     {
         id: "5",
-        name: "Event Tees (Bulk)",
+        name: "Sleeveless Sweatshirt",
         priceNote: "Bulk pricing",
         category: "Bulk",
         short: "Fast turnaround for teams/events.",
-        image: "/images/products/event-tees.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/Sleeveless%20Sweatshirt-3.PNG?raw=true"
     },
     {
         id: "6",
-        name: "Branded Tote Bag",
+        name: "Tote Bag",
         priceNote: "From ₦…",
         category: "Merch",
         short: "Clean print. Strong fabric.",
-        image: "/images/products/tote-bag.jpg"
+        image: "https://github.com/Ladyprowess/store-image/blob/main/images/tote-bag-3.png?raw=true"
     },
     {
         id: "7",
@@ -98,11 +98,11 @@ const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.dritch
 const WHATSAPP_URL = "https://wa.me/2349110163722";
 /* ✅ Correct icons */ function AppleIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b") {
+    if ($[0] !== "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b";
+        $[0] = "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -144,11 +144,11 @@ const WHATSAPP_URL = "https://wa.me/2349110163722";
 _c = AppleIcon;
 /* ✅ Correct Google Play icon (triangle) */ function GooglePlayIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b") {
+    if ($[0] !== "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b";
+        $[0] = "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -198,11 +198,11 @@ _c = AppleIcon;
 _c1 = GooglePlayIcon;
 function WhatsAppIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b") {
+    if ($[0] !== "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b";
+        $[0] = "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -235,11 +235,11 @@ _c2 = WhatsAppIcon;
 function ShopPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(24);
-    if ($[0] !== "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b") {
+    if ($[0] !== "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4") {
         for(let $i = 0; $i < 24; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b";
+        $[0] = "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4";
     }
     const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [storeModal, setStoreModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -371,7 +371,7 @@ function ShopPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mt-2 text-sm text-black/60",
-                                        children: "Tap to order via the app or WhatsApp"
+                                        children: "Tap to order"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/shop/page.tsx",
                                         lineNumber: 125,
@@ -651,11 +651,11 @@ _s(ShopPage, "IDNq3pIbFYD703mjz821eQFXe70=");
 _c3 = ShopPage;
 /* SIMPLE MODAL */ function Modal(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b") {
+    if ($[0] !== "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4") {
         for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44321a0936e4247f08caaf1c37c28a4bca773d0349bc0e36369641272b176c6b";
+        $[0] = "1d5fbd6bb8d1566d9bc0a4a4fb9277c57960c73ff2d41bf97cb031c2dbf258e4";
     }
     const { children, onClose } = t0;
     let t1;

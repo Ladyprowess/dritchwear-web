@@ -410,9 +410,14 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/lucide-react/dist/esm/icons/instagram.js [app-client] (ecmascript) <export default as Instagram>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/lucide-react/dist/esm/icons/twitter.js [app-client] (ecmascript) <export default as Twitter>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music2$3e$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/lucide-react/dist/esm/icons/music-2.js [app-client] (ecmascript) <export default as Music2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-client] (ecmascript) <export default as Linkedin>");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 function Footer() {
@@ -448,7 +453,7 @@ function Footer() {
         className: "bg-[var(--black)] text-white mt-16",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-4",
+                className: "mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-3",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
@@ -460,7 +465,7 @@ function Footer() {
                                         children: "DRITCH"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 39,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -470,13 +475,13 @@ function Footer() {
                                         children: "WEAR"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 40,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 37,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -484,13 +489,94 @@ function Footer() {
                                 children: "Custom streetwear & branded merchandise; built for identity, visibility, and value."
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-4 flex items-center gap-4 text-white/80",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "https://www.instagram.com/dritchwear",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        "aria-label": "Instagram",
+                                        className: "hover:text-[var(--brand-yellow)] transition",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__["Instagram"], {
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                            lineNumber: 53,
+                                            columnNumber: 5
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                        lineNumber: 52,
+                                        columnNumber: 3
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "https://www.tiktok.com/@dritchwear",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        "aria-label": "TikTok",
+                                        className: "hover:text-[var(--brand-yellow)] transition",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music2$3e$__["Music2"], {
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                            lineNumber: 57,
+                                            columnNumber: 5
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                        lineNumber: 56,
+                                        columnNumber: 3
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "https://twitter.com/dritchwear",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        "aria-label": "X (Twitter)",
+                                        className: "hover:text-[var(--brand-yellow)] transition",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__["Twitter"], {
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                            lineNumber: 61,
+                                            columnNumber: 5
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                        lineNumber: 60,
+                                        columnNumber: 3
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "https://www.linkedin.com/company/dritchwear",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        "aria-label": "LinkedIn",
+                                        className: "hover:text-[var(--brand-yellow)] transition",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                            lineNumber: 65,
+                                            columnNumber: 5
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                        lineNumber: 64,
+                                        columnNumber: 3
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
+                                lineNumber: 51,
+                                columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                        lineNumber: 36,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -501,7 +587,7 @@ function Footer() {
                                 children: "Support"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 52,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,7 +599,7 @@ function Footer() {
                                         children: "Size Guide"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 75,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -522,7 +608,7 @@ function Footer() {
                                         children: "Returns & Exchanges"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -531,7 +617,7 @@ function Footer() {
                                         children: "Terms & Conditions"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 60,
+                                        lineNumber: 81,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -540,78 +626,19 @@ function Footer() {
                                         children: "Privacy Policy"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 53,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                        lineNumber: 51,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-sm",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "font-semibold text-white",
-                                children: "Social"
-                            }, void 0, false, {
-                                fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 71,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-3 grid gap-2 text-white/80",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        className: "hover:text-[var(--brand-yellow)]",
-                                        href: "instagram.con/dritchwear",
-                                        target: "_blank",
-                                        rel: "noreferrer",
-                                        children: "Instagram"
-                                    }, void 0, false, {
-                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 73,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        className: "hover:text-[var(--brand-yellow)]",
-                                        href: "tiktokcom/@dritchwear",
-                                        target: "_blank",
-                                        rel: "noreferrer",
-                                        children: "TikTok"
-                                    }, void 0, false, {
-                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 76,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        className: "hover:text-[var(--brand-yellow)]",
-                                        href: "twitter.com/dritchwear",
-                                        target: "_blank",
-                                        rel: "noreferrer",
-                                        children: "X (Twitter)"
-                                    }, void 0, false, {
-                                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 79,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 72,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                        lineNumber: 70,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -622,7 +649,7 @@ function Footer() {
                                 children: "Stay in the loop"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 87,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -630,7 +657,7 @@ function Footer() {
                                 children: "New drops, special offers, and updates; straight to your inbox."
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 88,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this),
                             success ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -641,7 +668,7 @@ function Footer() {
                                 children: "You’re subscribed 🎉"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 92,
+                                lineNumber: 97,
                                 columnNumber: 22
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                 onSubmit: handleSubscribe,
@@ -656,7 +683,7 @@ function Footer() {
                                         className: "w-full rounded-xl border border-white/10 bg-white px-4 py-3 text-[16px] md:text-sm text-black outline-none"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -669,7 +696,7 @@ function Footer() {
                                         children: loading ? "Subscribing..." : "Subscribe"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 104,
                                         columnNumber: 15
                                     }, this),
                                     error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -677,25 +704,25 @@ function Footer() {
                                         children: error
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 110,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                                lineNumber: 96,
+                                lineNumber: 101,
                                 columnNumber: 20
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                        lineNumber: 86,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -709,18 +736,18 @@ function Footer() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                    lineNumber: 111,
+                    lineNumber: 117,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-                lineNumber: 110,
+                lineNumber: 116,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/dritchwear-web-1/components/Footer.tsx",
-        lineNumber: 33,
+        lineNumber: 34,
         columnNumber: 10
     }, this);
 }
