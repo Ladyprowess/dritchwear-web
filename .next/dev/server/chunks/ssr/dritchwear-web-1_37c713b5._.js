@@ -264,7 +264,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$co
 ;
 ;
 const metadata = {
-    title: "DRITCHWEAR — Custom Streetwear & Branded Merch",
+    title: "DRITCHWEAR",
     description: "Wear it. Brand it. Gift it."
 };
 function RootLayout({ children }) {

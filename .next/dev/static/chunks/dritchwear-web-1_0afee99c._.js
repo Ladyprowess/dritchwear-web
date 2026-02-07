@@ -72,7 +72,6 @@ __turbopack_context__.s([
     ()=>AnnouncementModal
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/dritchwear-web-1/components/Card.tsx [app-client] (ecmascript)");
@@ -82,289 +81,158 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
-function AnnouncementModal(t0) {
+function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = [], ctaLabel = "Start your order now!", ctaHref = "/shop", // 1 hour by default. For 2 hours use: 2 * 60 * 60 * 1000
+repeatEveryMs = 60 * 60 * 1000 }) {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(37);
-    if ($[0] !== "9ff4e3d1e41c41db9698a1751c44f7c9b005db174afcd44f59007b12d9b82f41") {
-        for(let $i = 0; $i < 37; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "9ff4e3d1e41c41db9698a1751c44f7c9b005db174afcd44f59007b12d9b82f41";
-    }
-    const { id, title, message, subtitle, highlight, bullets: t1, ctaLabel: t2, ctaHref: t3 } = t0;
-    let t4;
-    if ($[1] !== t1) {
-        t4 = t1 === undefined ? [] : t1;
-        $[1] = t1;
-        $[2] = t4;
-    } else {
-        t4 = $[2];
-    }
-    const bullets = t4;
-    const ctaLabel = t2 === undefined ? "Start your order now!" : t2;
-    const ctaHref = t3 === undefined ? "/shop" : t3;
-    const storageKey = `dritchwear_announcement_dismissed_${id}`;
+    const storageKey = `dritchwear_announcement_last_closed_${id}`;
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    let t5;
-    let t6;
-    if ($[3] !== storageKey) {
-        t5 = ({
-            "AnnouncementModal[useEffect()]": ()=>{
-                const dismissed = ("TURBOPACK compile-time value", "object") !== "undefined" && localStorage.getItem(storageKey);
-                if (!dismissed) {
-                    setOpen(true);
-                }
-            }
-        })["AnnouncementModal[useEffect()]"];
-        t6 = [
-            storageKey
-        ];
-        $[3] = storageKey;
-        $[4] = t5;
-        $[5] = t6;
-    } else {
-        t5 = $[4];
-        t6 = $[5];
-    }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t5, t6);
-    let t7;
-    if ($[6] !== storageKey) {
-        t7 = ({
-            "AnnouncementModal[close]": ()=>{
-                localStorage.setItem(storageKey, "1");
-                setOpen(false);
-            }
-        })["AnnouncementModal[close]"];
-        $[6] = storageKey;
-        $[7] = t7;
-    } else {
-        t7 = $[7];
-    }
-    const close = t7;
-    if (!open) {
-        return null;
-    }
-    let t8;
-    if ($[8] !== close) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            "aria-label": "Close",
-            className: "absolute right-4 top-4 rounded-lg p-2 hover:bg-black/[0.05]",
-            onClick: close,
-            children: "✕"
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 90,
-            columnNumber: 10
-        }, this);
-        $[8] = close;
-        $[9] = t8;
-    } else {
-        t8 = $[9];
-    }
-    let t9;
-    if ($[10] !== title) {
-        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-            className: "text-center text-xl md:text-2xl font-extrabold text-[var(--purple)]",
-            children: [
-                "🎉 ",
-                title
-            ]
-        }, void 0, true, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 98,
-            columnNumber: 10
-        }, this);
-        $[10] = title;
-        $[11] = t9;
-    } else {
-        t9 = $[11];
-    }
-    let t10;
-    if ($[12] !== subtitle) {
-        t10 = subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "mt-2 text-center text-sm text-black/70",
-            children: subtitle
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 106,
-            columnNumber: 23
-        }, this);
-        $[12] = subtitle;
-        $[13] = t10;
-    } else {
-        t10 = $[13];
-    }
-    let t11;
-    if ($[14] !== highlight) {
-        t11 = highlight && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "mt-4 text-center text-lg font-extrabold text-black",
-            children: highlight
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 114,
-            columnNumber: 24
-        }, this);
-        $[14] = highlight;
-        $[15] = t11;
-    } else {
-        t11 = $[15];
-    }
-    let t12;
-    if ($[16] !== bullets) {
-        t12 = bullets.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mt-5 space-y-3",
-            children: bullets.map(_AnnouncementModalBulletsMap)
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 122,
-            columnNumber: 33
-        }, this);
-        $[16] = bullets;
-        $[17] = t12;
-    } else {
-        t12 = $[17];
-    }
-    let t13;
-    if ($[18] !== message) {
-        t13 = message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "mt-5 text-center text-sm text-black/75",
-            children: message
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 130,
-            columnNumber: 22
-        }, this);
-        $[18] = message;
-        $[19] = t13;
-    } else {
-        t13 = $[19];
-    }
-    let t14;
-    if ($[20] !== close || $[21] !== ctaHref || $[22] !== ctaLabel) {
-        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-            href: ctaHref,
-            onClick: close,
-            className: "btn btn-purple w-full sm:w-auto",
-            children: [
-                "👉 ",
-                ctaLabel
-            ]
-        }, void 0, true, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 138,
-            columnNumber: 11
-        }, this);
-        $[20] = close;
-        $[21] = ctaHref;
-        $[22] = ctaLabel;
-        $[23] = t14;
-    } else {
-        t14 = $[23];
-    }
-    let t15;
-    if ($[24] !== close) {
-        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            type: "button",
-            className: "btn w-full sm:w-auto border border-black/10",
-            onClick: close,
-            children: "Close"
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 148,
-            columnNumber: 11
-        }, this);
-        $[24] = close;
-        $[25] = t15;
-    } else {
-        t15 = $[25];
-    }
-    let t16;
-    if ($[26] !== t14 || $[27] !== t15) {
-        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mt-7 flex flex-col sm:flex-row gap-3 justify-center",
-            children: [
-                t14,
-                t15
-            ]
-        }, void 0, true, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 156,
-            columnNumber: 11
-        }, this);
-        $[26] = t14;
-        $[27] = t15;
-        $[28] = t16;
-    } else {
-        t16 = $[28];
-    }
-    let t17;
-    if ($[29] !== t10 || $[30] !== t11 || $[31] !== t12 || $[32] !== t13 || $[33] !== t16 || $[34] !== t8 || $[35] !== t9) {
-        t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black/40 p-4",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                className: "relative w-full max-w-xl rounded-2xl p-6 md:p-8",
-                children: [
-                    t8,
-                    t9,
-                    t10,
-                    t11,
-                    t12,
-                    t13,
-                    t16
-                ]
-            }, void 0, true, {
-                fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                lineNumber: 165,
-                columnNumber: 109
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 165,
-            columnNumber: 11
-        }, this);
-        $[29] = t10;
-        $[30] = t11;
-        $[31] = t12;
-        $[32] = t13;
-        $[33] = t16;
-        $[34] = t8;
-        $[35] = t9;
-        $[36] = t17;
-    } else {
-        t17 = $[36];
-    }
-    return t17;
-}
-_s(AnnouncementModal, "e27cRtNMdAs0U0o1oHlS6A8OEBo=");
-_c = AnnouncementModal;
-function _AnnouncementModalBulletsMap(item, idx) {
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "AnnouncementModal.useEffect": ()=>{
+            if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+            ;
+            const lastClosedRaw = localStorage.getItem(storageKey);
+            const lastClosed = lastClosedRaw ? Number(lastClosedRaw) : 0;
+            const now = Date.now();
+            const canShowAgain = !lastClosed || now - lastClosed >= repeatEveryMs;
+            if (canShowAgain) setOpen(true);
+        }
+    }["AnnouncementModal.useEffect"], [
+        storageKey,
+        repeatEveryMs
+    ]);
+    const close = ()=>{
+        localStorage.setItem(storageKey, String(Date.now())); // store time closed
+        setOpen(false);
+    };
+    if (!open) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex items-start gap-3",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "text-green-600",
-                children: "✅"
-            }, void 0, false, {
-                fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                lineNumber: 180,
-                columnNumber: 60
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-sm text-black/80",
-                children: item
-            }, void 0, false, {
-                fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                lineNumber: 180,
-                columnNumber: 101
-            }, this)
-        ]
-    }, idx, true, {
+        className: "fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black/40 p-4",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+            className: "relative w-full max-w-xl rounded-2xl p-6 md:p-8",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    "aria-label": "Close",
+                    className: "absolute right-4 top-4 rounded-lg p-2 hover:bg-black/[0.05]",
+                    onClick: close,
+                    children: "✕"
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 51,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                    className: "text-center text-xl md:text-2xl font-extrabold text-[var(--purple)]",
+                    children: [
+                        "🎉 ",
+                        title
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 56,
+                    columnNumber: 9
+                }, this),
+                subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "mt-2 text-center text-sm text-black/70",
+                    children: subtitle
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 61,
+                    columnNumber: 22
+                }, this),
+                highlight && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "mt-4 text-center text-lg font-extrabold text-black",
+                    children: highlight
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 64,
+                    columnNumber: 23
+                }, this),
+                bullets.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-5 space-y-3",
+                    children: bullets.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-start gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-green-600",
+                                    children: "✅"
+                                }, void 0, false, {
+                                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                                    lineNumber: 71,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-sm text-black/80",
+                                    children: item
+                                }, void 0, false, {
+                                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                                    lineNumber: 72,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, idx, true, {
+                            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                            lineNumber: 70,
+                            columnNumber: 41
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 69,
+                    columnNumber: 32
+                }, this),
+                message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "mt-5 text-center text-sm text-black/75",
+                    children: message
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 77,
+                    columnNumber: 21
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-7 flex flex-col sm:flex-row gap-3 justify-center",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: ctaHref,
+                            onClick: close,
+                            className: "btn btn-purple w-full sm:w-auto",
+                            children: [
+                                "👉 ",
+                                ctaLabel
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                            lineNumber: 81,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            type: "button",
+                            className: "btn w-full sm:w-auto border border-black/10",
+                            onClick: close,
+                            children: "Close"
+                        }, void 0, false, {
+                            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                            lineNumber: 85,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 80,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+            lineNumber: 49,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-        lineNumber: 180,
+        lineNumber: 48,
         columnNumber: 10
     }, this);
 }
+_s(AnnouncementModal, "e27cRtNMdAs0U0o1oHlS6A8OEBo=");
+_c = AnnouncementModal;
 var _c;
 __turbopack_context__.k.register(_c, "AnnouncementModal");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -812,11 +680,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 function SoftIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6") {
+    if ($[0] !== "5d586c947dbc0c7d359f96a7e6eaa6d17c713518ac4ecb6874481dcf73ed8163") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6";
+        $[0] = "5d586c947dbc0c7d359f96a7e6eaa6d17c713518ac4ecb6874481dcf73ed8163";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -850,11 +718,11 @@ _c = SoftIcon;
 function HomePage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(47);
-    if ($[0] !== "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6") {
+    if ($[0] !== "5d586c947dbc0c7d359f96a7e6eaa6d17c713518ac4ecb6874481dcf73ed8163") {
         for(let $i = 0; $i < 47; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "e4c016bae7fd6116a2eee5fdfc7cbfc0eb322476285c54e3462bb5f5bfa197a6";
+        $[0] = "5d586c947dbc0c7d359f96a7e6eaa6d17c713518ac4ecb6874481dcf73ed8163";
     }
     const [isStoreModalOpen, setIsStoreModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -872,7 +740,8 @@ function HomePage() {
             ],
             message: "Let\u2019s bring your custom clothing and branded items to life; fast, clean, and stylish!",
             ctaLabel: "Start your order now!",
-            ctaHref: "/shop"
+            ctaHref: "/shop",
+            repeatEveryMs: 7200000
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/page.tsx",
             lineNumber: 37,

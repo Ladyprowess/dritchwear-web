@@ -37,17 +37,24 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$co
 ;
 ;
 ;
-function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = [], ctaLabel = "Start your order now!", ctaHref = "/shop" }) {
-    const storageKey = `dritchwear_announcement_dismissed_${id}`;
+function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = [], ctaLabel = "Start your order now!", ctaHref = "/shop", // 1 hour by default. For 2 hours use: 2 * 60 * 60 * 1000
+repeatEveryMs = 60 * 60 * 1000 }) {
+    const storageKey = `dritchwear_announcement_last_closed_${id}`;
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const dismissed = ("TURBOPACK compile-time value", "undefined") !== "undefined" && localStorage.getItem(storageKey);
-        if ("TURBOPACK compile-time truthy", 1) setOpen(true);
+        if ("TURBOPACK compile-time truthy", 1) return;
+        //TURBOPACK unreachable
+        ;
+        const lastClosedRaw = undefined;
+        const lastClosed = undefined;
+        const now = undefined;
+        const canShowAgain = undefined;
     }, [
-        storageKey
+        storageKey,
+        repeatEveryMs
     ]);
     const close = ()=>{
-        localStorage.setItem(storageKey, "1");
+        localStorage.setItem(storageKey, String(Date.now())); // store time closed
         setOpen(false);
     };
     if (!open) return null;
@@ -63,7 +70,7 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                     children: "✕"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 52,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -74,7 +81,7 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 61,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this),
                 subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -82,7 +89,7 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                     children: subtitle
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 67,
+                    lineNumber: 78,
                     columnNumber: 11
                 }, this),
                 highlight && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -90,7 +97,7 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                     children: highlight
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 74,
+                    lineNumber: 83,
                     columnNumber: 11
                 }, this),
                 bullets.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -103,7 +110,7 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                                     children: "✅"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 93,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -111,18 +118,18 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                                     children: item
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 94,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, idx, true, {
                             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                            lineNumber: 83,
+                            lineNumber: 92,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 81,
+                    lineNumber: 90,
                     columnNumber: 11
                 }, this),
                 message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -130,7 +137,7 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                     children: message
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 93,
+                    lineNumber: 102,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -146,8 +153,8 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                            lineNumber: 100,
-                            columnNumber: 3
+                            lineNumber: 107,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             type: "button",
@@ -156,24 +163,24 @@ function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = 
                             children: "Close"
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                            lineNumber: 108,
-                            columnNumber: 3
+                            lineNumber: 115,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 99,
+                    lineNumber: 106,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 50,
+            lineNumber: 61,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-        lineNumber: 49,
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 }
@@ -577,7 +584,8 @@ function HomePage() {
                 ],
                 message: "Let’s bring your custom clothing and branded items to life; fast, clean, and stylish!",
                 ctaLabel: "Start your order now!",
-                ctaHref: "/shop"
+                ctaHref: "/shop",
+                repeatEveryMs: 2 * 60 * 60 * 1000
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
                 lineNumber: 34,
@@ -587,7 +595,7 @@ function HomePage() {
                 className: "absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[var(--soft-purple)] blur-3xl"
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 53,
+                lineNumber: 55,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -597,20 +605,20 @@ function HomePage() {
                         className: "absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[var(--brand-purple)]/20 blur-3xl"
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 56,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[var(--yellow)]/10 blur-3xl"
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 57,
+                        lineNumber: 59,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 55,
+                lineNumber: 57,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -624,7 +632,7 @@ function HomePage() {
                                 children: "Premium custom streetwear & branded merch"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -634,7 +642,7 @@ function HomePage() {
                                         children: "Wear it."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 71,
                                         columnNumber: 3
                                     }, this),
                                     " ",
@@ -645,25 +653,25 @@ function HomePage() {
                                         children: "Brand it."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 72,
                                         columnNumber: 3
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 73,
                                         columnNumber: 3
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Gift it."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 74,
                                         columnNumber: 3
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 68,
+                                lineNumber: 70,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -671,7 +679,7 @@ function HomePage() {
                                 children: "Dritchwear helps individuals, brands, and organisations turn clothing into identity, visibility, and value."
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 76,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -684,7 +692,7 @@ function HomePage() {
                                         children: "Shop on the App"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -693,13 +701,13 @@ function HomePage() {
                                         children: "View Collection"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 92,
                                         columnNumber: 1
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 81,
+                                lineNumber: 83,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -710,26 +718,26 @@ function HomePage() {
                                         className: "inline-block h-[2px] w-8 bg-[#FDB813]"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 101,
                                         columnNumber: 3
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Custom · Bulk · Events · Merch"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 105,
                                         columnNumber: 3
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 98,
+                                lineNumber: 100,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 63,
+                        lineNumber: 65,
                         columnNumber: 1
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -739,7 +747,7 @@ function HomePage() {
                                 className: "absolute inset-0 rounded-3xl bg-gradient-to-tr from-black/25 via-transparent to-transparent z-10"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 110,
+                                lineNumber: 112,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -748,33 +756,33 @@ function HomePage() {
                                 className: "rounded-3xl object-cover w-full h-[420px] md:h-[520px] border border-black/10"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 111,
+                                lineNumber: 113,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute -bottom-4 -left-4 h-16 w-16 rounded-2xl bg-[var(--brand-purple)]/10 border border-black/10"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 117,
+                                lineNumber: 119,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute -top-4 -right-4 h-16 w-16 rounded-2xl bg-[var(--yellow)]/20 border border-black/10"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 118,
+                                lineNumber: 120,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 109,
+                        lineNumber: 111,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 60,
+                lineNumber: 62,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -788,7 +796,7 @@ function HomePage() {
                                 children: "Why Choose"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 125,
+                                lineNumber: 127,
                                 columnNumber: 3
                             }, this),
                             " ",
@@ -797,13 +805,13 @@ function HomePage() {
                                 children: "Dritchwear"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 126,
+                                lineNumber: 128,
                                 columnNumber: 3
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 124,
+                        lineNumber: 126,
                         columnNumber: 3
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -811,7 +819,7 @@ function HomePage() {
                         children: "We're committed to delivering exceptional quality and service in every aspect of your shopping experience."
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 129,
+                        lineNumber: 131,
                         columnNumber: 3
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -833,17 +841,17 @@ function HomePage() {
                                                 fill: "currentColor"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 146,
+                                                lineNumber: 148,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 141,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 139,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -851,7 +859,7 @@ function HomePage() {
                                         children: "Top Quality"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 154,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -859,13 +867,13 @@ function HomePage() {
                                         children: "We use good fabrics and pay attention to every detail in every item."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 153,
+                                        lineNumber: 155,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 136,
+                                lineNumber: 138,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -886,17 +894,17 @@ function HomePage() {
                                                 strokeLinejoin: "round"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 171,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 164,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 162,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -904,7 +912,7 @@ function HomePage() {
                                         children: "Fast Shipping"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 179,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -912,13 +920,13 @@ function HomePage() {
                                         children: "We send out orders quickly, so you get your clothes on time."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 178,
+                                        lineNumber: 180,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 159,
+                                lineNumber: 161,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -938,17 +946,17 @@ function HomePage() {
                                                 strokeWidth: "2"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 194,
+                                                lineNumber: 196,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 189,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 187,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -956,7 +964,7 @@ function HomePage() {
                                         children: "Secure Shopping"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 201,
+                                        lineNumber: 203,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -964,13 +972,13 @@ function HomePage() {
                                         children: "Your information is kept safe with strong security."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 204,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 184,
+                                lineNumber: 186,
                                 columnNumber: 5
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -991,17 +999,17 @@ function HomePage() {
                                                 strokeLinecap: "round"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 218,
+                                                lineNumber: 220,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 211,
+                                            lineNumber: 213,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 209,
+                                        lineNumber: 211,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1009,7 +1017,7 @@ function HomePage() {
                                         children: "24/7 Support"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 228,
                                         columnNumber: 7
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1017,25 +1025,25 @@ function HomePage() {
                                         children: "Our team is always ready to help you, day or night."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 227,
+                                        lineNumber: 229,
                                         columnNumber: 7
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                lineNumber: 208,
+                                lineNumber: 210,
                                 columnNumber: 5
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                        lineNumber: 134,
+                        lineNumber: 136,
                         columnNumber: 3
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 123,
+                lineNumber: 125,
                 columnNumber: 1
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1051,7 +1059,7 @@ function HomePage() {
                                     children: "Built for modern streetwear"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 241,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1063,14 +1071,14 @@ function HomePage() {
                                         "Built for identity.",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 249,
+                                            lineNumber: 251,
                                             columnNumber: 9
                                         }, this),
                                         "Designed for visibility."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 244,
+                                    lineNumber: 246,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1078,7 +1086,7 @@ function HomePage() {
                                     children: "We don’t just print clothes. We help you show up with confidence — whether it’s your personal style, your brand, or your next big event."
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 253,
+                                    lineNumber: 255,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1094,7 +1102,7 @@ function HomePage() {
                                             children: "Open the App"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 260,
+                                            lineNumber: 262,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1103,19 +1111,19 @@ function HomePage() {
                                             children: "Custom Orders"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 270,
+                                            lineNumber: 272,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 258,
+                                    lineNumber: 260,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 238,
+                            lineNumber: 240,
                             columnNumber: 3
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1139,17 +1147,17 @@ function HomePage() {
                                                     strokeLinejoin: "round"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 287,
+                                                    lineNumber: 289,
                                                     columnNumber: 13
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 286,
+                                                lineNumber: 288,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 284,
+                                            lineNumber: 286,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1157,7 +1165,7 @@ function HomePage() {
                                             children: "Custom Streetwear"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 295,
+                                            lineNumber: 297,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1165,13 +1173,13 @@ function HomePage() {
                                             children: "Oversized fits. Clean cuts. Premium feel."
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 298,
+                                            lineNumber: 300,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 283,
+                                    lineNumber: 285,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1193,7 +1201,7 @@ function HomePage() {
                                                         strokeLinejoin: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 310,
                                                         columnNumber: 13
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -1203,18 +1211,18 @@ function HomePage() {
                                                         fill: "currentColor"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 314,
+                                                        lineNumber: 316,
                                                         columnNumber: 13
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 307,
+                                                lineNumber: 309,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 305,
+                                            lineNumber: 307,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1222,7 +1230,7 @@ function HomePage() {
                                             children: "Branded Merch"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 317,
+                                            lineNumber: 319,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1230,13 +1238,13 @@ function HomePage() {
                                             children: "Tote bags, caps, bottles, boxes."
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 319,
+                                            lineNumber: 321,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 304,
+                                    lineNumber: 306,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1258,7 +1266,7 @@ function HomePage() {
                                                         strokeLinejoin: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 329,
+                                                        lineNumber: 331,
                                                         columnNumber: 13
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1268,7 +1276,7 @@ function HomePage() {
                                                         strokeLinejoin: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 335,
+                                                        lineNumber: 337,
                                                         columnNumber: 13
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1277,18 +1285,18 @@ function HomePage() {
                                                         strokeWidth: "2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 341,
+                                                        lineNumber: 343,
                                                         columnNumber: 13
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 328,
+                                                lineNumber: 330,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 326,
+                                            lineNumber: 328,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1296,7 +1304,7 @@ function HomePage() {
                                             children: "Bulk Orders"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 348,
+                                            lineNumber: 350,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1304,13 +1312,13 @@ function HomePage() {
                                             children: "For teams, events, campaigns and gifting."
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 349,
+                                            lineNumber: 351,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 325,
+                                    lineNumber: 327,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1332,7 +1340,7 @@ function HomePage() {
                                                         strokeLinejoin: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 365,
+                                                        lineNumber: 367,
                                                         columnNumber: 7
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1343,18 +1351,18 @@ function HomePage() {
                                                         strokeLinejoin: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 371,
+                                                        lineNumber: 373,
                                                         columnNumber: 7
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 358,
+                                                lineNumber: 360,
                                                 columnNumber: 5
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 356,
+                                            lineNumber: 358,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1362,7 +1370,7 @@ function HomePage() {
                                             children: "Durable Quality"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 380,
+                                            lineNumber: 382,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1370,35 +1378,35 @@ function HomePage() {
                                             children: "Strong fabrics, solid stitching, and finishes built to last."
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 381,
+                                            lineNumber: 383,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 355,
+                                    lineNumber: 357,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 281,
+                            lineNumber: 283,
                             columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                    lineNumber: 237,
+                    lineNumber: 239,
                     columnNumber: 3
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 236,
+                lineNumber: 238,
                 columnNumber: 1
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$ManualGoogleReviews$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ManualGoogleReviews"], {}, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 390,
+                lineNumber: 392,
                 columnNumber: 1
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1417,7 +1425,7 @@ function HomePage() {
                                             children: "Our"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 401,
+                                            lineNumber: 403,
                                             columnNumber: 3
                                         }, this),
                                         " ",
@@ -1426,13 +1434,13 @@ function HomePage() {
                                             children: "Offering"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 402,
+                                            lineNumber: 404,
                                             columnNumber: 3
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 400,
+                                    lineNumber: 402,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1456,7 +1464,7 @@ function HomePage() {
                                                                 strokeWidth: "2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                                lineNumber: 410,
+                                                                lineNumber: 412,
                                                                 columnNumber: 9
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1467,18 +1475,18 @@ function HomePage() {
                                                                 strokeLinejoin: "round"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                                lineNumber: 411,
+                                                                lineNumber: 413,
                                                                 columnNumber: 9
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 409,
+                                                        lineNumber: 411,
                                                         columnNumber: 7
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 408,
+                                                    lineNumber: 410,
                                                     columnNumber: 5
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1488,7 +1496,7 @@ function HomePage() {
                                                             children: "Quality that lasts"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 415,
+                                                            lineNumber: 417,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1496,19 +1504,19 @@ function HomePage() {
                                                             children: "Strong fabrics, neat stitching, clean finishing."
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 416,
+                                                            lineNumber: 418,
                                                             columnNumber: 7
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 414,
+                                                    lineNumber: 416,
                                                     columnNumber: 5
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 407,
+                                            lineNumber: 409,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1529,17 +1537,17 @@ function HomePage() {
                                                             strokeLinecap: "round"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 424,
+                                                            lineNumber: 426,
                                                             columnNumber: 9
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 423,
+                                                        lineNumber: 425,
                                                         columnNumber: 7
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 422,
+                                                    lineNumber: 424,
                                                     columnNumber: 5
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1549,7 +1557,7 @@ function HomePage() {
                                                             children: "Good customer service"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 428,
+                                                            lineNumber: 430,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1557,19 +1565,19 @@ function HomePage() {
                                                             children: "Clear communication and fast updates."
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 429,
+                                                            lineNumber: 431,
                                                             columnNumber: 7
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 427,
+                                                    lineNumber: 429,
                                                     columnNumber: 5
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 421,
+                                            lineNumber: 423,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1590,7 +1598,7 @@ function HomePage() {
                                                                 strokeWidth: "2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                                lineNumber: 437,
+                                                                lineNumber: 439,
                                                                 columnNumber: 9
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1600,18 +1608,18 @@ function HomePage() {
                                                                 strokeLinecap: "round"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                                lineNumber: 438,
+                                                                lineNumber: 440,
                                                                 columnNumber: 9
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 436,
+                                                        lineNumber: 438,
                                                         columnNumber: 7
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 435,
+                                                    lineNumber: 437,
                                                     columnNumber: 5
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1621,7 +1629,7 @@ function HomePage() {
                                                             children: "Built for identity"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 442,
+                                                            lineNumber: 444,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1629,19 +1637,19 @@ function HomePage() {
                                                             children: "Wear it your way. Show who you are."
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 443,
+                                                            lineNumber: 445,
                                                             columnNumber: 7
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 441,
+                                                    lineNumber: 443,
                                                     columnNumber: 5
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 434,
+                                            lineNumber: 436,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1663,7 +1671,7 @@ function HomePage() {
                                                                 strokeLinejoin: "round"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                                lineNumber: 451,
+                                                                lineNumber: 453,
                                                                 columnNumber: 9
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1673,18 +1681,18 @@ function HomePage() {
                                                                 strokeLinejoin: "round"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                                lineNumber: 452,
+                                                                lineNumber: 454,
                                                                 columnNumber: 9
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 450,
+                                                        lineNumber: 452,
                                                         columnNumber: 7
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 449,
+                                                    lineNumber: 451,
                                                     columnNumber: 5
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1694,7 +1702,7 @@ function HomePage() {
                                                             children: "Bulk orders"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 456,
+                                                            lineNumber: 458,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1702,19 +1710,19 @@ function HomePage() {
                                                             children: "For teams, events, brands, and gifting."
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 457,
+                                                            lineNumber: 459,
                                                             columnNumber: 7
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 455,
+                                                    lineNumber: 457,
                                                     columnNumber: 5
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 448,
+                                            lineNumber: 450,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1735,17 +1743,17 @@ function HomePage() {
                                                             strokeLinecap: "round"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 465,
+                                                            lineNumber: 467,
                                                             columnNumber: 9
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 464,
+                                                        lineNumber: 466,
                                                         columnNumber: 7
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 463,
+                                                    lineNumber: 465,
                                                     columnNumber: 5
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1755,7 +1763,7 @@ function HomePage() {
                                                             children: "Custom orders"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 469,
+                                                            lineNumber: 471,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1763,25 +1771,25 @@ function HomePage() {
                                                             children: "Tell us what you want; we bring it to life."
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 470,
+                                                            lineNumber: 472,
                                                             columnNumber: 7
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 468,
+                                                    lineNumber: 470,
                                                     columnNumber: 5
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 462,
+                                            lineNumber: 464,
                                             columnNumber: 3
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 405,
+                                    lineNumber: 407,
                                     columnNumber: 1
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1802,17 +1810,17 @@ function HomePage() {
                                                     strokeLinecap: "round"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 480,
+                                                    lineNumber: 482,
                                                     columnNumber: 7
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 479,
+                                                lineNumber: 481,
                                                 columnNumber: 5
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 477,
+                                            lineNumber: 479,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1822,7 +1830,7 @@ function HomePage() {
                                                     children: "Buy & resell"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 489,
+                                                    lineNumber: 491,
                                                     columnNumber: 5
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1830,25 +1838,25 @@ function HomePage() {
                                                     children: "Perfect for vendors who want to buy in bulk and resell."
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 490,
+                                                    lineNumber: 492,
                                                     columnNumber: 5
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 488,
+                                            lineNumber: 490,
                                             columnNumber: 3
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 476,
+                                    lineNumber: 478,
                                     columnNumber: 1
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 399,
+                            lineNumber: 401,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$Card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -1862,7 +1870,7 @@ function HomePage() {
                                             children: "Order"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 501,
+                                            lineNumber: 503,
                                             columnNumber: 3
                                         }, this),
                                         " ",
@@ -1871,13 +1879,13 @@ function HomePage() {
                                             children: "via the App"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 502,
+                                            lineNumber: 504,
                                             columnNumber: 3
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 500,
+                                    lineNumber: 502,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1885,7 +1893,7 @@ function HomePage() {
                                     children: "Browse the full catalogue, place orders, and track progress inside the Dritchwear mobile app."
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 504,
+                                    lineNumber: 506,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1896,12 +1904,12 @@ function HomePage() {
                                         className: "h-52 w-full object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                        lineNumber: 510,
+                                        lineNumber: 512,
                                         columnNumber: 3
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 509,
+                                    lineNumber: 511,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1921,19 +1929,19 @@ function HomePage() {
                                                         d: "M16.365 1.43c0 1.14-.42 2.22-1.22 3.1-.82.9-2.17 1.6-3.29 1.5-.14-1.1.43-2.27 1.22-3.07.86-.88 2.32-1.55 3.29-1.53zM20.52 17.12c-.55 1.25-.8 1.8-1.5 2.9-.98 1.55-2.37 3.47-4.09 3.49-1.53.02-1.92-.99-3.99-.98-2.07.01-2.5 1-4.03.98-1.72-.02-3.03-1.77-4.01-3.32-2.24-3.54-2.47-7.69-1.09-9.82.98-1.52 2.52-2.41 3.95-2.41 1.56 0 2.54 1.01 3.83 1.01 1.25 0 2.02-1.02 3.82-1.02 1.27 0 2.62.69 3.6 1.88-3.17 1.74-2.66 6.26.71 7.31z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                        lineNumber: 535,
+                                                        lineNumber: 537,
                                                         columnNumber: 5
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 528,
+                                                    lineNumber: 530,
                                                     columnNumber: 3
                                                 }, this),
                                                 "App Store"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 520,
+                                            lineNumber: 522,
                                             columnNumber: 3
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1952,64 +1960,64 @@ function HomePage() {
                                                             d: "M4 3.5v17c0 .6.7.9 1.2.6l10.4-8.5L5.2 2.9C4.7 2.6 4 2.9 4 3.5z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 553,
+                                                            lineNumber: 555,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                             d: "M16.6 12.6l2.7-2.2c.5-.4.5-1.1 0-1.5l-2.7-2.2-3.1 2.9 3.1 3z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 554,
+                                                            lineNumber: 556,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                             d: "M15.6 13.5L5.2 21.1c.4.3 1 .3 1.4 0l9-6.7z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 555,
+                                                            lineNumber: 557,
                                                             columnNumber: 7
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                             d: "M15.6 10.5l-9-6.7c-.4-.3-1-.3-1.4 0l10.4 7.6z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                            lineNumber: 556,
+                                                            lineNumber: 558,
                                                             columnNumber: 7
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 545,
+                                                    lineNumber: 547,
                                                     columnNumber: 5
                                                 }, this),
                                                 "Google Play"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 540,
+                                            lineNumber: 542,
                                             columnNumber: 3
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 518,
+                                    lineNumber: 520,
                                     columnNumber: 1
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 499,
+                            lineNumber: 501,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                    lineNumber: 398,
+                    lineNumber: 400,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 397,
+                lineNumber: 399,
                 columnNumber: 7
             }, this),
             isStoreModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2025,7 +2033,7 @@ function HomePage() {
                                     children: "Get the Dritchwear App"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 569,
+                                    lineNumber: 571,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2034,13 +2042,13 @@ function HomePage() {
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 572,
+                                    lineNumber: 574,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 568,
+                            lineNumber: 570,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2048,7 +2056,7 @@ function HomePage() {
                             children: "Choose your platform to start shopping."
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 580,
+                            lineNumber: 582,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2068,19 +2076,19 @@ function HomePage() {
                                                 d: "M16.365 1.43c0 1.14-.42 2.22-1.22 3.1-.82.9-2.17 1.6-3.29 1.5-.14-1.1.43-2.27 1.22-3.07.86-.88 2.32-1.55 3.29-1.53zM20.52 17.12c-.55 1.25-.8 1.8-1.5 2.9-.98 1.55-2.37 3.47-4.09 3.49-1.53.02-1.92-.99-3.99-.98-2.07.01-2.5 1-4.03.98-1.72-.02-3.03-1.77-4.01-3.32-2.24-3.54-2.47-7.69-1.09-9.82.98-1.52 2.52-2.41 3.95-2.41 1.56 0 2.54 1.01 3.83 1.01 1.25 0 2.02-1.02 3.82-1.02 1.27 0 2.62.69 3.6 1.88-3.17 1.74-2.66 6.26.71 7.31z"
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                lineNumber: 602,
+                                                lineNumber: 604,
                                                 columnNumber: 13
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 595,
+                                            lineNumber: 597,
                                             columnNumber: 11
                                         }, this),
                                         "App Store"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 587,
+                                    lineNumber: 589,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2098,58 +2106,58 @@ function HomePage() {
                                                     d: "M4 3.5v17c0 .6.7.9 1.2.6l10.4-8.5L5.2 2.9C4.7 2.6 4 2.9 4 3.5z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 624,
+                                                    lineNumber: 626,
                                                     columnNumber: 13
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                     d: "M16.6 12.6l2.7-2.2c.5-.4.5-1.1 0-1.5l-2.7-2.2-3.1 2.9 3.1 3z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 625,
+                                                    lineNumber: 627,
                                                     columnNumber: 13
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                     d: "M15.6 13.5L5.2 21.1c.4.3 1 .3 1.4 0l9-6.7z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 626,
+                                                    lineNumber: 628,
                                                     columnNumber: 13
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                     d: "M15.6 10.5l-9-6.7c-.4-.3-1-.3-1.4 0l10.4 7.6z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                                    lineNumber: 627,
+                                                    lineNumber: 629,
                                                     columnNumber: 13
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                            lineNumber: 617,
+                                            lineNumber: 619,
                                             columnNumber: 11
                                         }, this),
                                         "Google Play"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                                    lineNumber: 608,
+                                    lineNumber: 610,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                            lineNumber: 585,
+                            lineNumber: 587,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                    lineNumber: 566,
+                    lineNumber: 568,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
-                lineNumber: 565,
+                lineNumber: 567,
                 columnNumber: 3
             }, this)
         ]

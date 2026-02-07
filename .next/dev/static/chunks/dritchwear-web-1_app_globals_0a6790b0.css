@@ -1075,10 +1075,6 @@
     border-top-color: var(--purple);
   }
 
-  .bg-\[\#1A73E8\] {
-    background-color: #1a73e8;
-  }
-
   .bg-\[\#FDB813\] {
     background-color: #fdb813;
   }
@@ -1293,28 +1289,9 @@
     }
   }
 
-  .bg-gradient-to-br {
-    --tw-gradient-position: to bottom right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-
   .bg-gradient-to-tr {
     --tw-gradient-position: to top right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-
-  .from-\[var\(--brand-purple\)\]\/10 {
-    --tw-gradient-from: var(--brand-purple);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .from-\[var\(--brand-purple\)\]\/10 {
-      --tw-gradient-from: color-mix(in oklab, var(--brand-purple) 10%, transparent);
-    }
-  }
-
-  .from-\[var\(--brand-purple\)\]\/10 {
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
   .from-black\/25 {
@@ -1337,26 +1314,6 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
 
-  .via-white {
-    --tw-gradient-via: var(--color-white);
-    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-via-stops);
-  }
-
-  .to-\[var\(--brand-purple\)\]\/5 {
-    --tw-gradient-to: var(--brand-purple);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .to-\[var\(--brand-purple\)\]\/5 {
-      --tw-gradient-to: color-mix(in oklab, var(--brand-purple) 5%, transparent);
-    }
-  }
-
-  .to-\[var\(--brand-purple\)\]\/5 {
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
   .to-transparent {
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1368,10 +1325,6 @@
 
   .object-\[50\%_35\%\] {
     object-position: 50% 35%;
-  }
-
-  .object-top {
-    object-position: top;
   }
 
   .p-0 {
@@ -1652,16 +1605,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .text-black\/40 {
       color: color-mix(in oklab, var(--color-black) 40%, transparent);
-    }
-  }
-
-  .text-black\/45 {
-    color: #00000073;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .text-black\/45 {
-      color: color-mix(in oklab, var(--color-black) 45%, transparent);
     }
   }
 

@@ -49,7 +49,11 @@ export default function ResetPasswordPage() {
   return (
     <div className="min-h-[70vh] grid place-items-center px-4 py-10">
       <Card className="w-full max-w-md p-6">
-        <p className="text-xs font-semibold text-[var(--purple)] text-center">DRITCHWEAR</p>
+      <p className="text-xs font-semibold text-[var(--brand-purple)] text-center">
+  DRITCHWEAR
+</p>
+
+<div className="mt-3 h-[2px] w-12 bg-[var(--brand-yellow)] mx-auto" />
         <h1 className="mt-2 text-xl font-extrabold text-center">Reset your password</h1>
         <div className="mt-3 h-[2px] w-12 bg-[var(--yellow)] mx-auto" />
 
@@ -72,14 +76,22 @@ export default function ResetPasswordPage() {
 
             {error ? (
               <div className="rounded-xl border border-black/10 bg-black/[0.02] p-3 text-sm text-black/80">
-                <span className="font-semibold text-[var(--purple)]">Note: </span>
+             <span className="font-semibold text-[var(--purple)]">Note: </span>
                 {error}
               </div>
             ) : null}
 
-            <Button onClick={handleUpdate} disabled={status === "saving"}>
-              {status === "saving" ? "Updating…" : "Update password"}
-            </Button>
+<button
+  onClick={handleUpdate}
+  disabled={status === "saving"}
+  className="w-full rounded-xl px-4 py-3 text-sm font-bold text-white"
+  style={{
+    backgroundColor: "var(--brand-purple)",
+    opacity: status === "saving" ? 0.6 : 1,
+  }}
+>
+  {status === "saving" ? "Updating…" : "Update password"}
+</button>
 
             <div className="mt-2 text-center">
               <button
@@ -95,7 +107,13 @@ export default function ResetPasswordPage() {
             <p className="text-sm text-black/75">
               Password updated. Open the app to continue.
             </p>
-            <Button onClick={() => tryOpenApp(appUrl)}>Open Dritchwear App</Button>
+            <button
+  onClick={() => tryOpenApp(appUrl)}
+  className="w-full rounded-xl px-4 py-3 text-sm font-bold text-white"
+  style={{ backgroundColor: "var(--brand-purple)" }}
+>
+  Open Dritchwear App
+</button>
             <p className="text-xs text-black/60">Don’t have the app? Download it below.</p>
 
             <div className="grid gap-2">
