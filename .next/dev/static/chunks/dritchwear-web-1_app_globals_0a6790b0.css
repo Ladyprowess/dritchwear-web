@@ -835,10 +835,6 @@
     place-items: center;
   }
 
-  .place-items-end {
-    place-items: end;
-  }
-
   .items-center {
     align-items: center;
   }
@@ -1947,12 +1943,6 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:max-w-lg {
-      max-width: var(--container-lg);
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1967,12 +1957,6 @@
   @media (min-width: 48rem) {
     .md\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:place-items-center {
-      place-items: center;
     }
   }
 

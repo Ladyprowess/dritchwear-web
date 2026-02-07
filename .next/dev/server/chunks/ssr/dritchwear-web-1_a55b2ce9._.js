@@ -260,7 +260,7 @@ function HomePage() {
                 id: "promo_001",
                 title: "Special Offer Just for You!",
                 subtitle: "Planning a big order?",
-                highlightText: "Spend ₦300,000 or more and enjoy:",
+                highlight: "Spend ₦300,000 or more and enjoy:",
                 bullets: [
                     "Free delivery across Nigeria",
                     "50% off international shipping",

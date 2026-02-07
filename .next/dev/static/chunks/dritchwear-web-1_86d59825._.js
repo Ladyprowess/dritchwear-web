@@ -483,11 +483,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 function SoftIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "d9e473061313ee8e6342053cbb2964cfcdea9e492154529ce6519417a27edcc4") {
+    if ($[0] !== "bb23fb672188f4887ec3c000041d12b5871099d8a6127f5a2d69ccac1591c52a") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "d9e473061313ee8e6342053cbb2964cfcdea9e492154529ce6519417a27edcc4";
+        $[0] = "bb23fb672188f4887ec3c000041d12b5871099d8a6127f5a2d69ccac1591c52a";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -521,11 +521,11 @@ _c = SoftIcon;
 function HomePage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(46);
-    if ($[0] !== "d9e473061313ee8e6342053cbb2964cfcdea9e492154529ce6519417a27edcc4") {
+    if ($[0] !== "bb23fb672188f4887ec3c000041d12b5871099d8a6127f5a2d69ccac1591c52a") {
         for(let $i = 0; $i < 46; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "d9e473061313ee8e6342053cbb2964cfcdea9e492154529ce6519417a27edcc4";
+        $[0] = "bb23fb672188f4887ec3c000041d12b5871099d8a6127f5a2d69ccac1591c52a";
     }
     const [isStoreModalOpen, setIsStoreModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -535,7 +535,7 @@ function HomePage() {
             id: "promo_001",
             title: "Special Offer Just for You!",
             subtitle: "Planning a big order?",
-            highlightText: "Spend \u20A6300,000 or more and enjoy:",
+            highlight: "Spend \u20A6300,000 or more and enjoy:",
             bullets: [
                 "Free delivery across Nigeria",
                 "50% off international shipping",
