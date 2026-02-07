@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* =========================
+   DRITCHWEAR BRAND TOKENS
+   ========================= */
+:root {
+  /* Core colours */
+  --brand-purple: #5A2D82;
+  --brand-yellow: #FDB813;
+
+  /* Soft decorative purple (backgrounds ONLY) */
+  --soft-purple: rgba(90, 45, 130, 0.08);
+
+  /* Base */
+  --background: #ffffff;
+  --foreground: #0b0b0d;
+
+  --black: #0b0b0d;
+  --white: #ffffff;
+
+  /* UI */
+  --muted: rgba(11, 11, 13, 0.04);
+  --border: rgba(11, 11, 13, 0.10);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* =========================
+   Tailwind v4 theme mapping
+   ========================= */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-black: var(--black);
+  --color-brand-white: var(--white);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --muted: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* =========================
+   Base Styles
+   ========================= */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto,
+    Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* Headings: default purple BUT allow Tailwind to override */
+:where(h1, h2, h3, h4) {
+  letter-spacing: -0.03em;
+  color: var(--brand-purple);
+}
+
+
+/* Links (IMPORTANT: do NOT affect buttons) */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Only apply hover purple to normal links, NOT buttons */
+a:not(.btn):hover {
+  color: var(--brand-purple);
+}
+
+/* Selection */
+::selection {
+  background: rgba(90, 45, 130, 0.18);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--brand-purple);
+  outline-offset: 3px;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* =========================
+   Button System (RULE-BASED)
+   ========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  transition: opacity 200ms ease, transform 200ms ease, background 200ms ease,
+    color 200ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Purple button => WHITE text always (including hover) */
+.btn-purple {
+  background: var(--brand-purple);
+  color: var(--white);
+}
+.btn-purple:hover {
+  background: var(--brand-purple);
+  color: var(--white);
+  opacity: 0.95;
+}
+
+/* Black button => WHITE text */
+.btn-black {
+  background: var(--black);
+  color: var(--white);
+}
+.btn-black:hover {
+  opacity: 0.95;
+}
+
+/* Yellow button => BLACK text */
+.btn-yellow {
+  background: var(--brand-yellow);
+  color: var(--black);
+}
+.btn-yellow:hover {
+  opacity: 0.95;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+}
+
+/* Respect accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
