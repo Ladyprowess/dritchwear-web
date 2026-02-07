@@ -43,13 +43,16 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
-      <h1 className="text-3xl font-extrabold tracking-tight text-[var(--brand-purple)]">
-        Contact
-      </h1>
+      <div className="text-center">
+  <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+    <span className="text-[var(--brand-purple)]">Contact</span>{" "}
+    <span className="text-[#FDB813]">Us</span>
+  </h1>
 
-      <p className="mt-2 text-sm text-black/70">
-        Custom orders, bulk orders, partnerships — reach out and we’ll respond.
-      </p>
+  <p className="mt-4 text-base md:text-lg text-black/60 max-w-2xl mx-auto">
+    Custom orders, bulk orders, partnerships; reach out and we’ll respond.
+  </p>
+</div>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
         {/* LEFT — FORM */}
