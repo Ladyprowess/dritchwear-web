@@ -28,10 +28,20 @@ export default function HomePage() {
   return (
     <div>
       <AnnouncementModal
-        id="promo_001"
-        title="Announcement"
-        message="Full catalogue available on our mobile app. Bulk orders may qualify for free shipping."
-      />
+  id="promo_001"
+  title="Special Offer Just for You!"
+  subtitle="Planning a big order?"
+  highlightText="Spend ₦300,000 or more and enjoy:"
+  bullets={[
+    "Free delivery across Nigeria",
+    "50% off international shipping",
+    "Bonus branded gift pack added to your order",
+  ]}
+  message="Let’s bring your custom clothing and branded items to life; fast, clean, and stylish!"
+  ctaLabel="Start your order now!"
+  ctaHref="/shop"
+/>
+
 
       
 
