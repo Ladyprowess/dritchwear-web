@@ -3,9 +3,22 @@ globalThis.__BUILD_MANIFEST = {
     "/_app": []
   },
   "devFiles": [],
-  "polyfillFiles": [],
+  "polyfillFiles": [
+    "static/chunks/88fb7_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
   "lowPriorityFiles": [],
-  "rootMainFiles": []
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_f44e74ff._.js",
+    "static/chunks/88fb7_next_dist_compiled_react-dom_4825a6dc._.js",
+    "static/chunks/88fb7_next_dist_compiled_react-server-dom-turbopack_e5cf4bfd._.js",
+    "static/chunks/88fb7_next_dist_compiled_next-devtools_index_6a53cca0.js",
+    "static/chunks/88fb7_next_dist_compiled_89a7a7ac._.js",
+    "static/chunks/88fb7_next_dist_client_d7b8d1bd._.js",
+    "static/chunks/88fb7_next_dist_ea3b1e6d._.js",
+    "static/chunks/88fb7_@swc_helpers_cjs_fca4bc0d._.js",
+    "static/chunks/dritchwear-web-1_a0ff3932._.js",
+    "static/chunks/turbopack-dritchwear-web-1_3051b714._.js"
+  ]
 };
 globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
 "/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
