@@ -1366,6 +1366,14 @@
     object-fit: cover;
   }
 
+  .object-\[50\%_35\%\] {
+    object-position: 50% 35%;
+  }
+
+  .object-top {
+    object-position: top;
+  }
+
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }

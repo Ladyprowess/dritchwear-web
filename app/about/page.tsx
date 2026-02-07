@@ -178,8 +178,12 @@ export default function AboutPage() {
           </div>
 
           <Card className="p-0 overflow-hidden">
-            <div className="h-[340px] w-full rounded-2xl bg-gradient-to-br from-[var(--brand-purple)]/10 via-white to-[var(--brand-purple)]/5" />
-          </Card>
+  <img
+    src="/images/about-image.png"
+    alt="Dritchwear custom streetwear"
+    className="h-[340px] w-full object-cover object-[50%_35%]"
+  />
+</Card>
         </div>
       </section>
 
