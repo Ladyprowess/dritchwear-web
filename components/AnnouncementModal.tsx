@@ -97,20 +97,23 @@ export function AnnouncementModal({
 
         {/* Actions */}
         <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
-          <Link href={ctaHref} onClick={close} className="w-full sm:w-auto">
-            <Button className="w-full">
-              👉 {ctaLabel}
-            </Button>
-          </Link>
+  <Link
+    href={ctaHref}
+    onClick={close}
+    className="btn btn-purple w-full sm:w-auto"
+  >
+    👉 {ctaLabel}
+  </Link>
 
-          <Button
-            variant="secondary"
-            onClick={close}
-            className="w-full sm:w-auto"
-          >
-            Close
-          </Button>
-        </div>
+  <button
+    type="button"
+    className="btn w-full sm:w-auto border border-black/10"
+    onClick={close}
+  >
+    Close
+  </button>
+</div>
+
       </Card>
     </div>
   );
