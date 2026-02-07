@@ -63,11 +63,7 @@ export default function ShopPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
-      <AnnouncementModal
-        id="promo_shop"
-        title="Shop Preview"
-        message="Full collection is available on the Dritchwear mobile app."
-      />
+
 
       {/* SHOP HEADER */}
       <div className="mt-6 flex flex-col items-center text-center gap-4">
