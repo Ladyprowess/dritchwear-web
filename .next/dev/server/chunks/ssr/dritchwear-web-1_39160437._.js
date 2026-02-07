@@ -381,7 +381,7 @@ function ManualGoogleReviews() {
                         href: writeReviewLink,
                         target: "_blank",
                         rel: "noreferrer",
-                        className: "inline-flex items-center justify-center rounded-full bg-[var(--brand-purple)] px-6 py-3 font-semibold text-white transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[var(--brand-purple)] focus:ring-offset-2",
+                        className: "btn btn-purple rounded-full px-6 py-3",
                         children: "Review us on Google"
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
@@ -411,19 +411,19 @@ function ManualGoogleReviews() {
                                             className: "h-full w-full object-cover"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                            lineNumber: 134,
+                                            lineNumber: 125,
                                             columnNumber: 19
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "font-bold text-[var(--brand-purple)]",
                                             children: r.name.slice(0, 1).toUpperCase()
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                            lineNumber: 140,
+                                            lineNumber: 131,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -437,7 +437,7 @@ function ManualGoogleReviews() {
                                                         children: r.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 139,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -448,13 +448,13 @@ function ManualGoogleReviews() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                                        lineNumber: 149,
+                                                        lineNumber: 140,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 138,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -463,24 +463,24 @@ function ManualGoogleReviews() {
                                                     rating: r.rating
                                                 }, void 0, false, {
                                                     fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 144,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 143,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                lineNumber: 129,
+                                lineNumber: 120,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -488,7 +488,7 @@ function ManualGoogleReviews() {
                                 children: r.text
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                lineNumber: 159,
+                                lineNumber: 150,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -499,18 +499,18 @@ function ManualGoogleReviews() {
                                 children: "Read more"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                                lineNumber: 164,
+                                lineNumber: 155,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, idx, true, {
                         fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                        lineNumber: 124,
+                        lineNumber: 115,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
-                lineNumber: 122,
+                lineNumber: 113,
                 columnNumber: 7
             }, this)
         ]

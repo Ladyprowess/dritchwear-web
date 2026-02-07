@@ -101,16 +101,7 @@ const viewReviewsLink = "https://www.google.com/maps/place/Dritchwear/@9.0338725
   href={writeReviewLink}
   target="_blank"
   rel="noreferrer"
-  className="inline-flex items-center justify-center rounded-full
-             bg-[var(--brand-purple)]
-             px-6 py-3 font-semibold
-             text-white
-             transition
-             hover:opacity-95
-             focus:outline-none
-             focus:ring-2
-             focus:ring-[var(--brand-purple)]
-             focus:ring-offset-2"
+  className="btn btn-purple rounded-full px-6 py-3"
 >
   Review us on Google
 </a>

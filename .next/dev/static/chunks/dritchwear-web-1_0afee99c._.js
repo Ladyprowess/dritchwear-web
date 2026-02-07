@@ -385,11 +385,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$no
 ;
 function Stars(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "0e43719085c84f1198cf1ce542230d74fbc26f44a30de29a4586c3fccb80197d") {
+    if ($[0] !== "00cb126e19e416fc13c13db36ae6bea5f66646af3d643da4e7f9d0d7d53c0285") {
         for(let $i = 0; $i < 7; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0e43719085c84f1198cf1ce542230d74fbc26f44a30de29a4586c3fccb80197d";
+        $[0] = "00cb126e19e416fc13c13db36ae6bea5f66646af3d643da4e7f9d0d7d53c0285";
     }
     const { rating } = t0;
     const t1 = `${rating} out of 5 stars`;
@@ -441,11 +441,11 @@ function Stars(t0) {
 _c = Stars;
 function GoogleMark() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0e43719085c84f1198cf1ce542230d74fbc26f44a30de29a4586c3fccb80197d") {
+    if ($[0] !== "00cb126e19e416fc13c13db36ae6bea5f66646af3d643da4e7f9d0d7d53c0285") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0e43719085c84f1198cf1ce542230d74fbc26f44a30de29a4586c3fccb80197d";
+        $[0] = "00cb126e19e416fc13c13db36ae6bea5f66646af3d643da4e7f9d0d7d53c0285";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -473,11 +473,11 @@ function GoogleMark() {
 _c1 = GoogleMark;
 function ManualGoogleReviews() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0e43719085c84f1198cf1ce542230d74fbc26f44a30de29a4586c3fccb80197d") {
+    if ($[0] !== "00cb126e19e416fc13c13db36ae6bea5f66646af3d643da4e7f9d0d7d53c0285") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0e43719085c84f1198cf1ce542230d74fbc26f44a30de29a4586c3fccb80197d";
+        $[0] = "00cb126e19e416fc13c13db36ae6bea5f66646af3d643da4e7f9d0d7d53c0285";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -631,7 +631,7 @@ function ManualGoogleReviews() {
                             href: "https://g.page/r/CQgjZSZ1AKtVEBI/review",
                             target: "_blank",
                             rel: "noreferrer",
-                            className: "inline-flex items-center justify-center rounded-full\n             bg-[var(--brand-purple)]\n             px-6 py-3 font-semibold\n             text-white\n             transition\n             hover:opacity-95\n             focus:outline-none\n             focus:ring-2\n             focus:ring-[var(--brand-purple)]\n             focus:ring-offset-2",
+                            className: "btn btn-purple rounded-full px-6 py-3",
                             children: "Review us on Google"
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
@@ -650,7 +650,7 @@ function ManualGoogleReviews() {
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/ManualGoogleReviews.tsx",
                     lineNumber: 97,
-                    columnNumber: 1419
+                    columnNumber: 1103
                 }, this)
             ]
         }, void 0, true, {
