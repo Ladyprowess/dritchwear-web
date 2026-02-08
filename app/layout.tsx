@@ -2,7 +2,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { NotificationBar } from "@/components/NotificationBar";
-import { PurpleBackground } from "@/components/PurpleBackground";
+import { ConditionalBackground } from "@/components/ConditionalBackground";
 
 export const metadata = {
   title: "DRITCHWEAR",
@@ -13,8 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col overflow-x-hidden relative">
-        {/* Purple gradient background for ALL pages */}
-        <PurpleBackground />
+        {/* Purple background on all pages EXCEPT homepage */}
+        <ConditionalBackground />
 
         <Navbar />
         <NotificationBar message="🚚 Free shipping for first-time users | No payment on delivery | All items are custom-made." />
