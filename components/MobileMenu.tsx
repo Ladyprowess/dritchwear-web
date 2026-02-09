@@ -133,7 +133,7 @@ useEffect(() => {
                 </Link>
 
                 <Link
-                  href="/terms"
+                  href="/terms-of-service"
                   onClick={() => setOpen(false)}
                   className="rounded-xl px-3 py-3 font-semibold hover:bg-black/[0.03] transition"
                 >
@@ -141,7 +141,7 @@ useEffect(() => {
                 </Link>
 
                 <Link
-                  href="/privacy"
+                  href="/privacy-policy"
                   onClick={() => setOpen(false)}
                   className="rounded-xl px-3 py-3 font-semibold hover:bg-black/[0.03] transition"
                 >
@@ -151,7 +151,7 @@ useEffect(() => {
 
               {/* Only App Store + Google Play */}
               <div className="mt-8 grid gap-3">
-  <a href="https://example.com/google-play" className="btn btn-black w-full">
+  <a href="https://play.google.com/store/apps/details?id=com.dritchwear.app" className="btn btn-black w-full">
     Google Play
   </a>
 
