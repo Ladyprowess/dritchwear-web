@@ -4,33 +4,31 @@ import { useEffect, useMemo, useState } from "react";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { brand } from "@/lib/brand";
-import { buildAppLink, tryOpenApp } from "@/lib/deepLink";
+import { tryOpenApp } from "@/lib/deepLink";
 
 type Status = "loading" | "success";
 
 export default function ConfirmPage() {
   const [status, setStatus] = useState<Status>("loading");
 
-  const params = useMemo(() => {
-    // Supabase may return tokens in hash or query depending on flow
-    const hash = typeof window !== "undefined" ? window.location.hash : "";
-    const search = typeof window !== "undefined" ? window.location.search : "";
-    return { hash, search };
+  // ✅ Keep the deep link EXACTLY like your OLD working version:
+  // dritchwear://auth/callback + (hash) + (search)
+  const appUrl = useMemo(() => {
+    const hash = typeof window !== "undefined" ? window.location.hash || "" : "";
+    const search =
+      typeof window !== "undefined" ? window.location.search || "" : "";
+
+    return `dritchwear://auth/callback${hash}${search}`;
   }, []);
 
-  const appUrl = useMemo(() => {
-    return buildAppLink("auth/confirm", {
-      source: "web",
-      hash: params.hash || "",
-      search: params.search || "",
-    });
-  }, [params.hash, params.search]);
-
   useEffect(() => {
-    // show loading briefly, then success state
     const t = setTimeout(() => setStatus("success"), 900);
-    // attempt to open app after success
-    const t2 = setTimeout(() => tryOpenApp(appUrl), 1200);
+
+    // ✅ Open app quickly after success
+    const t2 = setTimeout(() => {
+      tryOpenApp(appUrl);
+    }, 1100);
+
     return () => {
       clearTimeout(t);
       clearTimeout(t2);
@@ -44,22 +42,30 @@ export default function ConfirmPage() {
 
         {status === "loading" ? (
           <>
-            <h1 className="mt-2 text-xl font-extrabold">Confirming your email…</h1>
+            <h1 className="mt-2 text-xl font-extrabold">
+              Confirming your email…
+            </h1>
             <div className="mt-5 mx-auto h-8 w-8 rounded-full border-2 border-black/20 border-t-[var(--purple)] animate-spin" />
           </>
         ) : (
           <>
-            <h1 className="mt-2 text-xl font-extrabold">Email confirmed. Opening the app…</h1>
+            <h1 className="mt-2 text-xl font-extrabold">
+              Email confirmed. Opening the app…
+            </h1>
             <div className="mt-3 h-[2px] w-12 bg-[var(--yellow)] mx-auto" />
 
             <div className="mt-6 grid gap-3">
-              <Button onClick={() => tryOpenApp(appUrl)}>Open Dritchwear App</Button>
+              <Button onClick={() => tryOpenApp(appUrl)}>
+                Open Dritchwear App
+              </Button>
+
               <button
                 className="text-sm font-semibold text-[var(--purple)] hover:underline"
                 onClick={() => tryOpenApp(appUrl)}
               >
                 If nothing happens, tap to open the app again
               </button>
+
               <p className="text-xs text-black/60">
                 Don’t have the app? Download it below.
               </p>
