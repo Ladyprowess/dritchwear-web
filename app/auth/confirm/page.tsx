@@ -1,33 +1,22 @@
+// ✅ ConfirmPage.tsx (web)
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { brand } from "@/lib/brand";
-import { tryOpenApp } from "@/lib/deepLink";
+import { buildSupabaseAuthCallbackLink, tryOpenApp } from "@/lib/deepLink";
 
 type Status = "loading" | "success";
 
 export default function ConfirmPage() {
   const [status, setStatus] = useState<Status>("loading");
 
-  // ✅ Keep the deep link EXACTLY like your OLD working version:
-  // dritchwear://auth/callback + (hash) + (search)
-  const appUrl = useMemo(() => {
-    const hash = typeof window !== "undefined" ? window.location.hash || "" : "";
-    const search =
-      typeof window !== "undefined" ? window.location.search || "" : "";
-
-    return `dritchwear://auth/callback${hash}${search}`;
-  }, []);
+  const appUrl = useMemo(() => buildSupabaseAuthCallbackLink(), []);
 
   useEffect(() => {
     const t = setTimeout(() => setStatus("success"), 900);
-
-    // ✅ Open app quickly after success
-    const t2 = setTimeout(() => {
-      tryOpenApp(appUrl);
-    }, 1100);
+    const t2 = setTimeout(() => tryOpenApp(appUrl), 1100);
 
     return () => {
       clearTimeout(t);
