@@ -5,7 +5,7 @@ import { NotificationBar } from "@/components/NotificationBar";
 import { ConditionalBackground } from "@/components/ConditionalBackground";
 
 export const metadata = {
-  title: "DRITCHWEAR",
+  title: "DRITCHWEAR COLLECTIONS",
   description: "Wear it. Brand it. Gift it.",
 };
 

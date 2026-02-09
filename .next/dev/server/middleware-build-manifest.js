@@ -1,6 +1,31 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/88fb7_next_dist_compiled_d5cb3e33._.js",
+      "static/chunks/88fb7_next_dist_shared_lib_c594f8f5._.js",
+      "static/chunks/88fb7_next_dist_client_993a425f._.js",
+      "static/chunks/88fb7_next_dist_3760c92e._.js",
+      "static/chunks/88fb7_next_app_677d1a0f.js",
+      "static/chunks/[next]_entry_page-loader_ts_044a117d._.js",
+      "static/chunks/88fb7_react-dom_c229e6d7._.js",
+      "static/chunks/88fb7_f16abb3e._.js",
+      "static/chunks/[root-of-the-server]__9f0e773e._.js",
+      "static/chunks/dritchwear-web-1_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-dritchwear-web-1_pages__app_60947b51._.js"
+    ],
+    "/_error": [
+      "static/chunks/88fb7_next_dist_compiled_d5cb3e33._.js",
+      "static/chunks/88fb7_next_dist_shared_lib_e034655d._.js",
+      "static/chunks/88fb7_next_dist_client_993a425f._.js",
+      "static/chunks/88fb7_next_dist_829922c5._.js",
+      "static/chunks/88fb7_next_error_8e5494ef.js",
+      "static/chunks/[next]_entry_page-loader_ts_1bf66d40._.js",
+      "static/chunks/88fb7_react-dom_c229e6d7._.js",
+      "static/chunks/88fb7_f16abb3e._.js",
+      "static/chunks/[root-of-the-server]__30e4836d._.js",
+      "static/chunks/dritchwear-web-1_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-dritchwear-web-1_pages__error_55dfcccf._.js"
+    ]
   },
   "devFiles": [],
   "polyfillFiles": [
