@@ -28,6 +28,22 @@ function SoftIcon() {
 
 export default function HomePage() {
   const [isStoreModalOpen, setIsStoreModalOpen] = useState(false);
+    // Coming soon modal for App Store
+    const [isAppStoreComingSoonOpen, setIsAppStoreComingSoonOpen] = useState(false);
+
+    // WhatsApp order link (replace number)
+    const whatsappHref =
+      "https://wa.me/2349110163722?text=" +
+      encodeURIComponent(
+        "Hi Dritchwear! I want to place an order. Please share how to proceed."
+      );
+  
+    // Handle App Store click
+    const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      setIsAppStoreComingSoonOpen(true);
+    };
+  
 
   useEffect(() => {
     // Fire Google Ads conversion on homepage load
@@ -530,6 +546,7 @@ export default function HomePage() {
   {/* App Store – purple bg, white text */}
   <a
   href="https://example.com/appstore"
+  onClick={handleAppStoreClick}
   className="inline-flex items-center justify-center gap-2 rounded-xl
              bg-[var(--brand-purple)] px-6 py-3 font-semibold
              !text-white transition
@@ -597,6 +614,7 @@ export default function HomePage() {
         {/* App Store */}
         <a
           href="https://example.com/appstore"
+          onClick={handleAppStoreClick}
           className="inline-flex items-center justify-center gap-2 rounded-xl
                      bg-[var(--brand-purple)] px-6 py-3 font-semibold
                      !text-white transition
@@ -643,6 +661,47 @@ export default function HomePage() {
     </div>
   </div>
 )}
+
+{isAppStoreComingSoonOpen && (
+  <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 px-4">
+    <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-extrabold text-[var(--brand-purple)]">
+          App Store; Coming Soon
+        </h3>
+        <button
+          onClick={() => setIsAppStoreComingSoonOpen(false)}
+          className="text-black/50 hover:text-black text-xl"
+        >
+          ×
+        </button>
+      </div>
+
+      <p className="mt-2 text-sm text-black/70">
+        The iOS app is launching soon. You can place your order on WhatsApp for now.
+      </p>
+
+      <div className="mt-6 flex flex-col gap-3">
+        <a
+          href={whatsappHref}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-xl bg-[var(--brand-purple)] px-6 py-3 font-semibold !text-white transition hover:bg-black hover:!text-white"
+        >
+          Order on WhatsApp
+        </a>
+
+        <button
+          onClick={() => setIsAppStoreComingSoonOpen(false)}
+          className="rounded-xl border border-black/15 px-6 py-3 font-semibold text-black hover:bg-black/[0.03]"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }
