@@ -16,20 +16,36 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+const WHATSAPP_URL = "https://wa.me/2349110163722?text=" + encodeURIComponent("Hi Dritchwear! I want to place an order. Please share how to proceed.");
 function MobileMenu() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "9021062bd16e0081cdb683421fb7a024139a6d618d79e81536404f2017bcd4ec") {
-        for(let $i = 0; $i < 12; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(16);
+    if ($[0] !== "10f070d79d84118f45096c78cfd496553da40d25f40e8849572a9f9a55e59bf7") {
+        for(let $i = 0; $i < 16; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "9021062bd16e0081cdb683421fb7a024139a6d618d79e81536404f2017bcd4ec";
+        $[0] = "10f070d79d84118f45096c78cfd496553da40d25f40e8849572a9f9a55e59bf7";
     }
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [comingSoonOpen, setComingSoonOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
-    let t1;
-    if ($[1] !== open) {
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t0 = ({
+            "MobileMenu[handleAppStoreClick]": (e)=>{
+                e.preventDefault();
+                setOpen(false);
+                setComingSoonOpen(true);
+            }
+        })["MobileMenu[handleAppStoreClick]"];
+        $[1] = t0;
+    } else {
+        t0 = $[1];
+    }
+    const handleAppStoreClick = t0;
+    let t1;
+    let t2;
+    if ($[2] !== open) {
+        t1 = ({
             "MobileMenu[useEffect()]": ()=>{
                 if (!open) {
                     return;
@@ -52,52 +68,53 @@ function MobileMenu() {
                 };
             }
         })["MobileMenu[useEffect()]"];
-        t1 = [
+        t2 = [
             open
         ];
-        $[1] = open;
-        $[2] = t0;
+        $[2] = open;
         $[3] = t1;
+        $[4] = t2;
     } else {
-        t0 = $[2];
         t1 = $[3];
+        t2 = $[4];
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t0, t1);
-    let t2;
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
     let t3;
-    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = ({
+    let t4;
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
+        t3 = ({
             "MobileMenu[useEffect()]": ()=>{
-                const onKeyDown = function onKeyDown(e) {
-                    if (e.key === "Escape") {
+                const onKeyDown = function onKeyDown(e_0) {
+                    if (e_0.key === "Escape") {
                         setOpen(false);
+                        setComingSoonOpen(false);
                     }
                 };
                 document.addEventListener("keydown", onKeyDown);
                 return ()=>document.removeEventListener("keydown", onKeyDown);
             }
         })["MobileMenu[useEffect()]"];
-        t3 = [];
-        $[4] = t2;
+        t4 = [];
         $[5] = t3;
-    } else {
-        t2 = $[4];
-        t3 = $[5];
-    }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t2, t3);
-    let t4;
-    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t4 = ({
-            "MobileMenu[<button>.onClick]": ()=>setOpen(true)
-        })["MobileMenu[<button>.onClick]"];
         $[6] = t4;
     } else {
+        t3 = $[5];
         t4 = $[6];
     }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t3, t4);
     let t5;
     if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            onClick: t4,
+        t5 = ({
+            "MobileMenu[<button>.onClick]": ()=>setOpen(true)
+        })["MobileMenu[<button>.onClick]"];
+        $[7] = t5;
+    } else {
+        t5 = $[7];
+    }
+    let t6;
+    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            onClick: t5,
             className: "inline-flex items-center justify-center rounded-xl border border-black/10 bg-white p-2 hover:bg-black/[0.03] transition",
             "aria-label": "Open menu",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -113,7 +130,7 @@ function MobileMenu() {
                         strokeLinecap: "round"
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                        lineNumber: 83,
+                        lineNumber: 100,
                         columnNumber: 246
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -123,7 +140,7 @@ function MobileMenu() {
                         strokeLinecap: "round"
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                        lineNumber: 83,
+                        lineNumber: 100,
                         columnNumber: 326
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -133,27 +150,27 @@ function MobileMenu() {
                         strokeLinecap: "round"
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                        lineNumber: 83,
+                        lineNumber: 100,
                         columnNumber: 407
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                lineNumber: 83,
+                lineNumber: 100,
                 columnNumber: 186
             }, this)
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-            lineNumber: 83,
+            lineNumber: 100,
             columnNumber: 10
         }, this);
-        $[7] = t5;
+        $[8] = t6;
     } else {
-        t5 = $[7];
+        t6 = $[8];
     }
-    let t6;
-    if ($[8] !== open) {
-        t6 = open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t7;
+    if ($[9] !== open) {
+        t7 = open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "fixed inset-0 z-[100]",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -164,7 +181,7 @@ function MobileMenu() {
                     "aria-label": "Close menu overlay"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                    lineNumber: 90,
+                    lineNumber: 107,
                     columnNumber: 57
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -178,7 +195,7 @@ function MobileMenu() {
                                     children: "Menu"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 109,
                                     columnNumber: 312
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -190,13 +207,13 @@ function MobileMenu() {
                                     children: "✕"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 109,
                                     columnNumber: 373
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                            lineNumber: 92,
+                            lineNumber: 109,
                             columnNumber: 226
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -214,7 +231,7 @@ function MobileMenu() {
                                             children: "Shop"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 111,
                                             columnNumber: 225
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -226,7 +243,7 @@ function MobileMenu() {
                                             children: "About"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 113,
                                             columnNumber: 123
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -238,20 +255,20 @@ function MobileMenu() {
                                             children: "Contact"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 98,
+                                            lineNumber: 115,
                                             columnNumber: 124
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 111,
                                     columnNumber: 173
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "my-6 h-px bg-black/10"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 117,
                                     columnNumber: 132
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -259,7 +276,7 @@ function MobileMenu() {
                                     children: "Support"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 117,
                                     columnNumber: 173
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -274,7 +291,7 @@ function MobileMenu() {
                                             children: "Size Guide"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 117,
                                             columnNumber: 296
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -286,7 +303,7 @@ function MobileMenu() {
                                             children: "Returns & Exchanges"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 119,
                                             columnNumber: 192
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -298,7 +315,7 @@ function MobileMenu() {
                                             children: "Terms & Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 104,
+                                            lineNumber: 121,
                                             columnNumber: 156
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -310,13 +327,13 @@ function MobileMenu() {
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 123,
                                             columnNumber: 155
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 117,
                                     columnNumber: 263
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -325,25 +342,28 @@ function MobileMenu() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "https://play.google.com/store/apps/details?id=com.dritchwear.app",
                                             className: "btn btn-black w-full",
+                                            target: "_blank",
+                                            rel: "noreferrer",
                                             children: "Google Play"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 108,
+                                            lineNumber: 125,
                                             columnNumber: 186
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "https://example.com/app-store",
+                                            onClick: handleAppStoreClick,
                                             className: "btn btn-black w-full",
                                             children: "App Store"
                                         }, void 0, false, {
                                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                            lineNumber: 108,
-                                            columnNumber: 309
+                                            lineNumber: 125,
+                                            columnNumber: 342
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 125,
                                     columnNumber: 153
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -351,48 +371,149 @@ function MobileMenu() {
                                     children: "Full catalogue is available in the mobile app."
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                                    lineNumber: 108,
-                                    columnNumber: 401
+                                    lineNumber: 125,
+                                    columnNumber: 464
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                            lineNumber: 94,
+                            lineNumber: 111,
                             columnNumber: 146
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-                    lineNumber: 92,
+                    lineNumber: 109,
                     columnNumber: 117
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
-            lineNumber: 90,
+            lineNumber: 107,
             columnNumber: 18
         }, this);
-        $[8] = open;
-        $[9] = t6;
+        $[9] = open;
+        $[10] = t7;
     } else {
-        t6 = $[9];
+        t7 = $[10];
     }
-    let t7;
-    if ($[10] !== t6) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+    let t8;
+    if ($[11] !== comingSoonOpen) {
+        t8 = comingSoonOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "fixed inset-0 z-[110] flex items-center justify-center px-4",
             children: [
-                t5,
-                t6
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    className: "absolute inset-0 bg-black/60",
+                    onClick: {
+                        "MobileMenu[<button>.onClick]": ()=>setComingSoonOpen(false)
+                    }["MobileMenu[<button>.onClick]"],
+                    "aria-label": "Close coming soon overlay"
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                    lineNumber: 133,
+                    columnNumber: 105
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative w-full max-w-md rounded-3xl bg-white p-6 shadow-xl border border-black/10",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: {
+                                "MobileMenu[<button>.onClick]": ()=>setComingSoonOpen(false)
+                            }["MobileMenu[<button>.onClick]"],
+                            className: "absolute right-4 top-4 text-sm font-bold",
+                            style: {
+                                color: "#5A2D82"
+                            },
+                            "aria-label": "Close",
+                            children: "✕"
+                        }, void 0, false, {
+                            fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                            lineNumber: 135,
+                            columnNumber: 183
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                            className: "text-xl font-extrabold text-[var(--brand-purple)]",
+                            children: "App Store; Coming Soon"
+                        }, void 0, false, {
+                            fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                            lineNumber: 139,
+                            columnNumber: 41
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "mt-2 text-sm text-black/70",
+                            children: "The iOS app is launching soon. For now, you can place your order on WhatsApp."
+                        }, void 0, false, {
+                            fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                            lineNumber: 139,
+                            columnNumber: 134
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "mt-6 grid gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: WHATSAPP_URL,
+                                    target: "_blank",
+                                    rel: "noreferrer",
+                                    className: "btn btn-purple w-full",
+                                    children: "Order on WhatsApp"
+                                }, void 0, false, {
+                                    fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                                    lineNumber: 139,
+                                    columnNumber: 290
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    onClick: {
+                                        "MobileMenu[<button>.onClick]": ()=>setComingSoonOpen(false)
+                                    }["MobileMenu[<button>.onClick]"],
+                                    className: "rounded-xl border border-black/15 px-6 py-3 font-semibold text-black hover:bg-black/[0.03]",
+                                    children: "Close"
+                                }, void 0, false, {
+                                    fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                                    lineNumber: 139,
+                                    columnNumber: 401
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                            lineNumber: 139,
+                            columnNumber: 257
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+                    lineNumber: 135,
+                    columnNumber: 83
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/dritchwear-web-1/components/MobileMenu.tsx",
+            lineNumber: 133,
+            columnNumber: 28
+        }, this);
+        $[11] = comingSoonOpen;
+        $[12] = t8;
+    } else {
+        t8 = $[12];
+    }
+    let t9;
+    if ($[13] !== t7 || $[14] !== t8) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: [
+                t6,
+                t7,
+                t8
             ]
         }, void 0, true);
-        $[10] = t6;
-        $[11] = t7;
+        $[13] = t7;
+        $[14] = t8;
+        $[15] = t9;
     } else {
-        t7 = $[11];
+        t9 = $[15];
     }
-    return t7;
+    return t9;
 }
-_s(MobileMenu, "7oOnPki23IUg2Imd4pIkXZ2/dxg=");
+_s(MobileMenu, "+sP7N37v/eirLCsYSV/y3RsOTt4=");
 _c = MobileMenu;
 var _c;
 __turbopack_context__.k.register(_c, "MobileMenu");
