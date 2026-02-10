@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnnouncementModal } from "@/components/AnnouncementModal";
 import { Card } from "@/components/Card";
 import { ManualGoogleReviews } from "@/components/ManualGoogleReviews";
@@ -26,9 +26,18 @@ function SoftIcon() {
   );
 }
 
-
 export default function HomePage() {
   const [isStoreModalOpen, setIsStoreModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Fire Google Ads conversion on homepage load
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "conversion", {
+        send_to: "AW-17944092598/rkXVCM76nvYbELa_tOxC",
+      });
+    }
+  }, []);
+
   return (
     <div>
       <AnnouncementModal

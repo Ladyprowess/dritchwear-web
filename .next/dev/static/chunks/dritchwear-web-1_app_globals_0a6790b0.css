@@ -118,7 +118,6 @@
     --shadow-sm: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
     --shadow-md: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
     --animate-spin: spin 1s linear infinite;
-    --blur-xl: 24px;
     --blur-3xl: 64px;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -418,10 +417,6 @@
     top: calc(var(--spacing) * -24);
   }
 
-  .-top-28 {
-    top: calc(var(--spacing) * -28);
-  }
-
   .-top-32 {
     top: calc(var(--spacing) * -32);
   }
@@ -454,10 +449,6 @@
     right: calc(var(--spacing) * -24);
   }
 
-  .-right-28 {
-    right: calc(var(--spacing) * -28);
-  }
-
   .-right-40 {
     right: calc(var(--spacing) * -40);
   }
@@ -482,20 +473,12 @@
     bottom: calc(var(--spacing) * -24);
   }
 
-  .-bottom-28 {
-    bottom: calc(var(--spacing) * -28);
-  }
-
   .-left-4 {
     left: calc(var(--spacing) * -4);
   }
 
   .-left-24 {
     left: calc(var(--spacing) * -24);
-  }
-
-  .-left-28 {
-    left: calc(var(--spacing) * -28);
   }
 
   .-left-32 {
@@ -1114,36 +1097,12 @@
     }
   }
 
-  .border-white\/25 {
-    border-color: #ffffff40;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-white\/25 {
-      border-color: color-mix(in oklab, var(--color-white) 25%, transparent);
-    }
-  }
-
   .border-t-\[var\(--purple\)\] {
     border-top-color: var(--purple);
   }
 
-  .bg-\[\#5A2D82\] {
-    background-color: #5a2d82;
-  }
-
-  .bg-\[\#5A2D82\]\/25 {
-    background-color: #5a2d8240;
-    background-color: lab(28.1389% 33.6817 -40.4698 / .25);
-  }
-
   .bg-\[\#FDB813\] {
     background-color: #fdb813;
-  }
-
-  .bg-\[\#FDB813\]\/20 {
-    background-color: #fdb81333;
-    background-color: lab(79.7591% 17.3671 79.4272 / .2);
   }
 
   .bg-\[var\(--black\)\] {
@@ -1300,16 +1259,6 @@
     }
   }
 
-  .bg-black\/70 {
-    background-color: #000000b3;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-black\/70 {
-      background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
-    }
-  }
-
   .bg-black\/\[0\.02\] {
     background-color: #00000005;
   }
@@ -1344,16 +1293,6 @@
 
   .bg-white {
     background-color: var(--color-white);
-  }
-
-  .bg-white\/10 {
-    background-color: #ffffff1a;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/10 {
-      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
   }
 
   .bg-white\/15 {
@@ -1824,16 +1763,6 @@
     }
   }
 
-  .text-white\/75 {
-    color: #ffffffbf;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .text-white\/75 {
-      color: color-mix(in oklab, var(--color-white) 75%, transparent);
-    }
-  }
-
   .text-white\/80 {
     color: #fffc;
   }
@@ -1856,14 +1785,6 @@
 
   .uppercase {
     text-transform: uppercase;
-  }
-
-  .underline {
-    text-decoration-line: underline;
-  }
-
-  .underline-offset-4 {
-    text-underline-offset: 4px;
   }
 
   .opacity-60 {
@@ -1906,12 +1827,6 @@
     backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
   }
 
-  .backdrop-blur-xl {
-    --tw-backdrop-blur: blur(var(--blur-xl));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
-    backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
-  }
-
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1930,10 +1845,6 @@
 
   .\[--stroke\:var\(--brand-purple\)\] {
     --stroke: var(--brand-purple);
-  }
-
-  .\[-webkit-text-stroke\:2px_rgba\(255\,255\,255\,0\.9\)\] {
-    -webkit-text-stroke: 2px #ffffffe6;
   }
 
   .\[-webkit-text-stroke\:2px_var\(--stroke\)\] {
@@ -2031,18 +1942,6 @@
   }
 
   @media (hover: hover) {
-    .hover\:bg-white\/15:hover {
-      background-color: #ffffff26;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:bg-white\/15:hover {
-        background-color: color-mix(in oklab, var(--color-white) 15%, transparent);
-      }
-    }
-  }
-
-  @media (hover: hover) {
     .hover\:bg-white\/95:hover {
       background-color: #fffffff2;
     }
@@ -2085,12 +1984,6 @@
   }
 
   @media (hover: hover) {
-    .hover\:text-white:hover {
-      color: var(--color-white);
-    }
-  }
-
-  @media (hover: hover) {
     .hover\:underline:hover {
       text-decoration-line: underline;
     }
@@ -2112,13 +2005,6 @@
     .hover\:shadow-md:hover {
       --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, #0000001a), 0 2px 4px -2px var(--tw-shadow-color, #0000001a);
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:brightness-110:hover {
-      --tw-brightness: brightness(110%);
-      filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
     }
   }
 
@@ -2272,12 +2158,6 @@
   @media (min-width: 48rem) {
     .md\:py-20 {
       padding-block: calc(var(--spacing) * 20);
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:py-24 {
-      padding-block: calc(var(--spacing) * 24);
     }
   }
 
