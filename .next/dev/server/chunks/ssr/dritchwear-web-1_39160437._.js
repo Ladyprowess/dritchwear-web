@@ -37,8 +37,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$co
 ;
 ;
 ;
-function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = [], ctaLabel = "Start your order now!", ctaHref = "/shop", // 1 hour by default. For 2 hours use: 2 * 60 * 60 * 1000
-repeatEveryMs = 60 * 60 * 1000 }) {
+function AnnouncementModal({ id, title, message, subtitle, highlight, bullets = [], ctaLabel = "Start your order now!", ctaHref = "/shop", imageSrc, imageAlt, promoCode, promoCodeLabel = "Use promo code at checkout", onCtaClick, repeatEveryMs = 60 * 60 * 1000 }) {
     const storageKey = `dritchwear_announcement_last_closed_${id}`;
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
@@ -70,7 +69,7 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                     children: "✕"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 63,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -81,7 +80,7 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 72,
+                    lineNumber: 91,
                     columnNumber: 9
                 }, this),
                 subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -89,7 +88,23 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                     children: subtitle
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 78,
+                    lineNumber: 97,
+                    columnNumber: 11
+                }, this),
+                imageSrc && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-4",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: imageSrc,
+                        alt: imageAlt ?? "Promo image",
+                        className: "w-full h-[220px] md:h-[200px] object-cover rounded-2xl"
+                    }, void 0, false, {
+                        fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                        lineNumber: 103,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 102,
                     columnNumber: 11
                 }, this),
                 highlight && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -97,7 +112,7 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                     children: highlight
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 83,
+                    lineNumber: 114,
                     columnNumber: 11
                 }, this),
                 bullets.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -110,7 +125,7 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                                     children: "✅"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 124,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -118,18 +133,18 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                                     children: item
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 125,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, idx, true, {
                             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                            lineNumber: 92,
+                            lineNumber: 123,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 90,
+                    lineNumber: 121,
                     columnNumber: 11
                 }, this),
                 message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -137,13 +152,60 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                     children: message
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 102,
+                    lineNumber: 133,
+                    columnNumber: 11
+                }, this),
+                promoCode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-5 text-center",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-sm text-black/70",
+                            children: promoCodeLabel
+                        }, void 0, false, {
+                            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                            lineNumber: 139,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "mt-3 inline-flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--gold)] bg-[rgba(253,184,19,0.10)] px-8 py-3",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-xl md:text-2xl font-extrabold tracking-wider text-[var(--gold)]",
+                                children: promoCode
+                            }, void 0, false, {
+                                fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                                lineNumber: 142,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                            lineNumber: 141,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                    lineNumber: 138,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mt-7 flex flex-col sm:flex-row gap-3 justify-center",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        onCtaClick ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            type: "button",
+                            onClick: ()=>{
+                                close();
+                                onCtaClick();
+                            },
+                            className: "btn btn-purple w-full sm:w-auto",
+                            children: [
+                                "👉 ",
+                                ctaLabel
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
+                            lineNumber: 153,
+                            columnNumber: 3
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: ctaHref,
                             onClick: close,
                             className: "btn btn-purple w-full sm:w-auto",
@@ -153,8 +215,8 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                            lineNumber: 107,
-                            columnNumber: 11
+                            lineNumber: 164,
+                            columnNumber: 3
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             type: "button",
@@ -163,24 +225,24 @@ repeatEveryMs = 60 * 60 * 1000 }) {
                             children: "Close"
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                            lineNumber: 115,
+                            lineNumber: 174,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-                    lineNumber: 106,
+                    lineNumber: 151,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-            lineNumber: 61,
+            lineNumber: 80,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/dritchwear-web-1/components/AnnouncementModal.tsx",
-        lineNumber: 60,
+        lineNumber: 79,
         columnNumber: 5
     }, this);
 }
@@ -587,23 +649,22 @@ function HomePage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$components$2f$AnnouncementModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnnouncementModal"], {
-                id: "promo_001",
-                title: "Special Offer Just for You!",
-                subtitle: "Planning a big order?",
-                highlight: "Spend ₦300,000 or more and enjoy:",
-                bullets: [
-                    "Free delivery across Nigeria",
-                    "50% off international shipping",
-                    "Bonus branded gift pack added to your order"
-                ],
-                message: "Let’s bring your custom clothing and branded items to life; fast, clean, and stylish!",
-                ctaLabel: "Start your order now!",
-                ctaHref: "/shop",
+                id: "promo_buy2get1",
+                title: "BUY 2, GET 1 FREE",
+                subtitle: "Upgrade your wardrobe with more style for less.",
+                imageSrc: "/promo/buy2get1-landscape.png",
+                imageAlt: "Dritchwear Buy 2 Get 1 Free Promo",
+                highlight: "Buy any 2 outfits and get 1 free.",
+                message: "Shop now and apply the code below.",
+                promoCodeLabel: "Use promo code at checkout",
+                promoCode: "BUY2GET1",
+                ctaLabel: "Shop on the App",
+                onCtaClick: ()=>setIsStoreModalOpen(true),
                 repeatEveryMs: 2 * 60 * 60 * 1000
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/page.tsx",
                 lineNumber: 59,
-                columnNumber: 7
+                columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute -top-24 -left-24 h-96 w-96 rounded-full bg-[var(--soft-purple)] blur-3xl"

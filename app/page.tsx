@@ -56,22 +56,22 @@ export default function HomePage() {
 
   return (
     <div>
-      <AnnouncementModal
-  id="promo_001"
-  title="Special Offer Just for You!"
-  subtitle="Planning a big order?"
-  highlight="Spend ₦300,000 or more and enjoy:"
-  bullets={[
-    "Free delivery across Nigeria",
-    "50% off international shipping",
-    "Bonus branded gift pack added to your order",
-  ]}
-  message="Let’s bring your custom clothing and branded items to life; fast, clean, and stylish!"
-  ctaLabel="Start your order now!"
-  ctaHref="/shop"
-  repeatEveryMs={2 * 60 * 60 * 1000}
+     <AnnouncementModal
+  id="promo_buy2get1"
+  title="BUY 2, GET 1 FREE"
+  subtitle="Upgrade your wardrobe with more style for less."
+  imageSrc="/promo/buy2get1-landscape.png"
+  imageAlt="Dritchwear Buy 2 Get 1 Free Promo"
+  highlight="Buy any 2 outfits and get 1 free."
+  message="Shop now and apply the code below."
+  promoCodeLabel="Use promo code at checkout"
+  promoCode="BUY2GET1"
+  ctaLabel="Shop on the App"
+onCtaClick={() => setIsStoreModalOpen(true)}
 
+  repeatEveryMs={2 * 60 * 60 * 1000}
 />
+
 
 
       
