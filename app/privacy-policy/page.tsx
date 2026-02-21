@@ -366,7 +366,7 @@ export default function PrivacyPage() {
                   <span className="font-semibold">Phone:</span> (+234) 911-016-3722
                 </p>
                 <p>
-                  <span className="font-semibold">Address:</span> Lagos, Nigeria
+                  <span className="font-semibold">Address:</span> Shop 101 tailoring line off trade fair complex Lagos, Nigeria
                 </p>
                 <p>
                   <span className="font-semibold">Data Protection Officer:</span>{" "}
