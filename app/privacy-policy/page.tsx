@@ -323,7 +323,33 @@ export default function PrivacyPage() {
 
             <Spacer />
 
-            {/* 11 */}
+{/* 11 */}
+<SectionTitle number="12" title="Data Retention" />
+<div className="mt-3 grid gap-4 text-sm text-black/75 leading-relaxed">
+  <p>
+    We retain personal information only for as long as necessary to fulfil the
+    purposes outlined in this Privacy Policy, including providing our services,
+    complying with legal obligations, resolving disputes, and enforcing our
+    agreements.
+  </p>
+
+  <p>
+    Account information will be retained while your account is active. If you
+    request deletion of your account, we will begin the deletion process and
+    complete removal within <span className="font-semibold">30 days</span>,
+    except where we are required to retain certain information for legal,
+    accounting, or security purposes.
+  </p>
+
+  <p>
+    Transaction records may be retained for regulatory and financial reporting
+    requirements.
+  </p>
+</div>
+
+            <Spacer />
+
+            {/* 12 */}
             <SectionTitle number="11" title="Contact Us" />
             <p className="mt-3 text-sm text-black/75 leading-relaxed">
               If you have any questions about this Privacy Policy or our data
