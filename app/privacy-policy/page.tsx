@@ -324,7 +324,7 @@ export default function PrivacyPage() {
             <Spacer />
 
 {/* 11 */}
-<SectionTitle number="12" title="Data Retention" />
+<SectionTitle number="11" title="Data Retention" />
 <div className="mt-3 grid gap-4 text-sm text-black/75 leading-relaxed">
   <p>
     We retain personal information only for as long as necessary to fulfil the
@@ -350,7 +350,7 @@ export default function PrivacyPage() {
             <Spacer />
 
             {/* 12 */}
-            <SectionTitle number="11" title="Contact Us" />
+            <SectionTitle number="12" title="Contact Us" />
             <p className="mt-3 text-sm text-black/75 leading-relaxed">
               If you have any questions about this Privacy Policy or our data
               practices, please contact us:
