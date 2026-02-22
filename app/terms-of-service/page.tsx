@@ -382,7 +382,7 @@ export default function TermsPage() {
                   <span className="font-semibold">Phone:</span> (+234) 911-016-3722
                 </p>
                 <p>
-                  <span className="font-semibold">Address:</span> Shop 101 Tailoring Line, Tradefsir Complex, Lagos, Nigeria
+                  <span className="font-semibold">Address:</span> Shop 101 Tailoring Line, Tradefair Complex, Lagos, Nigeria
                 </p>
                 <p>
                   <span className="font-semibold">Legal Department:</span>{" "}
