@@ -376,7 +376,7 @@ export default function TermsPage() {
               <div className="grid gap-3">
                 <p>
                   <span className="font-semibold">Email:</span>{" "}
-                  dritchwear@gmail.com
+                  support@dritchwear.com
                 </p>
                 <p>
                   <span className="font-semibold">Phone:</span> (+234) 911-016-3722
@@ -386,7 +386,7 @@ export default function TermsPage() {
                 </p>
                 <p>
                   <span className="font-semibold">Legal Department:</span>{" "}
-                  dritchwear@gmail.com
+                  support@dritchwear.com
                 </p>
               </div>
             </div>

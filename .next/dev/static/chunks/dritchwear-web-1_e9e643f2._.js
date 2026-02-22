@@ -1437,7 +1437,7 @@ function TermsPage() {
                                                             columnNumber: 523
                                                         }, this),
                                                         " ",
-                                                        "dritchwear@gmail.com"
+                                                        "support@dritchwear.com"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/terms-of-service/page.tsx",
@@ -1489,7 +1489,7 @@ function TermsPage() {
                                                             columnNumber: 741
                                                         }, this),
                                                         " ",
-                                                        "dritchwear@gmail.com"
+                                                        "support@dritchwear.com"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/terms-of-service/page.tsx",

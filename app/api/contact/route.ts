@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
       // ✅ SEND TO BOTH RECEIVER + SENDER
       to: [
-        "dritchwear@gmail.com", // receiver
+        "support@dritchwear.com", // receiver
         email,                  // sender
       ],
 

@@ -170,14 +170,14 @@ export default function ContactPage() {
         Email
       </p>
       <p className="mt-2 text-lg font-extrabold text-[var(--brand-purple)]">
-        dritchwear@gmail.com
+        support@dritchwear.com
       </p>
       <p className="mt-2 text-sm text-black/70">
         Best for detailed requests and partnerships.
       </p>
 
       <a
-        href="mailto:dritchwear@gmail.com"
+        href="mailto:support@dritchwear.com"
         className="mt-4 inline-flex w-full items-center justify-center rounded-2xl px-6 py-4 font-semibold bg-white"
         style={{
           border: "1px solid rgba(0,0,0,0.15)",

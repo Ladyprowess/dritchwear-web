@@ -266,7 +266,7 @@ export default function PrivacyPage() {
             />
             <p className="mt-5 text-sm text-black/75 leading-relaxed">
               To exercise these rights, please contact us at{" "}
-              <span className="font-semibold">dritchwear@gmail.com</span> or
+              <span className="font-semibold">support@dritchwear.com</span> or
               through our mobile app.
             </p>
 
@@ -360,7 +360,7 @@ export default function PrivacyPage() {
               <div className="grid gap-3">
                 <p>
                   <span className="font-semibold">Email:</span>{" "}
-                  dritchwear@gmail.com
+                  support@dritchwear.com
                 </p>
                 <p>
                   <span className="font-semibold">Phone:</span> (+234) 911-016-3722
@@ -370,7 +370,7 @@ export default function PrivacyPage() {
                 </p>
                 <p>
                   <span className="font-semibold">Data Protection Officer:</span>{" "}
-                  dritchwear@gmail.com
+                  support@dritchwear.com
                 </p>
               </div>
             </div>

@@ -943,7 +943,7 @@ function PrivacyPage() {
                 " ",
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "font-semibold",
-                    children: "dritchwear@gmail.com"
+                    children: "support@dritchwear.com"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/privacy-policy/page.tsx",
                     lineNumber: 403,
@@ -1179,7 +1179,7 @@ function PrivacyPage() {
                                                             columnNumber: 469
                                                         }, this),
                                                         " ",
-                                                        "dritchwear@gmail.com"
+                                                        "support@dritchwear.com"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/privacy-policy/page.tsx",
@@ -1231,7 +1231,7 @@ function PrivacyPage() {
                                                             columnNumber: 687
                                                         }, this),
                                                         " ",
-                                                        "dritchwear@gmail.com"
+                                                        "support@dritchwear.com"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/dritchwear-web-1/app/privacy-policy/page.tsx",
