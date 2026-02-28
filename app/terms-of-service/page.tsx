@@ -124,7 +124,7 @@ export default function TermsPage() {
           </div>
         </section>
 
-        {/* MAIN TERMS CONTENT — ONE CONTINUOUS CARD (no broken sections) */}
+        {/* MAIN TERMS CONTENT - ONE CONTINUOUS CARD (no broken sections) */}
         <section>
           <Card className="p-7 md:p-10">
             {/* 1 */}

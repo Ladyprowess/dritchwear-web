@@ -3287,7 +3287,7 @@ async function handler(req, res, ctx) {
                 // lets the client distinguish between a regular cache miss and a cache
                 // miss due to PPR being disabled. In other contexts this header is used
                 // to indicate that the response contains dynamic data, but here we're
-                // only using it to indicate that the feature is enabled — the segment
+                // only using it to indicate that the feature is enabled - the segment
                 // response itself contains whether the data is dynamic.
                 res.setHeader(__TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$esm$2f$client$2f$components$2f$app$2d$router$2d$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["NEXT_DID_POSTPONE_HEADER"], '2');
                 // Add the cache tags header to the response if it exists and we're in

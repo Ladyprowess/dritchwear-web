@@ -12,16 +12,21 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-const APP_STORE_URL = "https://example.com/appstore";
+const WHATSAPP_URL =
+  "https://wa.me/2349110163722?text=" +
+  encodeURIComponent("Hi Dritchwear! I need help with sizing. Please assist.");
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.dritchwear.app";
 
+/* ✅ FIX: Added 3XL and 4XL sizes */
 const rows = [
   { size: "S", chest: "92–96", length: "68", waist: "72–76", hip: "90–94" },
   { size: "M", chest: "97–102", length: "70", waist: "77–82", hip: "95–100" },
   { size: "L", chest: "103–108", length: "72", waist: "83–88", hip: "101–106" },
   { size: "XL", chest: "109–114", length: "74", waist: "89–94", hip: "107–112" },
   { size: "XXL", chest: "115–120", length: "76", waist: "95–100", hip: "113–118" },
+  { size: "3XL", chest: "121–126", length: "78", waist: "101–106", hip: "119–124" },
+  { size: "4XL", chest: "127–132", length: "80", waist: "107–112", hip: "125–130" },
 ];
 
 function SectionHeader({
@@ -125,23 +130,14 @@ function FitCard({
   );
 }
 
-/* Correct Apple icon */
-function AppleIcon() {
+function WhatsAppIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M16.2 2.6c-1 .1-2.1.7-2.8 1.6-.7.8-1.2 2-1 3.1 1.1.1 2.2-.6 2.9-1.4.7-.9 1.2-2 1-3.3z"
-        fill="currentColor"
-      />
-      <path
-        d="M20.6 17.2c-.4.9-.9 1.8-1.6 2.7-1 .9-1.9 1.3-2.5 1.3-.7 0-1.5-.3-2.5-.7-1-.4-1.7-.7-2.4-.7-.7 0-1.5.3-2.5.7-1 .4-1.8.7-2.5.7-.7 0-1.5-.4-2.5-1.3-1.2-1.1-2.2-2.8-2.9-4.9-.8-2.4-.9-4.6-.2-6.4.6-1.5 1.6-2.3 3-2.4.8 0 1.7.3 2.6.7.9.4 1.5.7 2 .7.4 0 1.1-.3 2.1-.7 1-.4 1.9-.7 2.7-.6 2 .2 3.4 1 4.2 2.4-1.8 1.1-2.7 2.7-2.6 4.7.1 1.6.8 3 2.1 3.9z"
-        fill="currentColor"
-      />
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.56 2 2.1 6.46 2.1 11.94c0 1.74.46 3.42 1.34 4.9L2 22l5.3-1.39c1.42.77 3.03 1.18 4.74 1.18h.01c5.48 0 9.94-4.46 9.94-9.94C21.99 6.46 17.53 2 12.04 2zm5.8 14.45c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.12-1.84-.12-.43-.14-.98-.32-1.68-.62-2.95-1.27-4.87-4.19-5.02-4.38-.14-.19-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.02-2.46.27-.3.6-.38.8-.38h.58c.18 0 .42-.07.66.5.24.57.82 2 .9 2.14.08.14.13.32.02.51-.11.19-.17.32-.33.5-.16.19-.35.41-.49.55-.16.16-.33.34-.14.65.19.3.86 1.42 1.86 2.3 1.28 1.14 2.36 1.49 2.68 1.66.32.16.5.14.68-.08.19-.22.78-.9.99-1.22.21-.32.42-.27.7-.16.29.11 1.82.86 2.13 1.02.32.16.53.24.61.38.08.14.08.8-.16 1.48z" />
     </svg>
   );
 }
 
-/* Correct Google Play icon (triangle) */
 function GooglePlayIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -199,17 +195,16 @@ export default function SizeGuidePage() {
       <div className="mt-14 space-y-16 md:space-y-20">
         {/* HOW TO MEASURE */}
         <section>
-        <SectionHeader
-  title="How To Measure"
-  subtitle="Follow these simple steps to get accurate measurements for the perfect fit."
-/>
-
+          <SectionHeader
+            title="How To Measure"
+            subtitle="Follow these simple steps to get accurate measurements for the perfect fit."
+          />
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <MeasureCard
               icon={<Ruler className="h-6 w-6" />}
               title="Use a Measuring Tape"
-              text="Use a flexible measuring tape for the most accurate measurements. If you don’t have one, use a string and measure it against a ruler."
+              text="Use a flexible measuring tape for the most accurate measurements. If you don't have one, use a string and measure it against a ruler."
             />
             <MeasureCard
               icon={<UserRound className="h-6 w-6" />}
@@ -338,7 +333,7 @@ export default function SizeGuidePage() {
               <div>
                 <h3 className="text-lg font-extrabold text-black">Still Unsure?</h3>
                 <p className="mt-2 text-sm text-black/70">
-                  Contact us with your measurements and we’ll recommend the best size.
+                  Contact us with your measurements and we'll recommend the best size.
                 </p>
 
                 <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -352,7 +347,6 @@ export default function SizeGuidePage() {
                     Contact Support
                   </Button>
 
-                  {/* ✅ now opens modal instead of deep link */}
                   <Button
                     className="btn btn-black"
                     onClick={() => setStoreModal(true)}
@@ -381,7 +375,7 @@ export default function SizeGuidePage() {
         </section>
       </div>
 
-      {/* ✅ APP STORE MODAL */}
+      {/* ✅ FIX: App modal - iOS → WhatsApp */}
       {storeModal && (
         <Modal onClose={() => setStoreModal(false)}>
           <p className="text-xs font-semibold tracking-[0.18em] uppercase text-black/50">
@@ -397,19 +391,21 @@ export default function SizeGuidePage() {
           </p>
 
           <div className="mt-6 grid gap-3">
-            {/* Purple => white text */}
+            {/* iOS → WhatsApp */}
             <a
-              href={APP_STORE_URL}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-2xl px-6 py-4 font-semibold text-center inline-flex items-center justify-center gap-2"
               style={{ backgroundColor: "var(--brand-purple)", color: "#fff" }}
             >
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15">
-                <AppleIcon />
+                <WhatsAppIcon />
               </span>
-              Download on App Store
+              iOS - Order on WhatsApp
             </a>
 
-            {/* Gold => white text */}
+            {/* Google Play */}
             <a
               href={PLAY_STORE_URL}
               className="rounded-2xl px-6 py-4 font-semibold text-center inline-flex items-center justify-center gap-2"

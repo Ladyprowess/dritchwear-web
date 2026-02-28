@@ -7,18 +7,11 @@ const WHATSAPP_URL =
   "https://wa.me/2349110163722?text=" +
   encodeURIComponent("Hi Dritchwear! I want to place an order. Please share how to proceed.");
 
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.dritchwear.app";
+
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
-
-  // ✅ NEW: Coming soon modal for App Store
-  const [comingSoonOpen, setComingSoonOpen] = useState(false);
-
-  // ✅ NEW: Handle App Store click
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setOpen(false); // close the menu drawer
-    setComingSoonOpen(true); // open coming soon modal
-  };
 
   // Lock body scroll when menu is open (NO sideways scroll)
   useEffect(() => {
@@ -50,7 +43,6 @@ export function MobileMenu() {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
         setOpen(false);
-        setComingSoonOpen(false);
       }
     }
     document.addEventListener("keydown", onKeyDown);
@@ -65,7 +57,6 @@ export function MobileMenu() {
         className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white p-2 hover:bg-black/[0.03] transition"
         aria-label="Open menu"
       >
-        {/* Simple hamburger icon */}
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
           <path d="M4 7H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           <path d="M4 12H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -76,7 +67,7 @@ export function MobileMenu() {
       {/* Drawer */}
       {open && (
         <div className="fixed inset-0 z-[100]">
-          {/* Dark overlay behind the white menu */}
+          {/* Dark overlay */}
           <button
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-black/50"
@@ -165,10 +156,10 @@ export function MobileMenu() {
                 </Link>
               </div>
 
-              {/* Only App Store + Google Play */}
+              {/* ✅ FIX: Google Play + iOS via WhatsApp (no dead-end Coming Soon) */}
               <div className="mt-8 grid gap-3">
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.dritchwear.app"
+                  href={PLAY_STORE_URL}
                   className="btn btn-black w-full"
                   target="_blank"
                   rel="noreferrer"
@@ -176,66 +167,19 @@ export function MobileMenu() {
                   Google Play
                 </a>
 
-                {/* ✅ App Store now opens Coming Soon */}
                 <a
-                  href="https://example.com/app-store"
-                  onClick={handleAppStoreClick}
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="btn btn-black w-full"
                 >
-                  App Store
+                  iOS - Order on WhatsApp
                 </a>
               </div>
 
               <p className="mt-4 text-xs text-black/50">
                 Full catalogue is available in the mobile app.
               </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ✅ Coming Soon Modal */}
-      {comingSoonOpen && (
-        <div className="fixed inset-0 z-[110] flex items-center justify-center px-4">
-          <button
-            className="absolute inset-0 bg-black/60"
-            onClick={() => setComingSoonOpen(false)}
-            aria-label="Close coming soon overlay"
-          />
-          <div className="relative w-full max-w-md rounded-3xl bg-white p-6 shadow-xl border border-black/10">
-            <button
-              onClick={() => setComingSoonOpen(false)}
-              className="absolute right-4 top-4 text-sm font-bold"
-              style={{ color: "#5A2D82" }}
-              aria-label="Close"
-            >
-              ✕
-            </button>
-
-            <h3 className="text-xl font-extrabold text-[var(--brand-purple)]">
-              App Store; Coming Soon
-            </h3>
-            <p className="mt-2 text-sm text-black/70">
-              The iOS app is launching soon. For now, you can place your order on WhatsApp.
-            </p>
-
-            <div className="mt-6 grid gap-3">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-purple w-full"
-              >
-                Order on WhatsApp
-              </a>
-
-              <button
-                type="button"
-                onClick={() => setComingSoonOpen(false)}
-                className="rounded-xl border border-black/15 px-6 py-3 font-semibold text-black hover:bg-black/[0.03]"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>

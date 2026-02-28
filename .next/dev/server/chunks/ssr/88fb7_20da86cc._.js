@@ -2426,7 +2426,7 @@ async function createFetch(url, headers, fetchPriority, shouldImmediatelyDecode,
     let browserResponse = await fetchPromise;
     // If the server responds with a redirect (e.g. 307), and the redirected
     // location does not contain the cache busting search param set in the
-    // original request, the response is likely invalid — when following the
+    // original request, the response is likely invalid - when following the
     // redirect, the browser forwards the request headers, but since the cache
     // busting search param is missing, the server will reject the request due to
     // a mismatch.
@@ -3130,8 +3130,8 @@ function getSegmentVaryPathForRequest(fetchStrategy, tree) {
     // as possible.
     //
     // We may be able to re-key the response to something even more generic once
-    // we receive it — for example, if the server tells us that the response
-    // doesn't vary on a particular param — but even before we send the request,
+    // we receive it - for example, if the server tells us that the response
+    // doesn't vary on a particular param - but even before we send the request,
     // we know some params are reusable based on the fetch strategy alone. For
     // example, a static prefetch will never vary on search params.
     //
@@ -3901,7 +3901,7 @@ function updateCacheNodeOnNavigation(navigatedAt, oldUrl, oldCacheNode, oldRoute
         accumulateRefreshUrl(accumulation, refreshUrl);
     }
     // As we diff the trees, we may sometimes modify (copy-on-write, not mutate)
-    // the Route Tree that was returned by the server — for example, in the case
+    // the Route Tree that was returned by the server - for example, in the case
     // of default parallel routes, we preserve the currently active segment. To
     // avoid mutating the original tree, we clone the router state children along
     // the return path.
@@ -4453,7 +4453,7 @@ async function finishNavigationTask(task, nextUrl, primaryRequestPromise, refres
                 // network error. Trigger an MPA navigation.
                 //
                 // Hard navigating/refreshing is how we prevent an infinite retry loop
-                // caused by a network error — when the network fails, we fall back to the
+                // caused by a network error - when the network fails, we fall back to the
                 // browser behavior for offline navigations. In the future, Next.js may
                 // introduce its own custom handling of offline navigations, but that
                 // doesn't exist yet.
@@ -4607,7 +4607,7 @@ function writeDynamicDataIntoNavigationTask(task, serverRouterState, dynamicData
 function finishPendingCacheNode(cacheNode, dynamicData, dynamicHead, debugInfo) {
     // Writes a dynamic response into an existing Cache Node tree. This does _not_
     // create a new tree, it updates the existing tree in-place. So it must follow
-    // the Suspense rules of cache safety — it can resolve pending promises, but
+    // the Suspense rules of cache safety - it can resolve pending promises, but
     // it cannot overwrite existing data. It can add segments to the tree (because
     // a missing segment will cause the layout router to suspend).
     // but it cannot delete them.
@@ -5609,8 +5609,8 @@ function revalidateEntireCache(nextUrl, tree) {
 }
 function attachInvalidationListener(task) {
     // This function is called whenever a prefetch task reads a cache entry. If
-    // the task has an onInvalidate function associated with it — i.e. the one
-    // optionally passed to router.prefetch(onInvalidate) — then we attach that
+    // the task has an onInvalidate function associated with it - i.e. the one
+    // optionally passed to router.prefetch(onInvalidate) - then we attach that
     // listener to the every cache entry that the task reads. Then, if an entry
     // is invalidated, we call the function.
     if (task.onInvalidate !== null) {
@@ -5856,7 +5856,7 @@ function readOrCreateRevalidatingSegmentEntry(now, fetchStrategy, route, tree) {
     //
     // You can think of it as if all the revalidation entries were stored in a
     // separate cache map from the canonical entries, and then transfered to the
-    // canonical cache map once the request is complete — this isn't how it's
+    // canonical cache map once the request is complete - this isn't how it's
     // actually implemented, since it's more efficient to store them in the same
     // data structure as the normal entries, but that's how it's modeled
     // conceptually.
@@ -6372,7 +6372,7 @@ async function fetchRouteOnCacheMiss(entry, task, key) {
             // Re-key the entry. The `set` implementation handles removing it from
             // its previous position in the cache. We don't need to do anything to
             // update the LRU, because the entry is already in it.
-            // TODO: Treat this as an upsert — should check if an entry already
+            // TODO: Treat this as an upsert - should check if an entry already
             // exists at the new keypath, and if so, whether we should keep that
             // one instead.
             const fulfilledVaryPath = (0, _varypath.getFulfilledRouteVaryPath)(pathname, search, nextUrl, couldBeIntercepted);
@@ -6956,7 +6956,7 @@ function reschedulePrefetchTask(task, treeAtTimeOfPrefetch, fetchStrategy, prior
 function isPrefetchTaskDirty(task, nextUrl, tree) {
     // This is used to quickly bail out of a prefetch task if the result is
     // guaranteed to not have changed since the task was initiated. This is
-    // strictly an optimization — theoretically, if it always returned true, no
+    // strictly an optimization - theoretically, if it always returned true, no
     // behavior should change because a full prefetch task will effectively
     // perform the same checks.
     const currentCacheVersion = (0, _cache.getCurrentCacheVersion)();
@@ -6987,7 +6987,7 @@ function ensureWorkIsScheduled() {
 /**
  * Checks if we've exceeded the maximum number of concurrent prefetch requests,
  * to avoid saturating the browser's internal network queue. This is a
- * cooperative limit — prefetch tasks should check this before issuing
+ * cooperative limit - prefetch tasks should check this before issuing
  * new requests.
  *
  * Also checks if we're within the revalidation cooldown window, during which
@@ -7309,7 +7309,7 @@ function pingSharedPartOfCacheComponentsTree(now, task, route, oldTree, newTree)
     // When Cache Components is enabled (or PPR, or a fully static route when PPR
     // is disabled; those cases are treated equivalently to Cache Components), we
     // start by prefetching each segment individually. Once we reach the "new"
-    // part of the tree — the part that doesn't exist on the current page — we
+    // part of the tree - the part that doesn't exist on the current page - we
     // may choose to switch to a runtime prefetch instead, based on the
     // information sent by the server in the route tree.
     //
@@ -7360,7 +7360,7 @@ function pingNewPartOfCacheComponentsTree(now, task, route, tree) {
         // layout, everything from this point should be prefetched using a single,
         // combined runtime request, rather than using per-segment static requests.
         // This is true even if some of the child segments are known to be fully
-        // static — once we've decided to perform a runtime prefetch, we might as
+        // static - once we've decided to perform a runtime prefetch, we might as
         // well respond with the static segments in the same roundtrip. (That's how
         // regular navigations work, too.) We'll still skip over segments that are
         // already cached, though.
@@ -7470,7 +7470,7 @@ function diffRouteTreeAgainstCurrent(now, task, route, oldTree, newTree, spawned
                             // additional data.
                             //
                             // Although the response will include dynamic data, opting into a
-                            // Full prefetch — via <Link prefetch={true}> — implicitly
+                            // Full prefetch - via <Link prefetch={true}> - implicitly
                             // instructs the cache to treat the response as "static", or non-
                             // dynamic, since the whole point is to cache it for
                             // future navigations.
@@ -7501,7 +7501,7 @@ function diffRouteTreeAgainstCurrent(now, task, route, oldTree, newTree, spawned
 }
 function pingPPRDisabledRouteTreeUpToLoadingBoundary(now, task, route, tree, refetchMarkerContext, spawnedEntries) {
     // This function is similar to pingRouteTreeAndIncludeDynamicData, except the
-    // server is only going to return a minimal loading state — it will stop
+    // server is only going to return a minimal loading state - it will stop
     // rendering at the first loading boundary. Whereas a Full prefetch is
     // intentionally aggressive and tries to pretfetch all the data that will be
     // needed for a navigation, a LoadingBoundary prefetch is much more
@@ -7689,7 +7689,7 @@ function pingStaticSegmentData(now, task, route, segment, routeKey, tree) {
                     case _types.FetchStrategy.LoadingBoundary:
                         // There's a pending request, but because it's using the old
                         // prefetching strategy, we can't be sure if it will be fulfilled by
-                        // the response — it might be inside the loading boundary. Perform
+                        // the response - it might be inside the loading boundary. Perform
                         // a revalidation, but because it's speculative, wait to do it at
                         // background priority.
                         if (background(task)) {
@@ -7834,7 +7834,7 @@ function compareQueuePriority(a, b) {
     if (priorityDiff !== 0) {
         return priorityDiff;
     }
-    // If the priority is the same, check which phase the prefetch is in — is it
+    // If the priority is the same, check which phase the prefetch is in - is it
     // prefetching the route tree, or the segments? Route trees are prioritized.
     const phaseDiff = b.phase - a.phase;
     if (phaseDiff !== 0) {

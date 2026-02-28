@@ -55,7 +55,7 @@ export default function ContactPage() {
 </div>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
-        {/* LEFT — FORM */}
+        {/* LEFT - FORM */}
         <Card className="p-6">
           <h2 className="text-xl font-extrabold">Send a message</h2>
 
@@ -139,7 +139,7 @@ export default function ContactPage() {
           </form>
         </Card>
 
-        {/* RIGHT — 2-CARD BLOCKS ALL THROUGH */}
+        {/* RIGHT - 2-CARD BLOCKS ALL THROUGH */}
 <div className="grid gap-4">
   {/* ROW 1: WhatsApp + Email */}
   <div className="grid gap-4 sm:grid-cols-2">

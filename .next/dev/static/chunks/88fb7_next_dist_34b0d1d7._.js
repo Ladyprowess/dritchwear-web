@@ -86,7 +86,7 @@ function useRouterBFCache(activeTree, activeStateKey) {
         return prevActiveEntry;
     }
     // The route tree changed. Note that this doesn't mean that the tree changed
-    // *at this level* — the change may be due to a child route. Either way, we
+    // *at this level* - the change may be due to a child route. Either way, we
     // need to either add or update the router tree in the bfcache.
     //
     // The rest of the code looks more complicated than it actually is because we
@@ -432,7 +432,7 @@ function ScrollAndFocusHandler({ segmentPath, children }) {
  * If no loading property is provided it renders the children without a suspense boundary.
  */ function LoadingBoundary({ name, loading, children }) {
     // If loading is a promise, unwrap it. This happens in cases where we haven't
-    // yet received the loading data from the server — which includes whether or
+    // yet received the loading data from the server - which includes whether or
     // not this layout has a loading component at all.
     //
     // It's OK to suspend here instead of inside the fallback because this
@@ -494,7 +494,7 @@ function OuterLayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts
         parentTreeSegment,
         parallelRouterKey
     ]);
-    // The "state" key of a segment is the one passed to React — it represents the
+    // The "state" key of a segment is the one passed to React - it represents the
     // identity of the UI tree. Whenever the state key changes, the tree is
     // recreated and the state is reset. In the App Router model, search params do
     // not cause state to be lost, so two segments with the same segment path but
@@ -516,7 +516,7 @@ function OuterLayoutRouter({ parallelRouterKey, error, errorStyles, errorScripts
     const activeStateKey = (0, _createroutercachekey.createRouterCacheKey)(activeSegment, true) // no search params
     ;
     // At each level of the route tree, not only do we render the currently
-    // active segment — we also render the last N segments that were active at
+    // active segment - we also render the last N segments that were active at
     // this level inside a hidden <Activity> boundary, to preserve their state
     // if or when the user navigates to them again.
     //

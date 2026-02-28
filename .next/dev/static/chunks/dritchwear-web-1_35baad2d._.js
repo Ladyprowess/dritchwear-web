@@ -82,15 +82,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const APP_STORE_URL = "https://example.com/appstore";
+const WHATSAPP_URL = "https://wa.me/2349110163722?text=" + encodeURIComponent("Hi Dritchwear! I want to place an order. Please share how to proceed.");
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.dritchwear.app";
 function IconMedal() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -135,11 +135,11 @@ function IconMedal() {
 _c = IconMedal;
 function IconLeaf() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -185,11 +185,11 @@ function IconLeaf() {
 _c1 = IconLeaf;
 function IconUsers() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -242,13 +242,13 @@ function IconUsers() {
     return t0;
 }
 _c2 = IconUsers;
-function AppleIcon() {
+function WhatsAppIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -256,27 +256,16 @@ function AppleIcon() {
             width: "18",
             height: "18",
             viewBox: "0 0 24 24",
-            fill: "none",
+            fill: "currentColor",
             "aria-hidden": "true",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M16.2 2.6c-1 .1-2.1.7-2.8 1.6-.7.8-1.2 2-1 3.1 1.1.1 2.2-.6 2.9-1.4.7-.9 1.2-2 1-3.3z",
-                    fill: "currentColor"
-                }, void 0, false, {
-                    fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
-                    lineNumber: 71,
-                    columnNumber: 89
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M20.6 17.2c-.4.9-.9 1.8-1.6 2.7-1 .9-1.9 1.3-2.5 1.3-.7 0-1.5-.3-2.5-.7-1-.4-1.7-.7-2.4-.7-.7 0-1.5.3-2.5.7-1 .4-1.8.7-2.5.7-.7 0-1.5-.4-2.5-1.3-1.2-1.1-2.2-2.8-2.9-4.9-.8-2.4-.9-4.6-.2-6.4.6-1.5 1.6-2.3 3-2.4.8 0 1.7.3 2.6.7.9.4 1.5.7 2 .7.4 0 1.1-.3 2.1-.7 1-.4 1.9-.7 2.7-.6 2 .2 3.4 1 4.2 2.4-1.8 1.1-2.7 2.7-2.6 4.7.1 1.6.8 3 2.1 3.9z",
-                    fill: "currentColor"
-                }, void 0, false, {
-                    fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
-                    lineNumber: 71,
-                    columnNumber: 207
-                }, this)
-            ]
-        }, void 0, true, {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M12.04 2C6.56 2 2.1 6.46 2.1 11.94c0 1.74.46 3.42 1.34 4.9L2 22l5.3-1.39c1.42.77 3.03 1.18 4.74 1.18h.01c5.48 0 9.94-4.46 9.94-9.94C21.99 6.46 17.53 2 12.04 2zm5.8 14.45c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.12-1.84-.12-.43-.14-.98-.32-1.68-.62-2.95-1.27-4.87-4.19-5.02-4.38-.14-.19-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.02-2.46.27-.3.6-.38.8-.38h.58c.18 0 .42-.07.66.5.24.57.82 2 .9 2.14.08.14.13.32.02.51-.11.19-.17.32-.33.5-.16.19-.35.41-.49.55-.16.16-.33.34-.14.65.19.3.86 1.42 1.86 2.3 1.28 1.14 2.36 1.49 2.68 1.66.32.16.5.14.68-.08.19-.22.78-.9.99-1.22.21-.32.42-.27.7-.16.29.11 1.82.86 2.13 1.02.32.16.53.24.61.38.08.14.08.8-.16 1.48z"
+            }, void 0, false, {
+                fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
+                lineNumber: 71,
+                columnNumber: 97
+            }, this)
+        }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
             lineNumber: 71,
             columnNumber: 10
@@ -287,14 +276,14 @@ function AppleIcon() {
     }
     return t0;
 }
-_c3 = AppleIcon;
+_c3 = WhatsAppIcon;
 function PlayStoreIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -341,11 +330,11 @@ function PlayStoreIcon() {
 _c4 = PlayStoreIcon;
 /* SIMPLE MODAL */ function Modal(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     const { children, onClose } = t0;
     let t1;
@@ -434,11 +423,11 @@ _c5 = Modal;
 function AboutPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
-    if ($[0] !== "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27") {
+    if ($[0] !== "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436") {
         for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "248f266606a932c15f2719e6cf8aea76f5ed62d914b59bf9318670f6f9968d27";
+        $[0] = "07a6a4e16d76e0afba4084752eef20ffb3435332361a8512205a9709f6364436";
     }
     const [storeModal, setStoreModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -929,7 +918,9 @@ function AboutPage() {
                     className: "mt-6 grid gap-3",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: APP_STORE_URL,
+                            href: WHATSAPP_URL,
+                            target: "_blank",
+                            rel: "noreferrer",
                             className: "rounded-2xl px-6 py-4 font-semibold text-center inline-flex items-center justify-center gap-2",
                             style: {
                                 backgroundColor: "var(--brand-purple)",
@@ -938,7 +929,7 @@ function AboutPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AppleIcon, {}, void 0, false, {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(WhatsAppIcon, {}, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
                                         lineNumber: 278,
                                         columnNumber: 101
@@ -948,7 +939,7 @@ function AboutPage() {
                                     lineNumber: 278,
                                     columnNumber: 12
                                 }, this),
-                                "Download on App Store"
+                                "iOS - Order on WhatsApp"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
@@ -980,7 +971,7 @@ function AboutPage() {
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/about/page.tsx",
                             lineNumber: 278,
-                            columnNumber: 146
+                            columnNumber: 151
                         }, this)
                     ]
                 }, void 0, true, {
@@ -1027,7 +1018,7 @@ var _c, _c1, _c2, _c3, _c4, _c5, _c6;
 __turbopack_context__.k.register(_c, "IconMedal");
 __turbopack_context__.k.register(_c1, "IconLeaf");
 __turbopack_context__.k.register(_c2, "IconUsers");
-__turbopack_context__.k.register(_c3, "AppleIcon");
+__turbopack_context__.k.register(_c3, "WhatsAppIcon");
 __turbopack_context__.k.register(_c4, "PlayStoreIcon");
 __turbopack_context__.k.register(_c5, "Modal");
 __turbopack_context__.k.register(_c6, "AboutPage");

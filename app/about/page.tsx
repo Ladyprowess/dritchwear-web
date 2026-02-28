@@ -5,7 +5,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { Card } from "@/components/Card";
 
-const APP_STORE_URL = "https://example.com/appstore";
+const WHATSAPP_URL =
+  "https://wa.me/2349110163722?text=" +
+  encodeURIComponent("Hi Dritchwear! I want to place an order. Please share how to proceed.");
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.dritchwear.app";
 
 function IconMedal() {
@@ -46,17 +48,10 @@ function IconUsers() {
   );
 }
 
-function AppleIcon() {
+function WhatsAppIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M16.2 2.6c-1 .1-2.1.7-2.8 1.6-.7.8-1.2 2-1 3.1 1.1.1 2.2-.6 2.9-1.4.7-.9 1.2-2 1-3.3z"
-        fill="currentColor"
-      />
-      <path
-        d="M20.6 17.2c-.4.9-.9 1.8-1.6 2.7-1 .9-1.9 1.3-2.5 1.3-.7 0-1.5-.3-2.5-.7-1-.4-1.7-.7-2.4-.7-.7 0-1.5.3-2.5.7-1 .4-1.8.7-2.5.7-.7 0-1.5-.4-2.5-1.3-1.2-1.1-2.2-2.8-2.9-4.9-.8-2.4-.9-4.6-.2-6.4.6-1.5 1.6-2.3 3-2.4.8 0 1.7.3 2.6.7.9.4 1.5.7 2 .7.4 0 1.1-.3 2.1-.7 1-.4 1.9-.7 2.7-.6 2 .2 3.4 1 4.2 2.4-1.8 1.1-2.7 2.7-2.6 4.7.1 1.6.8 3 2.1 3.9z"
-        fill="currentColor"
-      />
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.56 2 2.1 6.46 2.1 11.94c0 1.74.46 3.42 1.34 4.9L2 22l5.3-1.39c1.42.77 3.03 1.18 4.74 1.18h.01c5.48 0 9.94-4.46 9.94-9.94C21.99 6.46 17.53 2 12.04 2zm5.8 14.45c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.12-1.84-.12-.43-.14-.98-.32-1.68-.62-2.95-1.27-4.87-4.19-5.02-4.38-.14-.19-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.02-2.46.27-.3.6-.38.8-.38h.58c.18 0 .42-.07.66.5.24.57.82 2 .9 2.14.08.14.13.32.02.51-.11.19-.17.32-.33.5-.16.19-.35.41-.49.55-.16.16-.33.34-.14.65.19.3.86 1.42 1.86 2.3 1.28 1.14 2.36 1.49 2.68 1.66.32.16.5.14.68-.08.19-.22.78-.9.99-1.22.21-.32.42-.27.7-.16.29.11 1.82.86 2.13 1.02.32.16.53.24.61.38.08.14.08.8-.16 1.48z" />
     </svg>
   );
 }
@@ -70,9 +65,9 @@ function PlayStoreIcon() {
       aria-hidden="true"
       fill="currentColor"
     >
-      <path d="M325.3 234.3L104.6 13.6c-6.3-6.3-16.6-1.8-16.6 7.1v470.6c0 8.9 10.3 13.4 16.6 7.1l220.7-220.7c4.4-4.4 4.4-11.6 0-16z"/>
-      <path d="M361.2 270.1l-40.6-40.6c-4.4-4.4-11.6-4.4-16 0l-40.6 40.6c-4.4 4.4-4.4 11.6 0 16l40.6 40.6c4.4 4.4 11.6 4.4 16 0l40.6-40.6c4.4-4.4 4.4-11.6 0-16z"/>
-      <path d="M412.1 256l-46.7-46.7c-4.4-4.4-11.6-4.4-16 0l-46.7 46.7c-4.4 4.4-4.4 11.6 0 16l46.7 46.7c4.4 4.4 11.6 4.4 16 0l46.7-46.7c4.4-4.4 4.4-11.6 0-16z"/>
+      <path d="M325.3 234.3L104.6 13.6c-6.3-6.3-16.6-1.8-16.6 7.1v470.6c0 8.9 10.3 13.4 16.6 7.1l220.7-220.7c4.4-4.4 4.4-11.6 0-16z" />
+      <path d="M361.2 270.1l-40.6-40.6c-4.4-4.4-11.6-4.4-16 0l-40.6 40.6c-4.4 4.4-4.4 11.6 0 16l40.6 40.6c4.4 4.4 11.6 4.4 16 0l40.6-40.6c4.4-4.4 4.4-11.6 0-16z" />
+      <path d="M412.1 256l-46.7-46.7c-4.4-4.4-11.6-4.4-16 0l-46.7 46.7c-4.4 4.4-4.4 11.6 0 16l46.7 46.7c4.4 4.4 11.6 4.4 16 0l46.7-46.7c4.4-4.4 4.4-11.6 0-16z" />
     </svg>
   );
 }
@@ -108,44 +103,41 @@ export default function AboutPage() {
 
   return (
     <div className="w-full">
+      {/* ABOUT HERO */}
+      <section className="w-full">
+        <div className="mx-auto max-w-6xl px-6 pt-10 pb-12 text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-black">
+            About{" "}
+            <span style={{ color: "var(--brand-yellow)" }}>Dritchwear</span>
+          </h1>
 
+          <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg text-black/55 leading-relaxed">
+            We create premium streetwear and branded items that help you show up with
+            confidence; for your personal style, your brand, or your next big event.
+          </p>
 
-     {/* ABOUT HERO — centred layout (like your screenshot) */}
-<section className="w-full">
-  <div className="mx-auto max-w-6xl px-6 pt-10 pb-12 text-center">
-    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-black">
-      About{" "}
-      <span style={{ color: "var(--brand-yellow)" }}>Dritchwear</span>
-    </h1>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button
+              onClick={() => setStoreModal(true)}
+              className="rounded-full px-8 py-4 font-semibold"
+              style={{ backgroundColor: "var(--brand-purple)", color: "#fff" }}
+            >
+              Shop Our Collection
+            </button>
 
-    <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg text-black/55 leading-relaxed">
-  We create premium streetwear and branded items that help you show up with
-  confidence; for your personal style, your brand, or your next big event.
-</p>
-
-    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-      {/* opens your app-store modal */}
-      <button
-        onClick={() => setStoreModal(true)}
-        className="rounded-full px-8 py-4 font-semibold"
-        style={{ backgroundColor: "var(--brand-purple)", color: "#fff" }}
-      >
-        Shop Our Collection
-      </button>
-
-      <a
-        href="/contact"
-        className="rounded-full px-8 py-4 font-semibold bg-white"
-        style={{
-          border: "1px solid rgba(0,0,0,0.15)",
-          color: "var(--brand-purple)",
-        }}
-      >
-        Contact Us
-      </a>
-    </div>
-  </div>
-</section>
+            <a
+              href="/contact"
+              className="rounded-full px-8 py-4 font-semibold bg-white"
+              style={{
+                border: "1px solid rgba(0,0,0,0.15)",
+                color: "var(--brand-purple)",
+              }}
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* OUR STORY */}
       <section className="w-full py-14">
@@ -158,32 +150,28 @@ export default function AboutPage() {
                 Dritchwear started with one simple idea:{" "}
                 <span className="font-semibold">to help people wear their brand with pride.</span>
               </p>
-
               <p>
                 We saw how hard it was for individuals, event organisers, and business owners to get
                 quality streetwear and branded items made the way they wanted. So, we decided to make it easy.
               </p>
-
               <p>
                 We began sewing t-shirts, hoodies, joggers, and more; custom-made and carefully crafted.
               </p>
-
               <p>
                 We now also offer <span className="font-semibold">gift items</span> like tote bags, mugs, flasks,
                 and notebooks, perfect for branding, events, or personal use.
               </p>
-
               <p>Today, Dritchwear is your go-to brand for quality, style, and custom wear.</p>
             </div>
           </div>
 
           <Card className="p-0 overflow-hidden">
-  <img
-    src="/images/about-image.png"
-    alt="Dritchwear custom streetwear"
-    className="h-[340px] w-full object-cover object-[50%_35%]"
-  />
-</Card>
+            <img
+              src="/images/about-image.png"
+              alt="Dritchwear custom streetwear"
+              className="h-[340px] w-full object-cover object-[50%_35%]"
+            />
+          </Card>
         </div>
       </section>
 
@@ -233,7 +221,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* STORE MODAL (app links) */}
+      {/* ✅ FIX: Store modal - iOS → WhatsApp, Google Play stays */}
       {storeModal && (
         <Modal onClose={() => setStoreModal(false)}>
           <p className="text-xs font-semibold tracking-[0.18em] uppercase text-black/50">
@@ -249,29 +237,31 @@ export default function AboutPage() {
           </p>
 
           <div className="mt-6 grid gap-3">
-            {/* Purple => white text */}
+            {/* iOS → WhatsApp */}
             <a
-              href={APP_STORE_URL}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-2xl px-6 py-4 font-semibold text-center inline-flex items-center justify-center gap-2"
               style={{ backgroundColor: "var(--brand-purple)", color: "#fff" }}
             >
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15">
-                <AppleIcon />
+                <WhatsAppIcon />
               </span>
-              Download on App Store
+              iOS - Order on WhatsApp
             </a>
 
-            {/* Gold => white text */}
+            {/* Google Play */}
             <a
-  href={PLAY_STORE_URL}
-  className="rounded-2xl px-6 py-4 font-semibold inline-flex items-center justify-center gap-2"
-  style={{ backgroundColor: "var(--brand-yellow)", color: "#fff" }}
->
-  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15">
-    <PlayStoreIcon />
-  </span>
-  Get it on Google Play
-</a>
+              href={PLAY_STORE_URL}
+              className="rounded-2xl px-6 py-4 font-semibold inline-flex items-center justify-center gap-2"
+              style={{ backgroundColor: "var(--brand-yellow)", color: "#fff" }}
+            >
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15">
+                <PlayStoreIcon />
+              </span>
+              Get it on Google Play
+            </a>
           </div>
         </Modal>
       )}

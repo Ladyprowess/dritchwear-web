@@ -7,7 +7,8 @@ export function NotificationBar({ message }: { message: string }) {
   if (!visible) return null;
 
   return (
-    <div className="sticky top-0 z-40 w-full border-b border-black/10 bg-[var(--brand-purple)]/5 backdrop-blur">
+    /* ✅ FIX: Removed sticky - now scrolls away naturally, no more overlap with Navbar */
+    <div className="w-full border-b border-black/10 bg-[var(--brand-purple)]/5">
       <div className="relative mx-auto max-w-7xl px-4 py-3">
         {/* close */}
         <button

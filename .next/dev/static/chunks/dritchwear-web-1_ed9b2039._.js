@@ -164,9 +164,9 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const APP_STORE_URL = "https://example.com/appstore";
+const WHATSAPP_URL = "https://wa.me/2349110163722?text=" + encodeURIComponent("Hi Dritchwear! I need help with sizing. Please assist.");
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.dritchwear.app";
-const rows = [
+/* ✅ FIX: Added 3XL and 4XL sizes */ const rows = [
     {
         size: "S",
         chest: "92–96",
@@ -201,15 +201,29 @@ const rows = [
         length: "76",
         waist: "95–100",
         hip: "113–118"
+    },
+    {
+        size: "3XL",
+        chest: "121–126",
+        length: "78",
+        waist: "101–106",
+        hip: "119–124"
+    },
+    {
+        size: "4XL",
+        chest: "127–132",
+        length: "80",
+        waist: "107–112",
+        hip: "125–130"
     }
 ];
 function SectionHeader(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(13);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 13; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     const { title, accent, subtitle } = t0;
     let t1;
@@ -219,7 +233,7 @@ function SectionHeader(t0) {
             children: title
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 56,
+            lineNumber: 70,
             columnNumber: 10
         }, this);
         $[1] = title;
@@ -237,7 +251,7 @@ function SectionHeader(t0) {
                     children: accent
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 64,
+                    lineNumber: 78,
                     columnNumber: 26
                 }, this)
             ]
@@ -257,7 +271,7 @@ function SectionHeader(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 72,
+            lineNumber: 86,
             columnNumber: 10
         }, this);
         $[5] = t1;
@@ -273,7 +287,7 @@ function SectionHeader(t0) {
             children: subtitle
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 81,
+            lineNumber: 95,
             columnNumber: 21
         }, this) : null;
         $[8] = subtitle;
@@ -291,7 +305,7 @@ function SectionHeader(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 89,
+            lineNumber: 103,
             columnNumber: 10
         }, this);
         $[10] = t3;
@@ -305,11 +319,11 @@ function SectionHeader(t0) {
 _c = SectionHeader;
 function Table() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -328,7 +342,7 @@ function Table() {
                                     children: "Size"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 122,
                                     columnNumber: 173
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -336,7 +350,7 @@ function Table() {
                                     children: "Chest (cm)"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 122,
                                     columnNumber: 244
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -344,7 +358,7 @@ function Table() {
                                     children: "Length (cm)"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 122,
                                     columnNumber: 293
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -352,7 +366,7 @@ function Table() {
                                     children: "Waist (cm)"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 122,
                                     columnNumber: 343
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -360,36 +374,36 @@ function Table() {
                                     children: "Hip (cm)"
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 122,
                                     columnNumber: 392
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 108,
+                            lineNumber: 122,
                             columnNumber: 147
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                        lineNumber: 108,
+                        lineNumber: 122,
                         columnNumber: 112
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                         children: rows.map(_TableRowsMap)
                     }, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                        lineNumber: 108,
+                        lineNumber: 122,
                         columnNumber: 452
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 108,
+                lineNumber: 122,
                 columnNumber: 78
             }, this)
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 108,
+            lineNumber: 122,
             columnNumber: 10
         }, this);
         $[1] = t0;
@@ -408,7 +422,7 @@ function _TableRowsMap(r) {
                 children: r.size
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 116,
+                lineNumber: 130,
                 columnNumber: 64
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -416,7 +430,7 @@ function _TableRowsMap(r) {
                 children: r.chest
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 116,
+                lineNumber: 130,
                 columnNumber: 111
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -424,7 +438,7 @@ function _TableRowsMap(r) {
                 children: r.length
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 116,
+                lineNumber: 130,
                 columnNumber: 145
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -432,7 +446,7 @@ function _TableRowsMap(r) {
                 children: r.waist
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 116,
+                lineNumber: 130,
                 columnNumber: 180
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -440,23 +454,23 @@ function _TableRowsMap(r) {
                 children: r.hip
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 116,
+                lineNumber: 130,
                 columnNumber: 214
             }, this)
         ]
     }, r.size, true, {
         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-        lineNumber: 116,
+        lineNumber: 130,
         columnNumber: 10
     }, this);
 }
 function MeasureCard(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     const { icon, title, text } = t0;
     let t1;
@@ -468,12 +482,12 @@ function MeasureCard(t0) {
                 children: icon
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 133,
+                lineNumber: 147,
                 columnNumber: 115
             }, this)
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 133,
+            lineNumber: 147,
             columnNumber: 10
         }, this);
         $[1] = icon;
@@ -488,7 +502,7 @@ function MeasureCard(t0) {
             children: title
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 141,
+            lineNumber: 155,
             columnNumber: 10
         }, this);
         $[3] = title;
@@ -503,7 +517,7 @@ function MeasureCard(t0) {
             children: text
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 149,
+            lineNumber: 163,
             columnNumber: 10
         }, this);
         $[5] = text;
@@ -522,7 +536,7 @@ function MeasureCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 157,
+            lineNumber: 171,
             columnNumber: 10
         }, this);
         $[7] = t1;
@@ -537,11 +551,11 @@ function MeasureCard(t0) {
 _c2 = MeasureCard;
 function FitCard(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(13);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 13; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     const { title, desc, bullets } = t0;
     let t1;
@@ -551,7 +565,7 @@ function FitCard(t0) {
             children: title
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 182,
+            lineNumber: 196,
             columnNumber: 10
         }, this);
         $[1] = title;
@@ -566,7 +580,7 @@ function FitCard(t0) {
             children: desc
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 190,
+            lineNumber: 204,
             columnNumber: 10
         }, this);
         $[3] = desc;
@@ -589,7 +603,7 @@ function FitCard(t0) {
             children: t3
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 206,
+            lineNumber: 220,
             columnNumber: 10
         }, this);
         $[7] = t3;
@@ -608,7 +622,7 @@ function FitCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 214,
+            lineNumber: 228,
             columnNumber: 10
         }, this);
         $[9] = t1;
@@ -621,7 +635,7 @@ function FitCard(t0) {
     return t5;
 }
 _c3 = FitCard;
-/* Correct Apple icon */ function _FitCardBulletsMap(b) {
+function _FitCardBulletsMap(b) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex items-start gap-3",
         children: [
@@ -629,30 +643,30 @@ _c3 = FitCard;
                 className: "mt-[7px] inline-block h-2 w-2 rounded-full bg-[var(--brand-purple)]"
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 227,
+                lineNumber: 239,
                 columnNumber: 58
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: b
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 227,
+                lineNumber: 239,
                 columnNumber: 146
             }, this)
         ]
     }, b, true, {
         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-        lineNumber: 227,
+        lineNumber: 239,
         columnNumber: 10
     }, this);
 }
-function AppleIcon() {
+function WhatsAppIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -660,29 +674,18 @@ function AppleIcon() {
             width: "18",
             height: "18",
             viewBox: "0 0 24 24",
-            fill: "none",
+            fill: "currentColor",
             "aria-hidden": "true",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M16.2 2.6c-1 .1-2.1.7-2.8 1.6-.7.8-1.2 2-1 3.1 1.1.1 2.2-.6 2.9-1.4.7-.9 1.2-2 1-3.3z",
-                    fill: "currentColor"
-                }, void 0, false, {
-                    fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 239,
-                    columnNumber: 89
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M20.6 17.2c-.4.9-.9 1.8-1.6 2.7-1 .9-1.9 1.3-2.5 1.3-.7 0-1.5-.3-2.5-.7-1-.4-1.7-.7-2.4-.7-.7 0-1.5.3-2.5.7-1 .4-1.8.7-2.5.7-.7 0-1.5-.4-2.5-1.3-1.2-1.1-2.2-2.8-2.9-4.9-.8-2.4-.9-4.6-.2-6.4.6-1.5 1.6-2.3 3-2.4.8 0 1.7.3 2.6.7.9.4 1.5.7 2 .7.4 0 1.1-.3 2.1-.7 1-.4 1.9-.7 2.7-.6 2 .2 3.4 1 4.2 2.4-1.8 1.1-2.7 2.7-2.6 4.7.1 1.6.8 3 2.1 3.9z",
-                    fill: "currentColor"
-                }, void 0, false, {
-                    fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 239,
-                    columnNumber: 207
-                }, this)
-            ]
-        }, void 0, true, {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M12.04 2C6.56 2 2.1 6.46 2.1 11.94c0 1.74.46 3.42 1.34 4.9L2 22l5.3-1.39c1.42.77 3.03 1.18 4.74 1.18h.01c5.48 0 9.94-4.46 9.94-9.94C21.99 6.46 17.53 2 12.04 2zm5.8 14.45c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.12-1.84-.12-.43-.14-.98-.32-1.68-.62-2.95-1.27-4.87-4.19-5.02-4.38-.14-.19-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.02-2.46.27-.3.6-.38.8-.38h.58c.18 0 .42-.07.66.5.24.57.82 2 .9 2.14.08.14.13.32.02.51-.11.19-.17.32-.33.5-.16.19-.35.41-.49.55-.16.16-.33.34-.14.65.19.3.86 1.42 1.86 2.3 1.28 1.14 2.36 1.49 2.68 1.66.32.16.5.14.68-.08.19-.22.78-.9.99-1.22.21-.32.42-.27.7-.16.29.11 1.82.86 2.13 1.02.32.16.53.24.61.38.08.14.08.8-.16 1.48z"
+            }, void 0, false, {
+                fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
+                lineNumber: 251,
+                columnNumber: 97
+            }, this)
+        }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 239,
+            lineNumber: 251,
             columnNumber: 10
         }, this);
         $[1] = t0;
@@ -691,14 +694,14 @@ function AppleIcon() {
     }
     return t0;
 }
-_c4 = AppleIcon;
-/* Correct Google Play icon (triangle) */ function GooglePlayIcon() {
+_c4 = WhatsAppIcon;
+function GooglePlayIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -715,7 +718,7 @@ _c4 = AppleIcon;
                     opacity: "0.9"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 258,
+                    lineNumber: 268,
                     columnNumber: 89
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -723,7 +726,7 @@ _c4 = AppleIcon;
                     fill: "currentColor"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 258,
+                    lineNumber: 268,
                     columnNumber: 194
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -731,13 +734,13 @@ _c4 = AppleIcon;
                     fill: "currentColor"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 258,
+                    lineNumber: 268,
                     columnNumber: 272
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 258,
+            lineNumber: 268,
             columnNumber: 10
         }, this);
         $[1] = t0;
@@ -749,11 +752,11 @@ _c4 = AppleIcon;
 _c5 = GooglePlayIcon;
 /* SIMPLE MODAL */ function Modal(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     const { children, onClose } = t0;
     let t1;
@@ -764,7 +767,7 @@ _c5 = GooglePlayIcon;
             "aria-label": "Close overlay"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 281,
+            lineNumber: 291,
             columnNumber: 10
         }, this);
         $[1] = onClose;
@@ -791,7 +794,7 @@ _c5 = GooglePlayIcon;
             children: "✕"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 298,
+            lineNumber: 308,
             columnNumber: 10
         }, this);
         $[4] = onClose;
@@ -809,7 +812,7 @@ _c5 = GooglePlayIcon;
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 306,
+            lineNumber: 316,
             columnNumber: 10
         }, this);
         $[6] = children;
@@ -828,7 +831,7 @@ _c5 = GooglePlayIcon;
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 315,
+            lineNumber: 325,
             columnNumber: 10
         }, this);
         $[9] = t1;
@@ -843,11 +846,11 @@ _c6 = Modal;
 function SizeGuidePage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(37);
-    if ($[0] !== "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67") {
+    if ($[0] !== "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b") {
         for(let $i = 0; $i < 37; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "59b973964e31f826a7fcfb03d9b03d07ebcb58b0e73406ab3318bb5278938a67";
+        $[0] = "7c7f67300549e7e4d2c72996707283c7c160cc6a5a8b2de7ab63138f96feda8b";
     }
     const [storeModal, setStoreModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -857,7 +860,7 @@ function SizeGuidePage() {
             children: "Size"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 335,
+            lineNumber: 345,
             columnNumber: 10
         }, this);
         $[1] = t0;
@@ -879,13 +882,13 @@ function SizeGuidePage() {
                             children: "Guide"
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 342,
+                            lineNumber: 352,
                             columnNumber: 153
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 342,
+                    lineNumber: 352,
                     columnNumber: 77
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -893,13 +896,13 @@ function SizeGuidePage() {
                     children: "Use this guide to pick the best size before placing your order."
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 342,
+                    lineNumber: 352,
                     columnNumber: 215
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 342,
+            lineNumber: 352,
             columnNumber: 10
         }, this);
         $[2] = t1;
@@ -913,7 +916,7 @@ function SizeGuidePage() {
             subtitle: "Follow these simple steps to get accurate measurements for the perfect fit."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 349,
+            lineNumber: 359,
             columnNumber: 10
         }, this);
         $[3] = t2;
@@ -927,14 +930,14 @@ function SizeGuidePage() {
                 className: "h-6 w-6"
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 356,
+                lineNumber: 366,
                 columnNumber: 29
             }, void 0),
             title: "Use a Measuring Tape",
-            text: "Use a flexible measuring tape for the most accurate measurements. If you don\u2019t have one, use a string and measure it against a ruler."
+            text: "Use a flexible measuring tape for the most accurate measurements. If you don't have one, use a string and measure it against a ruler."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 356,
+            lineNumber: 366,
             columnNumber: 10
         }, this);
         $[4] = t3;
@@ -948,14 +951,14 @@ function SizeGuidePage() {
                 className: "h-6 w-6"
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 363,
+                lineNumber: 373,
                 columnNumber: 29
             }, void 0),
             title: "Wear Fitted Clothing",
             text: "Take measurements over fitted clothing or undergarments for the most accurate results. Avoid bulky clothing."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 363,
+            lineNumber: 373,
             columnNumber: 10
         }, this);
         $[5] = t4;
@@ -979,33 +982,33 @@ function SizeGuidePage() {
                                 className: "h-6 w-6"
                             }, void 0, false, {
                                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                lineNumber: 372,
+                                lineNumber: 382,
                                 columnNumber: 99
                             }, void 0),
                             title: "Get Help",
                             text: "Ask someone to help you measure for the most accurate results, especially for back measurements."
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 372,
+                            lineNumber: 382,
                             columnNumber: 80
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 372,
+                    lineNumber: 382,
                     columnNumber: 23
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 372,
+            lineNumber: 382,
             columnNumber: 10
         }, this);
         t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "border-t border-black/10"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 373,
+            lineNumber: 383,
             columnNumber: 10
         }, this);
         t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectionHeader, {
@@ -1013,7 +1016,7 @@ function SizeGuidePage() {
             subtitle: "Check your category below, then pick your size from the table."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 374,
+            lineNumber: 384,
             columnNumber: 10
         }, this);
         $[6] = t5;
@@ -1035,7 +1038,7 @@ function SizeGuidePage() {
                     className: "h-5 w-5 text-[var(--brand-purple)]"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 387,
+                    lineNumber: 397,
                     columnNumber: 51
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1043,13 +1046,13 @@ function SizeGuidePage() {
                     children: "Tops"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 387,
+                    lineNumber: 397,
                     columnNumber: 107
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 387,
+            lineNumber: 397,
             columnNumber: 10
         }, this);
         t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1057,14 +1060,14 @@ function SizeGuidePage() {
             children: "T-shirts, sweatshirts, jackets, polos, hoodies, shirts, and more."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 388,
+            lineNumber: 398,
             columnNumber: 10
         }, this);
         t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mt-4 h-[2px] w-12 bg-[var(--brand-yellow)]"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 389,
+            lineNumber: 399,
             columnNumber: 11
         }, this);
         $[9] = t10;
@@ -1087,18 +1090,18 @@ function SizeGuidePage() {
                     className: "mt-5",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Table, {}, void 0, false, {
                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                        lineNumber: 400,
+                        lineNumber: 410,
                         columnNumber: 68
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 400,
+                    lineNumber: 410,
                     columnNumber: 46
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 400,
+            lineNumber: 410,
             columnNumber: 11
         }, this);
         $[12] = t11;
@@ -1116,7 +1119,7 @@ function SizeGuidePage() {
                     className: "h-5 w-5 text-[var(--brand-purple)]"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 409,
+                    lineNumber: 419,
                     columnNumber: 52
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1124,13 +1127,13 @@ function SizeGuidePage() {
                     children: "Bottoms"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 409,
+                    lineNumber: 419,
                     columnNumber: 108
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 409,
+            lineNumber: 419,
             columnNumber: 11
         }, this);
         t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1138,14 +1141,14 @@ function SizeGuidePage() {
             children: "Joggers, shorts, trousers."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 410,
+            lineNumber: 420,
             columnNumber: 11
         }, this);
         t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mt-4 h-[2px] w-12 bg-[var(--brand-yellow)]"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 411,
+            lineNumber: 421,
             columnNumber: 11
         }, this);
         $[13] = t12;
@@ -1177,37 +1180,37 @@ function SizeGuidePage() {
                                     className: "mt-5",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Table, {}, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 424,
+                                        lineNumber: 434,
                                         columnNumber: 122
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 424,
+                                    lineNumber: 434,
                                     columnNumber: 100
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 424,
+                            lineNumber: 434,
                             columnNumber: 63
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 424,
+                    lineNumber: 434,
                     columnNumber: 24
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 424,
+            lineNumber: 434,
             columnNumber: 11
         }, this);
         t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "border-t border-black/10"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 425,
+            lineNumber: 435,
             columnNumber: 11
         }, this);
         t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectionHeader, {
@@ -1215,7 +1218,7 @@ function SizeGuidePage() {
             subtitle: "Understanding our different fits to help you choose the perfect style."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 426,
+            lineNumber: 436,
             columnNumber: 11
         }, this);
         $[16] = t15;
@@ -1239,7 +1242,7 @@ function SizeGuidePage() {
             ]
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 437,
+            lineNumber: 447,
             columnNumber: 11
         }, this);
         $[19] = t18;
@@ -1259,7 +1262,7 @@ function SizeGuidePage() {
             ]
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 444,
+            lineNumber: 454,
             columnNumber: 11
         }, this);
         $[20] = t19;
@@ -1289,26 +1292,26 @@ function SizeGuidePage() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 453,
+                            lineNumber: 463,
                             columnNumber: 84
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 453,
+                    lineNumber: 463,
                     columnNumber: 25
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 453,
+            lineNumber: 463,
             columnNumber: 11
         }, this);
         t21 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "border-t border-black/10"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 454,
+            lineNumber: 464,
             columnNumber: 11
         }, this);
         t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectionHeader, {
@@ -1316,7 +1319,7 @@ function SizeGuidePage() {
             subtitle: "Expert advice to help you find your perfect fit every time."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 455,
+            lineNumber: 465,
             columnNumber: 11
         }, this);
         $[21] = t20;
@@ -1334,7 +1337,7 @@ function SizeGuidePage() {
             children: "General Tips"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 466,
+            lineNumber: 476,
             columnNumber: 11
         }, this);
         $[24] = t23;
@@ -1358,13 +1361,13 @@ function SizeGuidePage() {
                     ].map(_SizeGuidePageAnonymous)
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 475,
+                    lineNumber: 485,
                     columnNumber: 21
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 475,
+            lineNumber: 485,
             columnNumber: 11
         }, this);
         t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1372,15 +1375,15 @@ function SizeGuidePage() {
             children: "Still Unsure?"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 476,
+            lineNumber: 486,
             columnNumber: 11
         }, this);
         t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             className: "mt-2 text-sm text-black/70",
-            children: "Contact us with your measurements and we’ll recommend the best size."
+            children: "Contact us with your measurements and we'll recommend the best size."
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 477,
+            lineNumber: 487,
             columnNumber: 11
         }, this);
         $[25] = t24;
@@ -1401,14 +1404,14 @@ function SizeGuidePage() {
                     className: "mr-2 h-4 w-4"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 488,
+                    lineNumber: 498,
                     columnNumber: 84
                 }, this),
                 "Contact Support"
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 488,
+            lineNumber: 498,
             columnNumber: 11
         }, this);
         $[28] = t27;
@@ -1444,43 +1447,43 @@ function SizeGuidePage() {
                                                         className: "mr-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                                        lineNumber: 497,
+                                                        lineNumber: 507,
                                                         columnNumber: 53
                                                     }, this),
                                                     "Live Chat in App"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                                lineNumber: 495,
+                                                lineNumber: 505,
                                                 columnNumber: 204
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 495,
+                                        lineNumber: 505,
                                         columnNumber: 143
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                lineNumber: 495,
+                                lineNumber: 505,
                                 columnNumber: 128
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                        lineNumber: 495,
+                        lineNumber: 505,
                         columnNumber: 79
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 495,
+                    lineNumber: 505,
                     columnNumber: 25
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 495,
+            lineNumber: 505,
             columnNumber: 11
         }, this);
         $[29] = t28;
@@ -1495,14 +1498,14 @@ function SizeGuidePage() {
             children: "Extra Notes"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 505,
+            lineNumber: 515,
             columnNumber: 11
         }, this);
         t30 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mt-4 h-[2px] w-12 bg-[var(--brand-yellow)]"
         }, void 0, false, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 506,
+            lineNumber: 516,
             columnNumber: 11
         }, this);
         $[30] = t29;
@@ -1536,44 +1539,44 @@ function SizeGuidePage() {
                                         children: "• Streetwear fits may feel relaxed or oversized."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 515,
+                                        lineNumber: 525,
                                         columnNumber: 188
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "• For custom or bulk orders, sizing can be adjusted."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 515,
+                                        lineNumber: 525,
                                         columnNumber: 243
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "• Need help choosing a size? Contact support or use live chat in the app."
                                     }, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 515,
+                                        lineNumber: 525,
                                         columnNumber: 302
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                lineNumber: 515,
+                                lineNumber: 525,
                                 columnNumber: 133
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                        lineNumber: 515,
+                        lineNumber: 525,
                         columnNumber: 101
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 515,
+                    lineNumber: 525,
                     columnNumber: 92
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 515,
+            lineNumber: 525,
             columnNumber: 11
         }, this);
         $[32] = t31;
@@ -1592,7 +1595,7 @@ function SizeGuidePage() {
                     children: "Live chat is inside the app"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 524,
+                    lineNumber: 534,
                     columnNumber: 42
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1600,7 +1603,7 @@ function SizeGuidePage() {
                     children: "Download the Dritchwear App"
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 524,
+                    lineNumber: 534,
                     columnNumber: 152
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1608,14 +1611,16 @@ function SizeGuidePage() {
                     children: "To use live chat and place orders, open Dritchwear on your mobile device."
                 }, void 0, false, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 524,
+                    lineNumber: 534,
                     columnNumber: 256
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mt-6 grid gap-3",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: APP_STORE_URL,
+                            href: WHATSAPP_URL,
+                            target: "_blank",
+                            rel: "noreferrer",
                             className: "rounded-2xl px-6 py-4 font-semibold text-center inline-flex items-center justify-center gap-2",
                             style: {
                                 backgroundColor: "var(--brand-purple)",
@@ -1624,21 +1629,21 @@ function SizeGuidePage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AppleIcon, {}, void 0, false, {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(WhatsAppIcon, {}, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 527,
+                                        lineNumber: 537,
                                         columnNumber: 101
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 527,
+                                    lineNumber: 537,
                                     columnNumber: 12
                                 }, this),
-                                "Download on App Store"
+                                "iOS - Order on WhatsApp"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 524,
+                            lineNumber: 534,
                             columnNumber: 408
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1653,31 +1658,31 @@ function SizeGuidePage() {
                                     className: "inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/15",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(GooglePlayIcon, {}, void 0, false, {
                                         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                        lineNumber: 530,
+                                        lineNumber: 540,
                                         columnNumber: 101
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                                    lineNumber: 530,
+                                    lineNumber: 540,
                                     columnNumber: 12
                                 }, this),
                                 "Get it on Google Play"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                            lineNumber: 527,
-                            columnNumber: 146
+                            lineNumber: 537,
+                            columnNumber: 151
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                    lineNumber: 524,
+                    lineNumber: 534,
                     columnNumber: 375
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 522,
+            lineNumber: 532,
             columnNumber: 25
         }, this);
         $[33] = storeModal;
@@ -1696,7 +1701,7 @@ function SizeGuidePage() {
             ]
         }, void 0, true, {
             fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-            lineNumber: 538,
+            lineNumber: 548,
             columnNumber: 11
         }, this);
         $[35] = t32;
@@ -1721,20 +1726,20 @@ function _SizeGuidePageAnonymous(t) {
                 className: "mt-[7px] inline-block h-2 w-2 rounded-full bg-[var(--brand-purple)]"
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 552,
+                lineNumber: 562,
                 columnNumber: 58
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$dritchwear$2d$web$2d$1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: t
             }, void 0, false, {
                 fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-                lineNumber: 552,
+                lineNumber: 562,
                 columnNumber: 146
             }, this)
         ]
     }, t, true, {
         fileName: "[project]/dritchwear-web-1/app/size-guide/page.tsx",
-        lineNumber: 552,
+        lineNumber: 562,
         columnNumber: 10
     }, this);
 }
@@ -1743,7 +1748,7 @@ __turbopack_context__.k.register(_c, "SectionHeader");
 __turbopack_context__.k.register(_c1, "Table");
 __turbopack_context__.k.register(_c2, "MeasureCard");
 __turbopack_context__.k.register(_c3, "FitCard");
-__turbopack_context__.k.register(_c4, "AppleIcon");
+__turbopack_context__.k.register(_c4, "WhatsAppIcon");
 __turbopack_context__.k.register(_c5, "GooglePlayIcon");
 __turbopack_context__.k.register(_c6, "Modal");
 __turbopack_context__.k.register(_c7, "SizeGuidePage");
