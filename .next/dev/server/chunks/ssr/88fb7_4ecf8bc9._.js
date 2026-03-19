@@ -20094,7 +20094,7 @@ class ResponseCache {
                 // FIFO eviction is acceptable here because:
                 // 1. Invocations are short-lived (single request lifecycle), so older
                 //    invocations are unlikely to still be active after 100 newer ones
-                // 2. This warning mechanism is best-effort for developer guidance-
+                // 2. This warning mechanism is best-effort for developer guidance—
                 //    missing occasional eviction warnings doesn't affect correctness
                 // 3. If a long-running invocation is somehow evicted and then has
                 //    another cache entry evicted, it will simply be re-added

@@ -53,16 +53,55 @@ export default function HomePage() {
   return (
     <div>
       <AnnouncementModal
-        id="promo_buy2get1"
-        title="BUY 2, GET 1 FREE"
-        subtitle="Upgrade your wardrobe with more style for less."
-        imageSrc="/promo/buy2get1-landscape.png"
-        imageAlt="Dritchwear Buy 2 Get 1 Free Promo"
-        highlight="Buy any 2 outfits and get 1 free."
-        message="Shop now and apply the code below."
-        promoCodeLabel="Use promo code at checkout"
-        promoCode="BUY2GET1"
-        ctaLabel="Shop on the App"
+        id="promo_earn_points"
+        title="Earn Points. Pay Bills. Get Rewards."
+        subtitle="Get points for every activity you complete on the Dritchwear app."
+        imageSrc="/promo/utilities.png"
+        imageAlt="Dritchwear rewards points utilities promo"
+        messageContent={
+          <div className="mt-1 space-y-4 rounded-2xl bg-black/[0.03] px-4 py-3 text-left md:space-y-5 md:px-5 md:py-4">
+            <div>
+              <p className="text-sm font-semibold text-black">
+                Earn reward points when you:
+              </p>
+              <ul className="mt-2 space-y-1.5 text-sm text-black/75">
+                <li className="flex items-center gap-2">
+                  <span className="text-base">🛍️</span>
+                  <span>Place an order</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-base">⭐</span>
+                  <span>Drop a review</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-base">👥</span>
+                  <span>Refer a friend</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-t border-black/10 pt-3 md:pt-4">
+              <p className="text-sm font-semibold text-black">
+                Use your points to pay for utility bills like:
+              </p>
+              <ul className="mt-2 space-y-1.5 text-sm text-black/75">
+                <li className="flex items-center gap-2">
+                  <span className="text-base">⚡</span>
+                  <span>Electricity bills</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-base">📶</span>
+                  <span>Data & airtime</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-base">📺</span>
+                  <span>Cable TV</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        }
+        ctaLabel="Earn Points Now"
         onCtaClick={() => setIsStoreModalOpen(true)}
         repeatEveryMs={24 * 60 * 60 * 1000} /* ✅ FIX: Show once per 24hrs instead of 2hrs */
       />

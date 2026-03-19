@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import { Card } from "./Card";
 
@@ -8,6 +8,7 @@ type Props = {
   id: string;
   title: string;
   message?: string;
+  messageContent?: ReactNode;
 
   // Promo-style (optional)
   subtitle?: string;
@@ -37,6 +38,7 @@ export function AnnouncementModal({
   id,
   title,
   message,
+  messageContent,
   subtitle,
   highlight,
   bullets = [],
@@ -77,7 +79,7 @@ export function AnnouncementModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black/40 p-4">
-      <Card className="relative w-full max-w-xl rounded-2xl p-6 md:p-8">
+      <Card className="relative max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-2xl p-5 md:p-8">
         {/* Close */}
         <button
           aria-label="Close"
@@ -88,22 +90,24 @@ export function AnnouncementModal({
         </button>
 
         {/* Title */}
-        <h3 className="text-center text-xl md:text-2xl font-extrabold text-[var(--purple)]">
+        <h3 className="pr-10 text-center text-lg font-extrabold text-[var(--purple)] md:text-2xl">
           🎉 {title}
         </h3>
 
         {/* Subtitle */}
         {subtitle && (
-          <p className="mt-2 text-center text-sm text-black/70">{subtitle}</p>
+          <p className="mt-2 text-center text-sm leading-5 text-black/70">
+            {subtitle}
+          </p>
         )}
 
                 {/* Promo image (landscape) */}
                 {imageSrc && (
-          <div className="mt-4">
+          <div className="mt-3 md:mt-4">
             <img
               src={imageSrc}
               alt={imageAlt ?? "Promo image"}
-              className="w-full h-[220px] md:h-[200px] object-cover rounded-2xl"
+              className="h-[150px] w-full rounded-2xl object-cover md:h-[200px]"
             />
           </div>
         )}
@@ -111,7 +115,7 @@ export function AnnouncementModal({
 
         {/* Highlight */}
         {highlight && (
-          <p className="mt-4 text-center text-lg font-extrabold text-black">
+          <p className="mt-4 text-center text-base font-extrabold text-black md:text-lg">
             {highlight}
           </p>
         )}
@@ -129,13 +133,17 @@ export function AnnouncementModal({
         )}
 
         {/* Message */}
-        {message && (
-          <p className="mt-5 text-center text-sm text-black/75">{message}</p>
-        )}
+        {messageContent ? (
+          <div className="mt-4 md:mt-5">{messageContent}</div>
+        ) : message ? (
+          <p className="mt-5 text-center text-sm text-black/75 whitespace-pre-line">
+            {message}
+          </p>
+        ) : null}
 
                 {/* Promo code (bold + centred) */}
                 {promoCode && (
-          <div className="mt-5 text-center">
+          <div className="mt-4 text-center md:mt-5">
             <p className="text-sm text-black/70">{promoCodeLabel}</p>
 
             <div className="mt-3 inline-flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--gold)] bg-[rgba(253,184,19,0.10)] px-8 py-3">
@@ -148,7 +156,7 @@ export function AnnouncementModal({
 
 
         {/* Actions */}
-        <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="mt-5 flex flex-col justify-center gap-3 sm:mt-7 sm:flex-row">
         {onCtaClick ? (
   <button
     type="button"
